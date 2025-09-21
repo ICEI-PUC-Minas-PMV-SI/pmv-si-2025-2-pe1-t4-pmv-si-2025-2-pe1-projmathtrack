@@ -1,12 +1,17 @@
 # Introdução
 
-Imagine que você deseja apresentar este projeto para investidores que deverão decidir se investem ou não no desenvolvimento da sua ferramenta.
+O setor de tecnologia e computação apresenta um crescimento significativo nos últimos anos, com um percentual médio de 11,9% em 2023 [1], sendo acompanhado por uma maior demanda de profissionais para a área bem como uma maior exigência quanto à formação e capacitação destes. Paradoxalmente, segundo o estudo do Google for Startups [2], o Brasil enfrenta uma escassez de 530 mil profissionais na área de T.I. Essa escassez deve-se a diversos fatores, dentre os quais se destaca a etapa universitária, especificamente a evasão nos cursos de T.I. que, segundo Lopes [3], corresponde à 29,91%. Ainda segundo os autores, em uma análise de 53% dos trabalhos revisados, o baixo desempenho acadêmico e reprovações são a causa principal das evasões. Chen e Soldner [4] mostram que 56% dos alunos matriculados no primeiro ano dos cursos de ciências e tecnologia trocaram de curso durante os primeiros seis anos e que o mal desempenho durante o início do percurso induz na decisão de abandoná-lo.
+A matemática é atribuída como uma das razões do baixo desempenho e abandono, apesar de ser uma disciplina fundamental na formação básica e superior. Nos cursos relacionados à Computação, observamos que essa está presente desde o primeiro período até em etapas posteriores, apresentando-se em diferentes formas, diretamente ou indiretamente. Em Sistemas de Informação, por exemplo, a matemática é abordada em disciplinas como Lógica, Cálculo I e II, Estatística e Probabilidade, Teoria dos Grafos e etc, e, também, em outros cursos de computação, como Engenharia de Software, Ciência da Computação, Engenharia da Computação etc.
+Entretanto, apesar da presença contínua desde a formação básica, apenas 5,2% dos concluintes do ensino médio apresentam um desempenho satisfatório em matemática [5] e no ensino superior constata-se um alto índice de reprovação e evasão devido às dificuldades em matemática. Morães e Pombeiro [6] identificaram, por meio da aplicação de um questionário entre estudantes, formados, desistentes e trancados, que, nos cursos de Computação de Curitiba e região Metropolitana, 18% apresentavam dificuldades em matemática, 71% apontaram como desestimulante as matérias relacionadas a matemática.  
+Pazeto e Prietch [7] identificaram um elevado índice de reprovação nas disciplinas ligadas à matemática no curso de licenciatura plena em Informática na UFMT, conforme a tabela 1 retirada do estudo. 
 
-A **Introdução** consiste das etapas: *Contextualização -- Definição do problema -- Definição dos Objetivos -- Justificativa*, e tem como função situar o seu trabalho dentro de um contexto de mercado e mostrar a importância da sua proposta para resolver a dor de um usuário.
+Tabela 1: Reprovações por disciplina - Licenciatura em Informática (UFMT)
+ 
+Fonte: Pazeto e Prietch [6]
 
-A Contextualização deve situar sem projeto em um determinado contexto de mercado, a fim de fornecer informações adicionais que possam ajudar a entender melhor o assunto que você irá abordar. Serve também para definir a relevância do seu assunto, uma vez que mostra o tamanho do mercado em que se está inserido. Ela pode envolver a análise de vários aspectos, como o ambiente histórico, cultural, político e social em que o problema a ser atacado surgiu.
+Ainda, de acordo com Hoed [8], a alta taxa de reprovação nas disciplinas de cálculo I e Algoritmos contribuem para o abandono discente nos cursos de computação na Universidade de Brasília (UnB), com picos no terceiro e quarto período, tendo como motivação a falta de domínio de conceitos do ensino médio. 
+Portanto, constata-se que desempenho em matemática se relaciona com a evasão nos cursos de computação. Faz-se, então, necessário pensar em estratégias que possibilitem o aprimoramento dos discentes às disciplinas vinculadas a essa área do conhecimento.  
 
-Escreva de 2 a 3 parágrafos para contetualizar o seu projeto.
 
 ## Problema
 

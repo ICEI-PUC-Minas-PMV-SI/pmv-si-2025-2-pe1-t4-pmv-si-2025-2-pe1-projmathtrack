@@ -6,6 +6,7 @@ Entretanto, apesar da presença contínua desde a formação básica, apenas 5,2
 Pazeto e Prietch [7] identificaram um elevado índice de reprovação nas disciplinas ligadas à matemática no curso de licenciatura plena em Informática na UFMT, conforme a tabela 1 retirada do estudo. 
 
 Tabela 1: Reprovações por disciplina - Licenciatura em Informática (UFMT)
+![Image](https://github.com/user-attachments/assets/9b6d20e0-389e-4763-8cc0-abf37bfc3cf5)
  
 Fonte: Pazeto e Prietch [6]
 

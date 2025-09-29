@@ -1,9 +1,20 @@
 
 # Projeto de Interface
+O design de interface do site foi projetado a fim de proporcionar ao usuário uma interação intuitiva e ágil entre as páginas e suas funcionalidades, de modo que, por meio de uma página principal, seja possível acessar todas as demais páginas e funções do site. Para acessar a página principal do site, o usuário deverá fazer login ou criar uma conta (RF-01), sendo possível também recuperar a senha caso tenha sido perdida ou esquecida (RF-08).
 
-Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
+Após ter feito o login, haverá duas possíveis ações para o usuário: ser direcionado para a trilha de aprendizado (página principal) ou realizar o teste de nivelamento. Caso o usuário já tenha feito o teste de nivelamento, ele será automaticamente direcionado para a trilha de aprendizado; caso contrário, será encaminhado para a página de teste de nivelamento (RF-02). Ao finalizar o teste de nivelamento, o usuário poderá ter acesso ao resultado ou refazer o teste, caso discorde do resultado.
 
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
+Ao acionar “resultado”, a página será direcionada para outra página contendo duas funcionalidades principais: “emitir relatório” e “iniciar módulo”. Em “emitir relatório”, o usuário visualiza os erros e acertos, pontos de defasagem e pode também emitir um relatório. Já em “iniciar módulo”, o usuário é direcionado para a página de “trilha de aprendizado”, onde terá acesso às principais ferramentas e recursos da plataforma.
+
+A “trilha de aprendizado” contém as seguintes funcionalidades: “iniciar aprendizado”, “módulos”, “desempenho”, “fórum” e “materiais”. Em “iniciar aprendizado” (RF-09), o usuário é direcionado a uma trilha de aprendizado personalizada de acordo com suas dificuldades. Nessa página, o usuário poderá acessar:
+i) “conteúdo do módulo”, em que estão disponíveis os materiais de ensino e um mecanismo para feedback do conteúdo por parte do usuário (RF-12);
+ii) “testes”, em que estão disponibilizados exercícios específicos que irão gerar pontos e medalhas conforme o resultado obtido (RF-11), e também onde é possível verificar a resposta correta dos testes (RF-06).
+Em “Fórum”, o usuário pode fazer e acessar publicações, interagindo também com outros usuários (RF-05). Tal função pode ser útil, por exemplo, para monitores que desejam um ambiente no qual seja possível realizar o registro de comunicação imediata e ampla com os usuários, auxiliando-os em suas dificuldades, seja de forma individual ou em grupo.
+Em “Módulo”,o usuário irá verificar todas os conteúdos abordados em cada módulo, do modo que mesmo que o usuário não deseje realizar o seu módelo específicoo  ainda assim poderá acessar os outros conteúdos (RF-04).
+Na página “Desempenho”, o site terá um gráfico que irá comparar a evolução do usuário com base nos testes realizados (RF-03) e permitirá um acompanhamento da progressão ao longo de cda módulo.  
+Na página “materiais” o usuário também pode acessar os materiais complementares a cada assunto tratado (RF-04), que irá redirecioná-los para páginas externas contendo atividades, leitura, vídeos e etc. 
+Na trilha principal ainda é possível o usuário fazer uma buscar por conteúdos específicos na barra lateral direita (RF-10). 
+O userflow na imagem abaixo esquematiza todos os possíveis passos em wireframes de baixa fidelidade.
 
 ## User Flow
 

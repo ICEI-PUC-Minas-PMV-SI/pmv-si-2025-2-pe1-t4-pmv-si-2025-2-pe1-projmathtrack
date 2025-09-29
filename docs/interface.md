@@ -2,6 +2,9 @@
 # Projeto de Interface
 O design de interface do site foi projetado a fim de proporcionar ao usuário uma interação intuitiva e ágil entre as páginas e suas funcionalidades, de modo que, por meio de uma página principal, seja possível acessar todas as demais páginas e funções do site. Para acessar a página principal do site, o usuário deverá fazer login ou criar uma conta (RF-01), sendo possível também recuperar a senha caso tenha sido perdida ou esquecida (RF-08).
 
+| ![Image](https://github.com/user-attachments/assets/f95627b7-3f80-4c30-8fef-e50784697ab5) | ![Image](https://github.com/user-attachments/assets/4b3eff2d-9bf6-41fa-9188-45c8acb315ff)| ![Image](https://github.com/user-attachments/assets/e6cc625e-1797-41e7-bd6b-ccc2cc621760) |
+|--------|--------|--------|
+
 Após ter feito o login, haverá duas possíveis ações para o usuário: ser direcionado para a trilha de aprendizado (página principal) ou realizar o teste de nivelamento. Caso o usuário já tenha feito o teste de nivelamento, ele será automaticamente direcionado para a trilha de aprendizado; caso contrário, será encaminhado para a página de teste de nivelamento (RF-02). Ao finalizar o teste de nivelamento, o usuário poderá ter acesso ao resultado ou refazer o teste, caso discorde do resultado.
 
 Ao acionar “resultado”, a página será direcionada para outra página contendo duas funcionalidades principais: “emitir relatório” e “iniciar módulo”. Em “emitir relatório”, o usuário visualiza os erros e acertos, pontos de defasagem e pode também emitir um relatório. Já em “iniciar módulo”, o usuário é direcionado para a página de “trilha de aprendizado”, onde terá acesso às principais ferramentas e recursos da plataforma.

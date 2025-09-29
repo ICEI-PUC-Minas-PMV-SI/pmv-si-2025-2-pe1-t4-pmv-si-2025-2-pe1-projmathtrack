@@ -7,6 +7,7 @@ O design de interface do site foi projetado a fim de proporcionar ao usuário um
 
 Após ter feito o login, haverá duas possíveis ações para o usuário: ser direcionado para a trilha de aprendizado (página principal) ou realizar o teste de nivelamento. Caso o usuário já tenha feito o teste de nivelamento, ele será automaticamente direcionado para a trilha de aprendizado; caso contrário, será encaminhado para a página de teste de nivelamento (RF-02). Ao finalizar o teste de nivelamento, o usuário poderá ter acesso ao resultado ou refazer o teste, caso discorde do resultado.
 
+
 Ao acionar “resultado”, a página será direcionada para outra página contendo duas funcionalidades principais: “emitir relatório” e “iniciar módulo”. Em “emitir relatório”, o usuário visualiza os erros e acertos, pontos de defasagem e pode também emitir um relatório. Já em “iniciar módulo”, o usuário é direcionado para a página de “trilha de aprendizado”, onde terá acesso às principais ferramentas e recursos da plataforma.
 
 A “trilha de aprendizado” contém as seguintes funcionalidades: “iniciar aprendizado”, “módulos”, “desempenho”, “fórum” e “materiais”. Em “iniciar aprendizado” (RF-09), o usuário é direcionado a uma trilha de aprendizado personalizada de acordo com suas dificuldades. Nessa página, o usuário poderá acessar:

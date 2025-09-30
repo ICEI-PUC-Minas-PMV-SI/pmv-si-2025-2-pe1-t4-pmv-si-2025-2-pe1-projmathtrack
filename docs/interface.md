@@ -47,4 +47,8 @@ Na trilha principal ainda é possível o usuário fazer uma buscar por conteúdo
 
 O userflow na imagem abaixo esquematiza todos os possíveis passos em wireframes de baixa fidelidade.
 
+<img width="12815" height="6218" alt="Image" src="https://github.com/user-attachments/assets/cbbe0229-bddc-45ed-9b02-ff486ecd5901" />
+
+
+
 

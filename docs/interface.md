@@ -44,8 +44,7 @@ Na página “Desempenho”, o site terá um gráfico que irá comparar a evolu�
 Na página “materiais” o usuário também pode acessar os materiais complementares a cada assunto tratado (RF-04), que irá redirecioná-los para páginas externas contendo atividades, leitura, vídeos e etc. 
 
 ![Image](https://github.com/user-attachments/assets/1b3fbf19-9ad4-4f47-b5b9-6ae97f19250f)
-
-Na trilha principal ainda é possível o usuário fazer uma buscar por conteúdos específicos na barra lateral direita (RF-10). 
+ 
 
 O userflow na imagem abaixo esquematiza todos os possíveis passos em wireframes de baixa fidelidade.
 

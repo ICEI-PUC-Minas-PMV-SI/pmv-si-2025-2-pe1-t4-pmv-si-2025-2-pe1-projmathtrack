@@ -28,8 +28,11 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Estudante do Ensino Médio.  | Eu quero identificar os tópicos em que tenho mais dificuldade em matemática e acessar materiais explicativos adaptados, mesmo utilizando apenas meu celular e sem precisar de conhecimentos avançados em tecnologia.          | Para que eu possa estudá-los de forma direcionada e melhorar meu desempenho escolar. |
+|Estudante do Ensino Superior.       | Eu quero melhorar meus conhecimentos em matemática e acompanhar minha evolução em tempo real, mesmo que eu tenha pouco tempo disponível para estudar e precise de uma interface intuitiva que facilite o aprendizado. | Para acompanhar o ritmo da turma e obter aprovação nas disciplinas que exigem base matemática.|
+|Monitor. |Eu quero utilizar uma plataforma com comunicação imediata, mesmo quando o atendimento ocorrer de forma remota ou assíncrona. | Para auxiliar individualmente ou em grupo os estudantes com dúvidas em matemática, registrar essas interações e acompanhar o progresso dos usuários.|
+|Profissional em transição de carreira. | Eu quero praticar e atualizar meus conhecimentos em matemática por meio de exercícios práticos e feedbacks automáticos, mesmo conciliando meus estudos com uma rotina de tempo reduzido e precisando de recursos acessíveis em qualquer dispositivo.| Para me manter competitivo no mercado e conquistar novas oportunidades de trabalho. |
+
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 

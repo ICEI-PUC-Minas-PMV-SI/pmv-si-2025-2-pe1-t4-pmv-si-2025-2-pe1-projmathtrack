@@ -25,6 +25,7 @@ Desenvolver uma plataforma web interativa para avaliação diagnóstica e nivela
 
 Objetivos específicos
 - Desenvolver mecanismos para identificar o nível de conhecimento do usuário em matemática, permitindo avaliação diagnóstica inicial.
+- 
 Propor recomendações personalizadas de materiais de estudo e atividades, de acordo com as dificuldades diagnosticadas.
 Implementar recursos para acompanhar a evolução do aprendizado ao longo do uso da plataforma.
 Projetar e validar uma interface interativa que favoreça a colaboração e a troca de experiências entre usuários. 

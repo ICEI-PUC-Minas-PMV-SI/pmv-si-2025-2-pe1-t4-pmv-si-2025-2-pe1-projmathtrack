@@ -6,7 +6,7 @@
 
 `SEMESTRE: 1º`
 
-O projeto é uma **plataforma educacional de Matemática** focada em personalização e nivelamento. Sua funcionalidade principal é aplicar um teste diagnóstico no primeiro acesso do usuário para mapear suas habilidades e lacunas de conhecimento. Com base nesse diagnóstico, o site deixa de lado a abordagem de conteúdo genérico e passa a oferecer uma rota de aprendizado totalmente adaptativa.
+O projeto é uma plataforma educacional de Matemática focada em personalização e nivelamento. Sua funcionalidade principal é aplicar um teste diagnóstico no primeiro acesso do usuário para mapear suas habilidades e lacunas de conhecimento. Com base nesse diagnóstico, o site deixa de lado a abordagem de conteúdo genérico e passa a oferecer uma rota de aprendizado totalmente adaptativa.
 
 O sistema então gera um plano de estudos direcionado. Ele indica de forma precisa os tópicos que o usuário precisa revisar e estudar para cobrir as deficiências identificadas. Além disso, para garantir a evolução contínua, a plataforma também sugere materiais de aprofundamento nos temas onde o usuário demonstrou maior domínio, tornando o processo de estudo altamente eficiente e otimizado para o progresso individual.
 

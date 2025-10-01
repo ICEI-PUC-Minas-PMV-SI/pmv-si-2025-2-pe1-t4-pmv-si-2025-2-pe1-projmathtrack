@@ -1,30 +1,42 @@
 # Especificações do Projeto
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
+## Perfis de Usuário 
 
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto.
+## Perfil: Estudantes do Ensino Médio
 
-Caso deseje atribuir uma imagem a sua persona, utilize o site https://thispersondoesnotexist.com/
+| **Descrição** | Um estudante do ensino médio em preparação para exames que envolva matemática e busca recursos que o ajudem a revisar e fixar os conteúdos. |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| **Necessidades** | - Identificar quais conteúdos precisa reforçar para ter melhor desempenho nas provas e exames.<br> - Resolver exercícios com correção automática.<br> - Medir sua evolução ao longo do tempo, identificando quais tópicos domina e quais precisa revisar.<br> - Ter uma plataforma de fácil acesso (computador ou celular) e que seja confiável, interativa e motivadora. |
 
-## Personas
+---
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+## Perfil: Estudantes do Ensino Superior
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+| **Descrição** | Estudante do ensino superior recém-ingresso em um curso da área de Computação. Apesar de ter concluído o ensino médio, sente que possui lacunas na base matemática o que prejudica seu desempenho nas disciplinas iniciais da graduação. É motivado, busca melhorar e valoriza ferramentas que facilitem o aprendizado de forma prática e personalizada. |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Necessidades** | - Identificar seu nível de conhecimento em matemática e quais tópicos precisa revisar.<br> - Ter acesso a conteúdo didático objetivo e de fácil compreensão, com exemplos práticos e exercícios interativos.<br> - Realizar testes de forma recorrente para acompanhar sua evolução.<br> - Estudar de forma autônoma, mas com feedback imediato sobre acertos e erros. |
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+---
+
+## Perfil: Monitor
+
+| **Descrição** | Responsável por ajudar estudantes nas disciplinas da Universidade. |
+|---------------|--------------------------------------------------------------------|
+| **Necessidades** | - Utilizar uma plataforma que centralize as dúvidas dos alunos e permita responder de forma rápida e organizada, e que registre a interação com os alunos.<br> - Acompanhar o progresso dos alunos para identificar quais tópicos precisam ser reforçados em plantões de dúvidas.<br> - Ambiente para indicar listas de exercícios, livros e outros materiais. |
+
+---
+
+## Perfil: Profissional em Transição de Carreira
+
+| **Descrição** | Profissional formado em alguma área de conhecimento. Após alguns anos no mercado de trabalho, decidiu realizar uma transição de carreira para a área de computação. Percebe nos seus estudos que a falta de familiaridade e prática com conteúdo matemático dificulta seu aprendizado em cursos de programação. Deseja se atualizar para acompanhar as demandas do mercado e conquistar melhores oportunidades de emprego. |
+|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Necessidades** | - Realizar um diagnóstico inicial que mostre em quais tópicos matemáticos revisar.<br> - Ter acesso a um plano de estudos objetivo, com conteúdos práticos e recomendações de materiais.<br> - Receber feedback imediato sobre seu desempenho para corrigir erros rapidamente.<br> - Estudar de forma flexível, conciliando aprendizado com rotina de trabalho.<br> - Garantir que está adquirindo a base matemática necessária para se sentir seguro em cursos de programação, análise de dados ou áreas correlatas. |
+
+
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+Com base na análise  nos perfis de usuários foram identificadas as seguintes histórias de usuários:
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
@@ -34,18 +46,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Profissional em transição de carreira. | Eu quero praticar e atualizar meus conhecimentos em matemática por meio de exercícios práticos e feedbacks automáticos, mesmo conciliando meus estudos com uma rotina de tempo reduzido e precisando de recursos acessíveis em qualquer dispositivo.| Para me manter competitivo no mercado e conquistar novas oportunidades de trabalho. |
 
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
-
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
 
 ### Requisitos Funcionais
 

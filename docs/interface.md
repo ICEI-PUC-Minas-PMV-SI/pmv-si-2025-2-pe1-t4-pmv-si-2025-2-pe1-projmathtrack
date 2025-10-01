@@ -1,5 +1,5 @@
 
-# Projeto de Interface
+## Projeto de Interface
 O design de interface do site foi projetado a fim de proporcionar ao usuário uma interação intuitiva e ágil entre as páginas e suas funcionalidades, de modo que, por meio de uma página principal, seja possível acessar todas as demais páginas e funções do site. Para construção dos wireframes utilizamos a plataforma whimsical. 
 
 Ao acessar a página principal do site, o usuário deverá fazer login ou criar uma conta (RF-01), sendo possível também recuperar a senha caso tenha sido perdida ou esquecida (RF-08).

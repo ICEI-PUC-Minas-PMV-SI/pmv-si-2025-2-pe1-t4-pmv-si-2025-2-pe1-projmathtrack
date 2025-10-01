@@ -1,52 +1,41 @@
 # Introdução
 
-O setor de tecnologia e computação apresenta um crescimento significativo nos últimos anos, com um percentual médio de 11,9% em 2023 [1], sendo acompanhado por uma maior demanda de profissionais para a área bem como uma maior exigência quanto à formação e capacitação destes. Paradoxalmente, segundo o estudo do Google for Startups [2], o Brasil enfrenta uma escassez de 530 mil profissionais na área de T.I. Essa escassez deve-se a diversos fatores, dentre os quais se destaca a etapa universitária, especificamente a evasão nos cursos de T.I. que, segundo Lopes [3], corresponde à 29,91%. Ainda segundo os autores, em uma análise de 53% dos trabalhos revisados, o baixo desempenho acadêmico e reprovações são a causa principal das evasões. Chen e Soldner [4] mostram que 56% dos alunos matriculados no primeiro ano dos cursos de ciências e tecnologia trocaram de curso durante os primeiros seis anos e que o mal desempenho durante o início do percurso induz na decisão de abandoná-lo.
-A matemática é atribuída como uma das razões do baixo desempenho e abandono, apesar de ser uma disciplina fundamental na formação básica e superior. Nos cursos relacionados à Computação, observamos que essa está presente desde o primeiro período até em etapas posteriores, apresentando-se em diferentes formas, diretamente ou indiretamente. Em Sistemas de Informação, por exemplo, a matemática é abordada em disciplinas como Lógica, Cálculo I e II, Estatística e Probabilidade, Teoria dos Grafos e etc, e, também, em outros cursos de computação, como Engenharia de Software, Ciência da Computação, Engenharia da Computação etc.
-Entretanto, apesar da presença contínua desde a formação básica, apenas 5,2% dos concluintes do ensino médio apresentam um desempenho satisfatório em matemática [5] e no ensino superior constata-se um alto índice de reprovação e evasão devido às dificuldades em matemática. Morães e Pombeiro [6] identificaram, por meio da aplicação de um questionário entre estudantes, formados, desistentes e trancados, que, nos cursos de Computação de Curitiba e região Metropolitana, 18% apresentavam dificuldades em matemática, 71% apontaram como desestimulante as matérias relacionadas a matemática.  
-Pazeto e Prietch [7] identificaram um elevado índice de reprovação nas disciplinas ligadas à matemática no curso de licenciatura plena em Informática na UFMT, conforme a tabela 1 retirada do estudo. 
+O setor de tecnologia da informação é um dos que mais cresce no Brasil e no mundo, sendo um ponto estratégico para o desenvolvimento econômico e social. Em 2023, o crescimento médio foi de 11,9%[1] o que ampliou a demanda de profissionais qualificados. Entretanto, o Brasil apresentou um déficit de 530 mil profissionais do setor[2]. Dentro dos diversos fatores que influenciam essa escassez, destaca-se a evasão dos estudantes durante a formação ainda nos períodos iniciais, refletindo uma taxa de evasão de 29,91%[3].
+Um dos principais fatores que explicam esse cenário é a dificuldade persistente dos estudantes em matemática, disciplina presente desde o primeiro período até etapas mais avançadas da formação em computação. Apesar da presença contínua desta matéria na vida dos estudantes, somente 5,2% dos concluintes do ensino médio apresentaram um desempenho satisfatório em matemática [5]. Este cenário pode acarretar baixo desempenho acadêmico no ensino superior e aumentar o índice de reprovações, tornando-se um dos principais motivos de evasão [3]. Pazeto e Prietch[7] realizaram um estudo onde identificaram um elevado índice de reprovação nas disciplinas relacionadas à matemática no curso de licenciatura plena em Informática da UFTM (Tabela 1). 
+Esses dados salientam que o baixo desempenho durante o início do percurso pode influenciar o estudante a decisão de abandono, sendo que esse fenômeno reflete uma taxa de 56% de troca do curso entre os alunos matriculados nas áreas de computação em um período de um ano à seis anos[4]. 
+Ademais, pesquisas regionais, realizadas em Curitiba e sua respectiva região metropolitana, reforçam essa tendência [6]. A análise em questão identificou que 18% dos estudantes com a matrícula vigente, formandos, desistentes ou que trancaram a matrícula, apresentavam lacunas de aprendizagem em matemática. Além disso, 71% dos dicentes apontaram como desestimulantes as matérias relacionadas à matemática. 
 
 Tabela 1: Reprovações por disciplina - Licenciatura em Informática (UFMT)
 ![Image](https://github.com/user-attachments/assets/9b6d20e0-389e-4763-8cc0-abf37bfc3cf5)
  
 Fonte: Pazeto e Prietch [6]
 
-Ainda, de acordo com Hoed [8], a alta taxa de reprovação nas disciplinas de cálculo I e Algoritmos contribuem para o abandono discente nos cursos de computação na Universidade de Brasília (UnB), com picos no terceiro e quarto período, tendo como motivação a falta de domínio de conceitos do ensino médio. 
-Portanto, constata-se que desempenho em matemática se relaciona com a evasão nos cursos de computação. Faz-se, então, necessário pensar em estratégias que possibilitem o aprimoramento dos discentes às disciplinas vinculadas a essa área do conhecimento.  
+Esse quadro não se limita a um contexto isolado, mas aparece de forma recorrente em estudos conduzidos em diferentes regiões do país. Por meio de sua pesquisa, Hord[8] reforça essa relação entre dificuldades em matemática e evasão nos cursos de computação. O autor aponta que devido a alta taxa de reprovação nas disciplinas de Cálculo I e Algoritmos contribuíram para o abandono discente nos cursos de computação da Universidade de Brasília (UnB), com picos no terceiro e quarto período, tendo como principal motivação a falta de domínio de conceitos do ensino médio. Dessa forma, evidencia-se que o desempenho insatisfatório em matemática não apenas compromete a trajetória acadêmica individual, mas também afeta a formação de profissionais em um setor estratégico para o país. Torna-se, assim, indispensável o desenvolvimento de estratégias que consolidam o conhecimento em matemática, promovendo não apenas a diminuição das reprovações, mas também a continuidade e o sucesso acadêmico dos estudantes.
 
 ## Problema
 
-A suplantação das dificuldades em matemática dificilmente pode ser conduzida apenas pelo docente de uma disciplina, sem que haja comprometimento da ementa e cronograma. Já em estudos autônomos, realizados por autodidatas ou curiosos, observa-se a ausência de mecanismos que permitam avaliar com precisão o progresso alcançado. Nesse contexto, o seguinte problema se faz relevante: como desenvolver uma solução que auxilie estudantes de diferentes níveis — do ensino básico à graduação — e também profissionais em processo de aperfeiçoamento, a identificar e sanar suas lacunas em matemática e acompanhar seu desenvolvimento, facilitando a transição e o aprimoramento em áreas, especialmente a computação, que exigem uma base sólida nessa disciplina?
+As dificuldades encontradas durante o aprendizado em matemática não se restringem apenas ao âmbito individual, mas também assumem uma dimensão social. Isso se deve ao comprometimento do aluno durante o acesso à educação superior, atingindo o futuro de milhares de discentes e profissionais, além de agravar a escassez de mão de obra em um setor estratégico do país. 
+Atualmente existem diversas iniciativas voltadas ao ensino e nivelamento em matemática de forma digital como a , contudo muitas delas não atendem de forma adequada às necessidades dos usuários, carecendo de mecanismos eficazes de acompanhamento individualizado e adaptação ao contexto educacional brasileiro. 
+Essa realidade evidencia a necessidade de investigar novas soluções tecnológicas, capazes de oferecer apoio personalizado, diagnosticar lacunas de aprendizagem, avaliar a evolução em tempo real do estudante e  e atender à diversidade de perfis estudantis.
 
 ## Objetivos
 
 Objetivo Geral 
-Desenvolver, a partir de uma aplicação front-end, uma plataforma interativa para diagnóstico e nivelamento em matemática, voltada para estudantes e outros interessados. 
+Desenvolver uma plataforma web interativa para avaliação diagnóstica e nivelamento em matemática, que permita identificar lacunas de aprendizagem, acompanhar o progresso dos usuários e contribuir para a redução das dificuldades que levam à evasão e reprovação em cursos de computação e áreas que possuem como requisito um melhor desempenho na matéria de matemática. 
 
 Objetivos específicos
-Identificar o nível de conhecimento do usuário.
-Recomendar materiais de estudo e atividades para suprir as dificuldades.
-Acompanhar o progresso de aprendizado.
-Interação entre usuários em uma interface dinâmica e colaborativa. 
+Desenvolver mecanismos para identificar o nível de conhecimento do usuário em matemática, permitindo avaliação diagnóstica inicial.
+Propor recomendações personalizadas de materiais de estudo e atividades, de acordo com as dificuldades diagnosticadas.
+Implementar recursos para acompanhar a evolução do aprendizado ao longo do uso da plataforma.
+Projetar e validar uma interface interativa que favoreça a colaboração e a troca de experiências entre usuários. 
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A matemática assume papel central na formação do profissional de Tecnologia da Informação, pois constitui o alicerce essencial para a compreensão e modelagem de processos computacionais. Entretanto, as dificuldades relacionadas a essa área do conhecimento acompanham os estudantes desde a formação básica e persistem durante o percurso acadêmico, resultando em reprovações, evasões e comprometimento da formação profissional. Esse cenário evidencia a relevância de propor estratégias que reduzam os déficits de conhecimento em matemática, contribuindo não apenas para o desempenho individual, mas também para a formação de profissionais em um setor estratégico.
+Com esse propósito, o presente projeto propõe o desenvolvimento de uma aplicação web interativa voltada para avaliação diagnóstica e nivelamento em matemática. A solução tem como função identificar lacunas de aprendizagem, recomendar atividades personalizadas e acompanhar o progresso do usuário, além de favorecer a interação em ambiente colaborativo. Seu público-alvo abrange estudantes da educação básica, universitários e profissionais em processo de aperfeiçoamento, que necessitam fortalecer suas competências matemáticas para prosseguir em seus estudos ou em suas trajetórias profissionais.
+A proposta fundamenta-se em pesquisas que destacam o impacto positivo de atividades de nivelamento em matemática, bem como indicam que estudantes que participaram dessas iniciativas obtiveram melhor rendimento acadêmico e maior permanência nos cursos em comparação com aqueles que não participaram [9, 10]. Essa base acadêmica, aliada ao contexto mercadológico que aponta um déficit significativo de profissionais qualificados em TI, reforça a pertinência da iniciativa.
 
-Lembre-se de pesquisar e utilizar números que justifiquem por que é importante que tal problema seja resolvido ou que mostrem o impacto do problema na vida das pessoas.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+O público-alvo é constituído por discentes que estão ingressando ou se encontram nas fases iniciais de cursos de graduação nas áreas de Computação e Ciências Exatas, estudantes do ensino básico e profissionais em busca de apurar seus conhecimentos em matemática. Esses grupos assumem a característica semelhante de almejam um nivelamento de suas competências, demandando, assim, uma solução que os ajude a diagnosticar suas deficiências e a otimizar seu processo de aprendizado.

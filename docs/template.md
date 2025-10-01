@@ -1,23 +1,11 @@
 # Template padrão do site
 
-Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia. 
-
 O layout padrão do site, que será utilizado em todas as páginas, foi projetado para oferecer ao usuário uma experiência visual simples e rápida de interpretar. No cabeçalho comum a todas as páginas, encontra-se no lado lateral esquerdo a logo principal que consiste apenas no nome site, já na lateral direita encontra-se a opção de "configuração" disposta  com um ícone de ferramenta para indicar o sentido da funcionalidade ao usuário. O layout da página foi dividido em três colunas (side, conteúdo central e rightbar) a fim de ter uma separação clara entre cada área, e para que, cada uma essas áreas, possibilite o usuário a utilização de diferentes funções. 
-
-A página principal (a trilha de aprendizado) possui no seu conteúdo central um menu padrão em que cada botão contém um nome indicando a página em que dá acesso. Os botões possuem formas arredondadas (5px) e uma cor roxa azulada
-
-Explique as guias de estilo utilizadas no seu projeto.
-
-
 
 ## Design
 
 Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo do sistema. Defina os menus padrões, entre outras coisas.
-O layout padrão do site, que será utilizado em todas as páginas, foi projetado para oferecer ao usuário uma experiência visual simples e rápida de interpretar. No cabeçalho - comum a todas as páginas - encontra-se no lado lateral esquerdo a logo principal que consiste apenas no nome site, já na lateral direita encontra-se a opção de "configuração" disposta  com um ícone de ferramenta para indicar o sentido da funcionalidade ao usuário. O layout da página foi organizado em três colunas (sidebar, conteúdo central e rightbar) a fim de ter uma separação clara entre cada área, e para que, cada uma essas áreas, possibilite o usuário a utilização de diferentes funções enquanto navega pelas interfaces. 
-
-![Image](https://github.com/user-attachments/assets/1330658a-5ecf-4a26-869b-29097a8e5ac8)
-
-A página principal (a trilha de aprendizado) possui no seu conteúdo central um menu padrão em que cada botão contém um nome indicando a página em que dá acesso. Os botões possuem formas arredondadas (5px) e uma cor roxa azulada
+O layout padrão do site, que será utilizado em todas as páginas, foi projetado para oferecer ao usuário uma experiência visual simples e rápida de interpretar. No cabeçalho - comum a todas as páginas - encontra-se no lado lateral esquerdo a logo principal que consiste apenas no nome site, já na lateral direita encontra-se a opção de "configuração" disposta  com um ícone de ferramenta para indicar o sentido da funcionalidade ao usuário. O layout da página será organizado em três colunas (sidebar, conteúdo central e rightbar) a fim de ter uma separação clara entre cada área, e para que, cada uma essas áreas, possibilite o usuário a utilização de diferentes funções enquanto navega pelas interfaces. 
 
 ## Cores
 

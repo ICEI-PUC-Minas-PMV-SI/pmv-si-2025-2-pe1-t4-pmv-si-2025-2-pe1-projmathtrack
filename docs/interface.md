@@ -48,7 +48,7 @@ Na página “materiais” o usuário também pode acessar os materiais compleme
 
 O userflow na imagem abaixo esquematiza todos os possíveis passos em wireframes de baixa fidelidade.
 
-<img width="12815" height="6218" alt="Image" src="https://github.com/user-attachments/assets/cbbe0229-bddc-45ed-9b02-ff486ecd5901" />
+<img width="12815" height="6218" alt="Image" src="https://github.com/user-attachments/assets/e2b6324a-3f4d-4e9d-b0fd-e91721a83cca" />
 
 
 

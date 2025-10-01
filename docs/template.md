@@ -3,6 +3,8 @@
 Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
 
 Explique as guias de estilo utilizadas no seu projeto.
+![Image](https://github.com/user-attachments/assets/1330658a-5ecf-4a26-869b-29097a8e5ac8)
+
 
 ## Design
 

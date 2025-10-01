@@ -1,19 +1,11 @@
 # Referências
-
-Inclua todas as referências (livros, artigos, sites, etc) utilizadas no desenvolvimento do trabalho.
-
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/referencias/)
-
-Exemplos de referências bibliográficas:
-
-**[1]** - _ELMASRI, Ramez; NAVATHE, Sham. **Sistemas de banco de dados**. 7. ed. São Paulo: Pearson, c2019. E-book. ISBN 9788543025001._
-
-**[2]** - _COPPIN, Ben. **Inteligência artificial**. Rio de Janeiro, RJ: LTC, c2010. E-book. ISBN 978-85-216-2936-8._
-
-**[3]** - _CORMEN, Thomas H. et al. **Algoritmos: teoria e prática**. Rio de Janeiro, RJ: Elsevier, Campus, c2012. xvi, 926 p. ISBN 9788535236996._
-
-**[4]** - _SUTHERLAND, Jeffrey Victor. **Scrum: a arte de fazer o dobro do trabalho na metade do tempo**. 2. ed. rev. São Paulo, SP: Leya, 2016. 236, [4] p. ISBN 9788544104514._
-
-**[5]** - _RUSSELL, Stuart J.; NORVIG, Peter. **Inteligência artificial**. Rio de Janeiro: Elsevier, c2013. xxi, 988 p. ISBN 9788535237016._
-
+**[1]** BRASSCOM. Relatório setorial 2023 macrossetor de TIC. São Paulo: BRASSCOM, 2023. Disponível em: https://www.brasscom.org.br.
+**[2]** GOOGLE FOR STARTUPS. Panorama de Talentos em tecnologia. São Paulo: Google for Startups, 2023. Disponível em: https://www.campus.co/br/. Acesso em: 31 ago. 2025.
+**[3]** Lopes da Silva Garcia, L. M., & Raquel Salcedo Gomes. (2022). Causas da evasão em cursos de ciências exatas: uma revisão da produção acadêmica. Revista Educar Mais, 6, 937–957. https://doi.org/10.15536/reducarmais.6.2022.2970
+**[4]** Chen, Xianglei; Soldner, Matthew. 2013. “STEM Attrition: College Students’ Paths Into and Out of STEM Fields”. National Center for Education Statistics, Institute of Education Sciences, U.S. Department of Education.
+**[5]** TODOS PELA EDUCAÇÃO. Aprendizagem na educação básica: situação brasileira no pós-pandemia. São Paulo: Todos Pela Educação, 2025. Disponível em:https://todospelaeducacao.org.br/. Acesso em: 31 ago. 2025.  
+**[6]** MORÂES, Martin Jose Fagonde. POMBEIRO, Orlei José Pombeiro. Evasão nos cursos de graduação em Computação de Curitiba. Anais do EVINCI-UniBrasil 1, 4 (2015), 2088–2103
+**[7]** PRIETCH, Soraia Silva and PAZETO, Tatiana Annoni. Estudo sobre a evasão em um curso de licenciatura em informática e considerações para melhorias. In Workshop de Educação em Informática Bahia-Alagoas-Sergipe (WEIBASE), Maceió/AL, 2010. 21, 22, 23, 24
+**[8]** HOED, Raphael Magalhães Análise da evasão em cursos superiores: o caso da evasão em cursos superiores da área de Computação / Raphael Magalhães Hoed; orientador Marcelo Ladeira. - Brasília, 2016. 188 p.
+**[9]** SILVA, Alícia Caroline de Lima. CAIRES, Diana Maria Pereira. LOZ, Mariana Karla Guedes. FREITAS, Gabriel de Carvalho. SANTOS, Roberto Barbosa dos. O impacto do curso de nivelamento no desempenho em cálculo 1 de recém-ingressos no curso de engenharia civil da Universidade Federal de Alagoas. In: XLVIII Congresso Brasileiro de Educação em Engenharia e III Simpósio Internacional de Educação em Engenharia da ABENGE, Online. Disponivel em: <https://www.abenge.org.br/transfer.php/?arquivo=../dados/COBENGE20/COBENGE20_00152_00003223.pdf>. Acesso em: 06. Set.2025..
+**[10]** RODRIGUES, Nilton Rodolfo N.M; SILVA, Anderson de França. OLIVEIRA, Rodrigo M.S. RODRIGUES, Alexandre Guimarães. SOUZA, Alessandra Macedo de. LOPES, Jocy Maciel. SOARES, Rosana P.O. TOSTES, Maria Emília de lima. Alunos ingressantes nas engenharias e a aprendizagem básica em matemática. In: CONGRESSO BRASILEIRO DE EDUCAÇÃO EM ENGENHARIA, 40., 2012, Belém. Anais... Belém: ABENGE, 2012. Disponível em: < https://www.abenge.org.br/cobenge/legado/arquivos/7/artigos/104351.pdf >. Acesso em: 06. Set.2025.

@@ -69,44 +69,16 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve permitir que o usuário realize um cadastro/login na plataforma. | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| O sistema deve funcionar de maneira rápida e responsiva.O sistema deve funcionar de maneira rápida e responsiva. | Alta | 
+|RNF-002| O sistema deve ser fácil de navegar, com uma interface intuitiva. |  Alta | 
+|RNF-003| O sistema deve ser compatível com dispositivos móveis, tablets e desktops, adaptando-se a diferentes tamanhos de tela. | Alta | 
+|RNF-004| O sistema deve estar disponível 24 horas por dia, 7 dias por semana. |  Média | 
+|RNF-005| O sistema deve armazenar os dados dos usuários, incluindo seu desempenho e progresso, devem ser armazenados de forma segura e privada.  | Alta | 
+|RNF-006| O sistema deve ser compatível com os navegadores de internet mais utilizados. |  Alta | 
+|RNF-007| O sistema deve ser escalável para suportar picos de acesso. | Média | 
+|RNF-008| O sistema deve ser acessível para pessoas com deficiência visual (daltonismo). |  Média | 
+|RNF-009| O sistema deve possuir rotinas de backup diárias e automáticas. | Média | 
+|RNF-010| O sistema deve ser de fácil manutenção e bem documentado.|  Baixa | 
+|RNF-011| O sistema deve respeitar as leis de direitos autorais em seu conteúdo educacional. |  Alta | 
+|RNF-012| Os dados dos usuários devem ser íntegros e consistentes.|  Alta | 
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-
-## Restrições
-
-O projeto está restrito pelos itens apresentados na tabela a seguir.
-
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)

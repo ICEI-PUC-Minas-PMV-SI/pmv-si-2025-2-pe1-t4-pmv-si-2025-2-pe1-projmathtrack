@@ -1,66 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado</title>
-    <link rel="stylesheet" href="resultado.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MathTrack — resultado</title>
+
+    <!-- Estilo da Página:
+   Tem que colocar CSS da Página, Navbar, Footer e Bse -->
+    <link rel="stylesheet" href="/src/styles/Base.css" />
+    <link rel="stylesheet" href="/src/styles/pages/resultado.css" />
+    <link rel="stylesheet" href="/src/styles/components/navbar.css">
+    <link rel="stylesheet" href="/src/styles/components/footer.css" />
+
+    <!-- Aqui incluímos o Navbar-->
+    <div data-include="/src/components/navbar.html"></div>
 </head>
 <body>
-    <header class="navbar">
-        <div class="nav-container">
-        <!-- Componentes Navbar --
-         Logo -->
-        <a href="/" class="logo">
-      <img src="/assets/logo.svg" alt="Logo da MathTrack" />
-      <span>MathTrack <small></small></span>
-        </a>
-
-        <!-- Menu Principal -->
-        <nav class="nav-menu" aria-label="Navegação principal">
-            <ul>
-                <li><a href="/Paginas/teste.html">Fazer o teste</a></li>
-
-            <li class="dropdown">
-            <details>
-                <summary>Conteúdos</summary>
-                <ul class="submenu">
-                    <li><a href="/Paginas/cursos.html">Cursos</a></li>
-                    <li><a href="/Paginas/portfolios.html">Portfólios</a></li>
-                    <li><a href="/Paginas/videos.html">Vídeos</a></li>
-                </ul>
-            </details>
-            </li>
-
-            <li><a href="/Paginas/comunidade.html">Comunidade</a></li>
-
-            <li class="dropdown">
-                <details>
-                    <summary>O Projeto</summary>
-                    <ul class="submenu">
-                        <li><a href="/Paginas/sobre.html">Sobre</a></li>
-                        <li><a href="/Paginas/equipe.html">Equipe</a></li>
-                        <li><a href="/Paginas/contato.html">Contato</a></li>
-                    </ul>
-                </details>
-            </li>
-
-            <li>
-                <button class="search-btn" aria-label="Pesquisar">🔍</button>
-            </li>
-            </ul>
-        </nav>
-
-            <!-- Ações --
-            Login e cadastro -->
-        <div class="actions">
-            <a href="/Paginas/login.html" class="login-link">Entrar</a>
-            <a href="/Paginas/cadastro.html" class="btn-primary">Cadastre-se</a>
-        </div>
-    </div>
-    </header>
-
-    <main> 
+       <main> 
         <div class="resultado">
             <h4>Resultado do Teste:</h4>
             <p class="nivel">Básico</p>
@@ -79,40 +35,19 @@
         </div>
 
         <div class="botoes">
-            <a href="relatorio.html"> <button class="relatorio">Emitir relatório completo</button> </a>
-            <a href="iniciar.html"> <button class="iniciar">Ir para trilha de aprendizado</button> </a>
+            <a href="\src\pages\historico.html"> <button class="relatorio">Emitir relatório completo</button> </a>
+            <a href="\src\pages\trilha-de-aprendizado.html"> <button class="iniciar">Ir para trilha de aprendizado</button> </a>
             <br>
         </div>
         </div>
     </main>
 
-    <footer class="footer">
-    <div class="container footer-content">
-        <div class="footer-logo">
-            <a href="/" class="logo">
-                <img src="/assets/logo.svg" alt="Logo da MathTrack" />
-                <h3>MathTrack</h3>
-                <p>Aprendizado inteligente e acessível, onde quer que você esteja.</p>
-        </div>
 
+    <!-- Aqui é para colocar o Footer-->
+    <div data-include="/src/components/footer.html"></div>
 
-        <nav class="footer-nav">
-            <h4>Links</h4>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Fórum</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-
-    </div>
-
-    <div class="footer-bottom">
-        <p>© 2025 MathTrack — Todos os direitos reservados.</p>
-    </div>
-</footer>
-
+    <!-- JS para incluir a Navbar e o Footer -->
+    <script type="module" src="/src/Scripts/incluir-partes.js"></script>
 
 </body>
 </html>

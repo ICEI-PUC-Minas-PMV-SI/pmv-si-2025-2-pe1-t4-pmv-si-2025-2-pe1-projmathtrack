@@ -1,48 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MathTrack — criar-conta</title>
+    <title>MathTrack — cadastrar
+        
+    </title>
 
     <!-- Estilo da Página:
    Tem que colocar CSS da Página, Navbar, Footer e Bse -->
     <link rel="stylesheet" href="/src/styles/Base.css" />
-    <link rel="stylesheet" href="/src/styles/pages/criar-conta.css" />
+    <link rel="stylesheet" href="/src/styles/pages/login.css" />
     <link rel="stylesheet" href="/src/styles/components/navbar.css">
     <link rel="stylesheet" href="/src/styles/components/footer.css" />
 
     <!-- Aqui incluímos o Navbar-->
     <div data-include="/src/components/navbar.html"></div>
 </head>
-
 <body>
     <div class="container">
         <div class="main-content">
-            <div class="title">
-                <h1>Criar conta</h1>
+            <div class="welcome-title">
+                <h1><span class="bold">Bem-vindo</span> <span class="normal">ao</span> <span class="bold">MathTrack!</span></h1>
             </div>
-
-            <div class="form">
-                <input type="text" placeholder="Nome:" class="input-field">
-                <input type="date" placeholder="Data de nascimento:" class="input-field">
-                <input type="tel" placeholder="Celular:" class="input-field">
+            <div class="login-form">
                 <input type="email" placeholder="Email:" class="input-field">
-                <input type="email" placeholder="Confirmar email:" class="input-field">
                 <input type="password" placeholder="Senha:" class="input-field">
-
-                <a href="\src\pages\login.html" class="btn">Criar conta</a>
+                
+                <a href="\src\pages\formulario.html" class="btn btn-primary">Entrar</a>
+                <a href="\src\pages\recuperar-senha.html" class="btn btn-secondary">Esqueci minha senha</a>
+                <a href="\src\pages\criar-conta.html" class="btn btn-secondary">Novo por aqui? Criar conta</a>
             </div>
         </div>
     </div>
-</main>
-    <!-- Aqui é para colocar o Footer-->
+        <!-- Aqui é para colocar o Footer-->
     <div data-include="/src/components/footer.html"></div>
 
     <!-- JS para incluir a Navbar e o Footer -->
     <script type="module" src="/src/Scripts/incluir-partes.js"></script>
-
 </body>
-
 </html>

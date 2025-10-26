@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathTrack - Redefinir Senha</title>
-    <link rel="stylesheet" href="../estilos/redefinir-senha.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MathTrack — conteudo</title>
+
+    <!-- Estilo da Página:
+   Tem que colocar CSS da Página, Navbar, Footer e Bse -->
+    <link rel="stylesheet" href="/src/styles/Base.css" />
+    <link rel="stylesheet" href="/src/styles/pages/redefinir-senha.css" />
+    <link rel="stylesheet" href="/src/styles/components/navbar.css">
+    <link rel="stylesheet" href="/src/styles/components/footer.css" />
+
+    <!-- Aqui incluímos o Navbar-->
+    <div data-include="/src/components/navbar.html"></div>
 </head>
 <body>
     <div class="container">
@@ -20,5 +29,10 @@
             </div>
         </div>
     </div>
+    <!-- Aqui é para colocar o Footer-->
+    <div data-include="/src/components/footer.html"></div>
+
+    <!-- JS para incluir a Navbar e o Footer -->
+    <script type="module" src="/src/Scripts/incluir-partes.js"></script>
 </body>
 </html>

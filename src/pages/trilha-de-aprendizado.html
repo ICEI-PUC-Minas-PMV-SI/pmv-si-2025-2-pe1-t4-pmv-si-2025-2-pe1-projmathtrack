@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Trilha</title>
-        <link rel="stylesheet" href="trilha.css">
-        <link rel="stylesheet" href="/src/Estilos/Home.css" />
-        <link rel="stylesheet" href="/src/Componentes/navbar.css">
-        <div data-include="/src/Componentes/navbar.html"></div>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MathTrack — Trilha de aprendizado</title>
 
-    </head>
+    <!-- Estilo da Página:
+   Tem que colocar CSS da Página, Navbar, Footer e Bse -->
+    <link rel="stylesheet" href="/src/styles/Base.css" />
+    <link rel="stylesheet" href="/src/styles/pages/trilha.css" />
+    <link rel="stylesheet" href="/src/styles/components/navbar.css">
+    <link rel="stylesheet" href="/src/styles/components/footer.css" />
+
+    <!-- Aqui incluímos o Navbar-->
+    <div data-include="/src/components/navbar.html"></div>
+</head>
 
 
     <body>
-        <header>
-        <h1 class="trilha">Trilha de Aprendizado</h1>
-        <p> Esta seção apresenta a trilha de aprenziado do curso de Nivelamento em Matemática.
-            <br>
-            Acompanhe cada etapa do seu progresso, acesse os módulos e materiais, veja como você evolui em cada módulo, participe dos fóruns e descubra seus pontos fortes e desafios. A Trilha de Aprendizagem é o seu mapa para acessar as funcionalidades do site e alcançar novos níveis de conhecimento e conquistar seus objetivos.
-        </p>
-        </header>  
-
-        <br> 
-        <br>
-
-        <br>
-        <br> 
-
+ 
         <div class="container">
             <div class="modulos"> 
                 <div class="modulo">
@@ -40,9 +32,7 @@
                         <br>
                         <br>
                 </div>
-                <br>
-                <br>
-
+               
                 <div class="modulo">
                     <a href="modulo2.html"> <h3>Módulo 2</h3> </a>
                     <p>Sistema de Equações</p>
@@ -52,8 +42,7 @@
                          <span class="texto-progresso">0</span>
                         </div>
                 </div>
-                <br>
-                <br>
+
 
                 <div class="modulo">
                     <a href="modulo2.html"> <h3>Módulo 3</h3> </a>
@@ -64,8 +53,7 @@
                          <span class="texto-progresso">0</span>
                         </div>
                 </div>
-                <br> 
-                <br>
+
             </div>
 
             <div class="ranking">
@@ -80,10 +68,7 @@
                     <p> Unidade: </p>
                 </div>
 
-                <br> 
-                <br> 
-
-                <div class="continuar-modulo"> 
+                 <div class="continuar-modulo"> 
                     <h3> Módulo: </h3>
                     <p>Unidade: </p>
                 </div>
@@ -128,6 +113,10 @@
         </div>
 
     </body>
+    
+    <!-- Aqui é para colocar o Footer-->
+    <div data-include="/src/components/footer.html"></div>
 
+    <!-- JS para incluir a Navbar e o Footer -->
     <script type="module" src="/src/Scripts/incluir-partes.js"></script>
 </html>

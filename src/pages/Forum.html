@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MathTrack — Fórum</title>
 
-    <!-- Estilo da Página:
+  <!-- Estilo da Página:
    Tem que colocar CSS da Página, Navbar, Footer e Bse -->
   <link rel="stylesheet" href="/src/styles/Base.css" />
   <link rel="stylesheet" href="/src/styles/pages/Forum.css" />
@@ -21,7 +21,7 @@
 <body>
   <main class="forum-layout container">
 
- <!-- Sidebar com Menu e Filtro -->
+    <!-- Sidebar com Menu e Filtro -->
     <aside class="sidebar" aria-label="Navegação do fórum">
       <nav class="side-nav">
         <a class="side-link is-active" href="#">Home</a>
@@ -52,7 +52,7 @@
       </header>
 
       <!-- Card 1 -->
-      <article class="thread-card">
+      <article class="thread-card" id="thread-1">
         <header class="thread-head">
           <h2 class="thread-title">Representação gráfica </h2>
           <div class="thread-tags">
@@ -74,17 +74,23 @@
         </div>
 
         <p class="thread-body">
-          Pessoal, estou com uma dúvida sobre como fazer representação gráfica de retas e coeficiente angular. Teriam dicas ou macetes para fazer os graficos de uma forma que eu fixe o conteúdo?
+          Pessoal, estou com uma dúvida sobre como fazer representação gráfica de retas e coeficiente angular. Teriam
+          dicas ou macetes para fazer os graficos de uma forma que eu fixe o conteúdo?
         </p>
 
         <footer class="thread-foot">
           <a class="btn btn--ghost" href="#">Responder</a>
-          <a class="btn-link" href="#">Ver tópico</a>
-          <div class="facepile" aria-label="Participantes">
-          </div>
+
+          <!-- era <a class="btn-link" href="#">Ver tópico</a> -->
+          <button type="button" class="btn-link thread-open" data-thread-id="thread-1">
+            Ver tópico
+          </button>
+
+          <div class="facepile" aria-label="Participantes"></div>
         </footer>
       </article>
-      
+      </article>
+
     </section>
   </main>
 
@@ -94,7 +100,9 @@
 
   <!-- JS para incluir a Navbar e o Footer -->
   <script type="module" src="/src/Scripts/incluir-partes.js"></script>
-</body>
+  
+  <!-- Script botão Ver Topico  -->
+  <script type="module" src="/src/scripts/forum-view.js"></script>
 </body>
 
 </html>

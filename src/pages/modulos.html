@@ -1,159 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MathTrack — modulos</title>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="../styles/pages/modulos.css">
+    <link rel="stylesheet" href="/src/styles/Base.css" />
+    <link rel="stylesheet" href="/src/styles/pages/modulos.css" />
+    <link rel="stylesheet" href="/src/styles/components/navbar.css">
+    <link rel="stylesheet" href="/src/styles/components/footer.css" />
 
-    </head>
+    <div data-include="/src/components/navbar.html"></div>
+</head>
 
 <body>
-    
-    <header>
-        <h1 class="moduloss">Módulos</h1>
-        <p> Esta seção apresenta os módulos do curso de Nivelamento em Matemática.
-            Cada módulo foi desenvolvido para revisar conceitos fundamentais e preparar você para os conteúdos mais avançados.
-            Explore os temas, siga a sequência recomendada e fortaleça sua base matemática.
-        </p>
-        </header>  
+    <header> <h1 class="moduloss">Módulos</h1> <p> Esta seção apresenta os módulos do curso de Nivelamento em Matemática. Cada módulo foi desenvolvido para revisar conceitos fundamentais e preparar você para os conteúdos mais avançados. Explore os temas, siga a sequência recomendada e fortaleça sua base matemática. </p> </header>
+<main>
+  <section class="pesquisar">
+    <input class="pesquisar" type="text" placeholder="Pesquisar">
+    <button class="botao2">Buscar</button>
+  </section>
 
-        <br> 
-        <br>
+  <article class="selecione-o-modulo">
+    <h3>Selecione o módulo</h3>
+  </article>
 
-        <section class="pesquisar">
-            <input class="pesquisar" type="text" placeholder="Pesquisar">
-            <br>
-            <br>
-            <button class="botao2">Buscar</button>
-        </section>   
+  <div class="container">
+    <div class="box">
+      <button class="botao1">Módulo 1</button>
+      <p>Conteúdo: Equação do Primeiro grau</p>
+      <p>Nível: Básico</p>
+      <p>Pré-requisito: nenhum</p>
+    </div>
 
-        <br> 
-        <br>
+    <div class="box">
+      <button class="botao1">Módulo 2</button>
+      <p>Conteúdo: Sistemas de Equação</p>
+      <p>Nível: Básico</p>
+      <p>Pré-requisito: Módulo 1</p>
+    </div>
 
-        <article class="selecione-o-modulo">
-            <h3> Selecione o módulo </h3>
-            <br>
-            <br>
-        </article>
+    <div class="box">
+      <button class="botao1">Módulo 3</button>
+      <p>Conteúdo: Equação do Segundo grau</p>
+      <p>Nível: Básico</p>
+      <p>Pré-requisito: Módulo 1</p>
+    </div>
 
+    <div class="box">
+      <button class="botao1">Módulo 4</button>
+      <p>Conteúdo: Potência e Radiciação</p>
+      <p>Nível: Básico</p>
+      <p>Pré-requisito: nenhum</p>
+    </div>
 
-    <div class="container">
+    <div class="box">
+      <button class="botao1">Módulo 5</button>
+      <p>Conteúdo: Polinômios e fatoração</p>
+      <p>Nível: Intermediário</p>
+      <p>Pré-requisito: Módulo 1, Módulo 2, Módulo 3 e Módulo 4</p>
+    </div>
 
-        <br>
-        <br> 
-        <div class="box1">
-            <button class="botao1">Módulo 1</button>
-            Conteúdo: Equação do Primeiro grau
-            <br>
-            <br> 
-            Nível: Básico
-            <br> 
-            <br> 
-            Pré-requisito: nenhum
-        </div>
-        <br>
-        <br>
+    <div class="box">
+      <button class="botao1">Módulo 6</button>
+      <p>Conteúdo: Conjuntos numéricos</p>
+      <p>Nível: Básico</p>
+      <p>Pré-requisito: Nenhum</p>
+    </div>
 
-        <div class="box2">
-            <button class="botao1">Módulo 2 </button>
-            Conteúdo: Sistemas de Equação
-            <br>
-            <br>
-            Nível: Básico
-            <br> 
-            <br>
-            Pré-requisito: Módulo 1
-        </div>
+    <div class="box">
+      <button class="botao1">Módulo 7</button>
+      <p>Conteúdo: Fundamentos de funções</p>
+      <p>Nível: Intermediário</p>
+      <p>Pré-requisito: Módulo 1, Módulo 2, Módulo 3 e Módulo 4</p>
+    </div>
 
-
-        <br>
-        <br> 
-
-        <div class="box3">
-            <button class="botao1"> Módulo 3 </button>
-            Conteúdo: Equação do Segundo grau
-            <br>
-            <br>
-            Nível: Básico
-            <br>
-            <br>
-            Pré-requisito: Módulo 1
-        </div>
-
-        <br> 
-        <br> 
-
-        <div class="box4">
-            <button class="botao1"> Módulo 4</button>
-            Conteúdo:Potência e Radiciação
-            <br>
-            <br> 
-            Nível: Básico
-            <br>
-            <br>
-            Pré-requisito: nenhum
-        </div>
-
-        <br>
-        <br>
-
-        <div class="box5">
-            <button class="botao1"> Módulo 5</button>
-            Conteúdo: Polinômios e fatoração
-            <br>
-            <br> 
-            Nível: Intermediário
-            <br>
-            <br>
-            Pré-requisito: Módulo 1, Módulo 2, Módulo 3 e Módulo 4
-        </div>
-
-        <br>
-        <br>
-
-        <div class="box6">
-            <button class="botao1"> Módulo 6 </button>
-            Conteúdo: Conjuntos numéricos  
-            <br>
-            <br> 
-            Nível: Básico
-            <br>
-            <br>
-            Pré-requisito: Nenhum
-        </div>
-
-        <br> 
-        <br>
-
-        <div class="box7"> 
-            <button class="botao1"> Módulo 7 </button>
-            Conteúdo: Fundamentos de funções
-            <br>
-            <br> 
-            Nível: Intermediário
-            <br>
-            <br>
-            Pré-requisito: Módulo 1, Módulo 2, Módulo 3 e Módulo 4
-        </div>
-
-        <br> 
-        <br> 
-
-        <div class="box8">
-            <button class="botao1"> Módulo 8</button>
-            Conteúdo: Funções polinomiais do 1º e 2º grau
-            <br>
-            <br> 
-            Nível: Intermediário
-            <br>
-            <br>
-            Pré-requisito: Módulo 1, Módulo 2, Módulo 3 e Módulo 4
-        </div>
-
-    </div> 
+    <div class="box">
+      <button class="botao1">Módulo 8</button>
+      <p>Conteúdo: Funções polinomiais do 1º e 2º grau</p>
+      <p>Nível: Intermediário</p>
+      <p>Pré-requisito: Módulo 1, Módulo 2, Módulo 3 e Módulo 4</p>
+    </div>
+  </div>
+</main>
 
 
+    <div data-include="/src/components/footer.html"></div>
+
+    <script type="module" src="/src/Scripts/incluir-partes.js"></script>
 </body>
 </html>

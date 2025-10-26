@@ -12,6 +12,7 @@
 /* Posição e tamanho da Navbar no geral */
 .navbar {
   position: sticky;
+  margin-bottom: 6px; 
   top: 0;
   background: var(--bg);
   border-bottom: 1px solid var(--line);
@@ -41,7 +42,7 @@
 }
 
 .navbar .logo img {
-  width: 38px;
+  width: 160px;
   height: auto;
   display: block;
 }

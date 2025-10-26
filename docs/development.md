@@ -10,7 +10,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |RF-002| O sistema deve emitir um relatório de avaliação do nível que o usuário está em relação a matemática, indicando possíveis defasagens, pontos fortes e pontos que precisam de melhoria. | Ana Paula | cadastro-noticia.html |
 |RF-003| O sistema precisa emitir um gráfico com as oscilações de melhoria ou piora em relação ao teste feito anteriormente (histórico). | Wallison | trilha-de-aprendizado.html |
 |RF-004| O sistema deve apresentar links externos contendo referências bibliográficas e/ou indicação de exercícios voltados aos pontos fracos destacados na avaliação. | Ana Paula | cadastro-noticia.html |
-|RF-005| O sistema deve permitir ao usuário participar de fóruns online sobre assuntos pontuais voltados à matemática, permitindo interação com outros usuários. | João | index.html |
+|RF-005| O sistema deve permitir ao usuário participar de fóruns online sobre assuntos pontuais voltados à matemática, permitindo interação com outros usuários. | Bianca, Patrick | forum.html, Fórum_MT.html |
 |RF-006| O sistema deve fornecer a resolução dos exercícios, com os resultados e apontando as questões acertadas e erradas pelo usuário.| Ana Paula | cadastro-noticia.html |
 |RF-007| O sistema deve apresentar uma modularização dos tópicos para o usuário, a fim de facilitar sua navegação. | Wallison, Patrick | trilha-de-aprendizado.html |
 |RF-008| O sistema deve permitir que o usuário redefina sua senha. | Bóris | cadastro-noticia.html |

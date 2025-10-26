@@ -6,7 +6,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 |ID    | Descrição do Requisito | Responsável | Artefato Criado |
 |------|------------------------|------------|-----------------|
-|RF-001| O sistema deve permitir que o usuário realize um cadastro/login na plataforma.	 | Boris, Iury | criar-conta.html |
+|RF-001| O sistema deve permitir que o usuário realize um cadastro/login na plataforma.	 | Boris, Bianca | criar-conta.html |
 |RF-002| O sistema deve emitir um relatório de avaliação do nível que o usuário está em relação a matemática, indicando possíveis defasagens, pontos fortes e pontos que precisam de melhoria. | Iury, Bianca, Boris | historico.html |
 |RF-003| O sistema precisa emitir um gráfico com as oscilações de melhoria ou piora em relação ao teste feito anteriormente (histórico). | Wallison, Bianca, Boris | trilha-de-aprendizado.html |
 |RF-004| O sistema deve apresentar links externos contendo referências bibliográficas e/ou indicação de exercícios voltados aos pontos fracos destacados na avaliação. |  Patrick, Boris, Bianca | Página-do-Módulo_MT.html |

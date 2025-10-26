@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MathTrack — Fórum</title>
+
+    <!-- Estilo da Página:
+   Tem que colocar CSS da Página, Navbar, Footer e Bse -->
+  <link rel="stylesheet" href="/src/styles/Base.css" />
+  <link rel="stylesheet" href="/src/styles/pages/Forum.css" />
+  <link rel="stylesheet" href="/src/styles/components/navbar.css">
+  <link rel="stylesheet" href="/src/styles/components/footer.css" />
+
+  <!-- Aqui incluímos o Navbar:
+   Precisa de JS (Próxima Etapa)-->
+  <div data-include="/src/components/navbar.html"></div>
+</head>
+
+<body>
+  <main class="forum-layout container">
+
+ <!-- Sidebar com Menu e Filtro -->
+    <aside class="sidebar" aria-label="Navegação do fórum">
+      <nav class="side-nav">
+        <a class="side-link is-active" href="#">Home</a>
+        <a class="side-link" href="#">Seus tópicos</a>
+
+        <h4 class="side-title">Módulos em Curso </h4>
+        <ul class="side-list">
+          <li><a href="#">Álgebra</a></li>
+          <li><a href="#">Cálculo I</a></li>
+          <li><a href="#">Estruturas Lógicas</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Aqui é o "Feed" principal do Fórum:
+     Onde o usuário procura o fórum que precisa -->
+    <section class="feed">
+
+      <!-- barra de ações:
+       Buscar ou iniciar um tópico novo -->
+      <header class="feed-actions">
+        <label class="search">
+          <input type="search" placeholder="Buscar ou iniciar um tópico…" aria-label="Buscar no fórum" />
+        </label>
+        <div class="actions">
+          <a class="btn btn--primary" href="#">Novo tópico</a>
+        </div>
+      </header>
+
+      <!-- Card 1 -->
+      <article class="thread-card">
+        <header class="thread-head">
+          <h2 class="thread-title">Representação gráfica </h2>
+          <div class="thread-tags">
+            <span class="chip"> Álgebra Básica </span>
+            <span class="chip -alt"> Dúvida </span>
+          </div>
+        </header>
+
+        <div class="thread-meta">
+          <img class="avatar" src="/assets/avatar1.jpg" alt="" />
+          <div class="who">
+            <strong>Nome do aluno </strong>
+            <span>há 2h </span>
+          </div>
+          <div class="counters">
+            <span title="Respostas">💬 8</span>
+            <span title="Visualizações">👁️ 214</span>
+          </div>
+        </div>
+
+        <p class="thread-body">
+          Pessoal, estou com uma dúvida sobre como fazer representação gráfica de retas e coeficiente angular. Teriam dicas ou macetes para fazer os graficos de uma forma que eu fixe o conteúdo?
+        </p>
+
+        <footer class="thread-foot">
+          <a class="btn btn--ghost" href="#">Responder</a>
+          <a class="btn-link" href="#">Ver tópico</a>
+          <div class="facepile" aria-label="Participantes">
+          </div>
+        </footer>
+      </article>
+      
+    </section>
+  </main>
+
+  <!-- Aqui é para colocar o Footer:
+   Precisa de JS (Próxima Etapa)-->
+  <div data-include="/src/components/footer.html"></div>
+
+  <!-- JS para incluir a Navbar e o Footer -->
+  <script type="module" src="/src/Scripts/incluir-partes.js"></script>
+</body>
+</body>
+
+</html>

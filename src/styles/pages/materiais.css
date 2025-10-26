@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f8f8;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.config a {
+    text-decoration: none;
+    color: #5a4af4;
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 50px);
+}
+
+.sidebar {
+    width: 200px;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    font-size: 40px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #5a4af4;
+    font-size: 14px;
+}
+
+.content {
+    flex: 1;
+    padding: 40px;
+}
+
+.content h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.material-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.material-item:last-child {
+    border-bottom: none;
+}
+
+.material-item p {
+    font-size: 18px;
+    color: #333;
+}
+
+.material-link {
+    text-decoration: none;
+    color: #5a4af4;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+}
+
+.rightbar {
+    width: 200px;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+}
+
+.rightbar input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.rightbar input:focus {
+    outline: none;
+    border-color: #5a4af4;
+}

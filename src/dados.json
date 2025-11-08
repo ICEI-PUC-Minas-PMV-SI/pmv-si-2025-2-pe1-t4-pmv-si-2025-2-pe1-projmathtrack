@@ -1,0 +1,4 @@
+touch dados.json
+git add dados.json
+git commit -m "Adiciona arquivo JSON de dados compartilhados"
+git push origin main

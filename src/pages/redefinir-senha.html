@@ -3,16 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MathTrack — conteudo</title>
+    <title>MathTrack — Redefinir senha</title>
 
-    <!-- Estilo da Página:
-   Tem que colocar CSS da Página, Navbar, Footer e Bse -->
     <link rel="stylesheet" href="/src/styles/Base.css" />
     <link rel="stylesheet" href="/src/styles/pages/redefinir-senha.css" />
     <link rel="stylesheet" href="/src/styles/components/navbar.css">
     <link rel="stylesheet" href="/src/styles/components/footer.css" />
 
-    <!-- Aqui incluímos o Navbar-->
     <div data-include="/src/components/navbar.html"></div>
 </head>
 <body>
@@ -23,16 +20,18 @@
             </div>
             
             <div class="form">
-                <input type="password" placeholder="senha:" class="input-field">
+                <input type="password" placeholder="Nova senha:" class="input-field" id="input-senha">
+                <input type="password" placeholder="Confirme a nova senha:" class="input-field" id="input-senha-confirma">
                 
-                <button class="btn">Redefinir</button>
+                <button class="btn" id="btn-redefinir">Redefinir</button>
             </div>
         </div>
     </div>
-    <!-- Aqui é para colocar o Footer-->
+    
     <div data-include="/src/components/footer.html"></div>
 
-    <!-- JS para incluir a Navbar e o Footer -->
     <script type="module" src="/src/Scripts/incluir-partes.js"></script>
+
+    <script type="module" src="/src/Scripts/redefinir-senha.js"></script>
 </body>
 </html>

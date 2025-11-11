@@ -5,38 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>MathTrack — recuperar-senha</title>
 
-    <!-- Estilo da Página:
-   Tem que colocar CSS da Página, Navbar, Footer e Bse -->
-    <link rel="stylesheet" href="/src/styles/Base.css" />
+        <link rel="stylesheet" href="/src/styles/Base.css" />
     <link rel="stylesheet" href="/src/styles/pages/recuperar-senha.css" />
     <link rel="stylesheet" href="/src/styles/components/navbar.css">
     <link rel="stylesheet" href="/src/styles/components/footer.css" />
 
-    <!-- Aqui incluímos o Navbar-->
     <div data-include="/src/components/navbar.html"></div>
 </head>
 <body>
-    <div class="container">
-        <div class="main-content">
+  <div class="container">
+    <div class="main-content">
             <div class="title">
-                <h1>Recuperar senha</h1>
+               <h1>Recuperar senha</h1>
             </div>
-            
+        
             <div class="form">
-                <input type="text" placeholder="Nome:" class="input-field">
-                <input type="date" placeholder="Data de Nascimento" class="input-field">
-                <input type="email" placeholder="Email::" class="input-field">
-                <input type="email" placeholder="Confirme seu email" class="input-field">
+                            <input type="text" placeholder="Nome:" class="input-field" id="input-nome">
+                <input type="date" placeholder="Data de Nascimento" class="input-field" id="input-nascimento">
+                <input type="email" placeholder="Email:" class="input-field" id="input-email">
+                <input type="email" placeholder="Confirme seu email" class="input-field" id="input-email-confirma">
                 
-                <button class="btn">Enviar email de verificação</button>
+                         <button class="btn" id="btn-enviar">Enviar email de verificação</button>
             </div>
         </div>
     </div>
 
-     <!-- Aqui é para colocar o Footer-->
-    <div data-include="/src/components/footer.html"></div>
+        <div data-include="/src/components/footer.html"></div>
 
-    <!-- JS para incluir a Navbar e o Footer -->
-    <script type="module" src="/src/Scripts/incluir-partes.js"></script>
+        <script type="module" src="/src/Scripts/incluir-partes.js"></script>
+    
+    <script type="module" src="/src/Scripts/recuperar-senha.js"></script>
 </body>
 </html>

@@ -1,32 +1,26 @@
 <!doctype html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MathTrack — Fórum</title>
 
-  <!-- Estilo da Página:
-   Tem que colocar CSS da Página, Navbar, Footer e Bse -->
+  <!-- CSS -->
   <link rel="stylesheet" href="/src/styles/Base.css" />
   <link rel="stylesheet" href="/src/styles/pages/Forum.css" />
   <link rel="stylesheet" href="/src/styles/components/navbar.css">
   <link rel="stylesheet" href="/src/styles/components/footer.css" />
-
-  <!-- Aqui incluímos o Navbar-->
   <div data-include="/src/components/navbar.html"></div>
 </head>
 
 <body>
   <main class="forum-layout container">
-
-    <!-- Sidebar com Menu e Filtro -->
+    <!-- Sidebar -->
     <aside class="sidebar" aria-label="Navegação do fórum">
       <nav class="side-nav">
         <a class="side-link is-active" href="#">Home</a>
         <a class="side-link" href="#">Seus tópicos</a>
-
-        <h4 class="side-title">Módulos em Curso </h4>
+        <h4 class="side-title">Módulos em Curso</h4>
         <ul class="side-list">
           <li><a href="#">Álgebra</a></li>
           <li><a href="#">Cálculo I</a></li>
@@ -35,73 +29,67 @@
       </nav>
     </aside>
 
-    <!-- Aqui é o "Feed" principal do Fórum:
-     Onde o usuário procura o fórum que precisa -->
+    <!-- Feed do Fórum -->
     <section class="feed">
 
-      <!-- barra de ações:
-       Buscar ou iniciar um tópico novo -->
+      <!-- Barrra de Ações -->
       <header class="feed-actions">
         <label class="search">
-          <input type="search" placeholder="Buscar ou iniciar um tópico…" aria-label="Buscar no fórum" />
+          <input id="busca" type="search" placeholder="Buscar por título ou conteúdo…" aria-label="Buscar no fórum" />
         </label>
         <div class="actions">
-          <a class="btn btn--primary" href="#">Novo tópico</a>
+          <button id="btnNovoTopico" class="btn btn--primary" type="button">Novo tópico</button>
+          <button id="btnFiltrarSalvos" class="btn btn--ghost" type="button">Salvos</button>
         </div>
       </header>
 
-      <!-- Card 1 -->
-      <article class="thread-card" id="thread-1">
+      <!-- Criar Tópico -->
+      <article class="thread-card" id="boxNovoTopico" style="display:none">
         <header class="thread-head">
-          <h2 class="thread-title">Representação gráfica </h2>
-          <div class="thread-tags">
-            <span class="chip"> Álgebra Básica </span>
-            <span class="chip -alt"> Dúvida </span>
-          </div>
+          <h2 class="thread-title">Criar novo tópico</h2>
         </header>
-
-        <div class="thread-meta">
-          <img class="avatar" src="/assets/avatar1.jpg" alt="" />
-          <div class="who">
-            <strong>Nome do aluno </strong>
-            <span>há 2h </span>
-          </div>
-          <div class="counters">
-            <span title="Respostas">💬 8</span>
-            <span title="Visualizações">👁️ 214</span>
+        <div>
+          <div style="display:grid; gap:10px; margin-top:8px">
+            <input id="novoTitulo" class="search-input" placeholder="Título do tópico" />
+            <input id="novoAutor" class="search-input" placeholder="Seu nome (opcional)" />
+            <textarea id="novoCorpo" class="search-input" placeholder="Escreva o conteúdo inicial"></textarea>
+            <div style="display:flex; gap:10px; justify-content:flex-end">
+              <button id="btnCancelarTopico" class="btn btn--ghost" type="button">Cancelar</button>
+              <button id="btnPublicarTopico" class="btn btn--primary" type="button">Publicar</button>
+            </div>
           </div>
         </div>
-
-        <p class="thread-body">
-          Pessoal, estou com uma dúvida sobre como fazer representação gráfica de retas e coeficiente angular. Teriam
-          dicas ou macetes para fazer os graficos de uma forma que eu fixe o conteúdo?
-        </p>
-
-        <footer class="thread-foot">
-          <a class="btn btn--ghost" href="#">Responder</a>
-
-          <!-- era <a class="btn-link" href="#">Ver tópico</a> -->
-          <button type="button" class="btn-link thread-open" data-thread-id="thread-1">
-            Ver tópico
-          </button>
-
-          <div class="facepile" aria-label="Participantes"></div>
-        </footer>
-      </article>
       </article>
 
+      <!-- Lista e Visão de Tópico -->
+      <div id="listaTopicos"></div>
+      <div id="visaoTopico" style="display:none"></div>
     </section>
   </main>
 
-  <!-- Aqui é para colocar o Footer:
-   Precisa de JS (Próxima Etapa)-->
+  <!-- Popup de Login Obrigatório  -->
+  <!-- Caso o usuário não esteja logado, ele não pode responder os comentários, editar ou criar
+   um tópico novo. Nisso, vai abrir o popup para que ele possa Logar -->
+  <div id="loginPopup" class="popup-overlay" style="display:none">
+    <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="loginPopupTitle">
+      <h2 id="loginPopupTitle">Você não está logado!</h2>
+      <p>Para continuar, é necessário entrar em sua conta.</p>
+      <div class="popup-actions">
+        <a href="/src/pages/Login.html" class="btn btn--primary">Fazer login</a>
+        <button id="closePopup" class="btn btn--ghost" type="button">Fechar</button>
+      </div>
+    </div>
+  </div>
   <div data-include="/src/components/footer.html"></div>
 
-  <!-- JS para incluir a Navbar e o Footer -->
-  <script type="module" src="/src/Scripts/incluir-partes.js"></script>
-  
-  <!-- Script botão Ver Topico  -->
-  <script type="module" src="/src/scripts/forum-view.js"></script>
+  <!-- Scripts -->
+  <script src="/src/Scripts/incluir-partes.js" defer></script>
+  <script src="/src/scripts/forum-view.js" defer></script>
+  <script src="/src/scripts/auth.js" defer></script>
+    <script src="/src/scripts/auth.js" defer></script>
+    <!-- Favor não mexer no auth.js pois fiquei mais de 3h para descobrir um erro 
+    e não sei mais como resolver caso se acontecer de novo -->
+    <!-- Caso ainda queira mexer no auth.js, deixe comentado tudo o que fizer. Nesse caso,
+    da para ir desfazendo se acontecer algo que me tire o sono novamente -->
 </body>
-
 </html>

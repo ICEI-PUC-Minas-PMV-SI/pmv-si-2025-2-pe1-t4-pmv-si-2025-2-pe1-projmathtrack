@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MathTrack — criar-conta</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MathTrack — Criar conta</title>
 
-    <!-- Estilo da Página:
-   Tem que colocar CSS da Página, Navbar, Footer e Bse -->
-    <link rel="stylesheet" href="/src/styles/Base.css" />
-    <link rel="stylesheet" href="/src/styles/pages/criar-conta.css" />
-    <link rel="stylesheet" href="/src/styles/components/navbar.css">
-    <link rel="stylesheet" href="/src/styles/components/footer.css" />
+  <!-- Estilos -->
+  <link rel="stylesheet" href="/src/styles/Base.css" />
+  <link rel="stylesheet" href="/src/styles/pages/criar-conta.css" />
+  <link rel="stylesheet" href="/src/styles/components/navbar.css">
+  <link rel="stylesheet" href="/src/styles/components/footer.css" />
 
-    <!-- Aqui incluímos o Navbar-->
-    <div data-include="/src/components/navbar.html"></div>
+  <!-- Navbar incluída por script - JS -->
+  <div data-include="/src/components/navbar.html"></div>
 </head>
 
 <body>
-    <div class="container">
-        <div class="main-content">
-            <div class="title">
-                <h1>Criar conta</h1>
-            </div>
+  <div class="container">
+    <div class="main-content">
+      <div class="title">
+        <h1>Criar conta</h1>
+      </div>
 
-            <div class="form">
-                <input type="text" placeholder="Nome:" class="input-field">
-                <input type="date" placeholder="Data de nascimento:" class="input-field">
-                <input type="tel" placeholder="Celular:" class="input-field">
-                <input type="email" placeholder="Email:" class="input-field">
-                <input type="email" placeholder="Confirmar email:" class="input-field">
-                <input type="password" placeholder="Senha:" class="input-field">
+      <!-- Formulário de cadastro -->
+      <form id="signupForm" class="form" novalidate>
+        <input id="nome" type="text" placeholder="Nome:" class="input-field" required />
+        <input id="nascimento" type="date" placeholder="Data de nascimento:" class="input-field" />
+        <input id="celular" type="tel" placeholder="Celular:" class="input-field" />
 
-                <a href="\src\pages\login.html" class="btn">Criar conta</a>
-            </div>
-        </div>
+        <input id="email" type="email" placeholder="Email:" class="input-field" required />
+        <input id="email2" type="email" placeholder="Confirmar email:" class="input-field" required />
+
+        <input id="senha" type="password" placeholder="Senha:" class="input-field" required />
+
+        <button type="submit" class="btn">Criar conta</button>
+
+        <p style="margin-top:10px">
+          Já possui conta?
+          <a href="/src/pages/login.html">Entrar</a>
+        </p>
+      </form>
     </div>
-</main>
-    <!-- Aqui é para colocar o Footer-->
-    <div data-include="/src/components/footer.html"></div>
+  </div>
 
-    <!-- JS para incluir a Navbar e o Footer -->
-    <script type="module" src="/src/Scripts/incluir-partes.js"></script>
+  <!-- Footer incluído por JS -->
+  <div data-include="/src/components/footer.html"></div>
+
+  <!-- Scripts -->
+  <script src="/src/Scripts/incluir-partes.js" defer></script>
+  <script src="/src/scripts/signup.js" defer></script>
+  <script src="/src/scripts/auth.js" defer></script>
+    <!-- Favor não mexer no auth.js pois fiquei mais de 3h para descobrir um erro 
+    e não sei mais como resolver caso se acontecer de novo -->
+    <!-- Caso ainda queira mexer no auth.js, deixe comentado tudo o que fizer. Nesse caso,
+    da para ir desfazendo se acontecer algo que me tire o sono novamente -->
 
 </body>
-
 </html>

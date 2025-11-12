@@ -1,0 +1,72 @@
+{
+  "topicos": [
+    {
+      "id": "seed-topico-1",
+      "titulo": "Bem-vindo ao Fórum MathTrack",
+      "corpo": "Crie tópicos, comente, edite, exclua, curta e salve tópicos. Tudo funciona com Front-end + localStorage.",
+      "autor": "Equipe",
+      "criadoEm": 1731350400000,
+      "curtidas": 2,
+      "salvo": false,
+      "comentarios": [
+        {
+          "id": "seed-coment-1",
+          "autor": "Bianca",
+          "corpo": "Primeiro comentário! 🎉",
+          "criadoEm": 1731354000000,
+          "curtidas": 1
+        }
+      ]
+    },
+    {
+      "id": "seed-topico-2",
+      "titulo": "Representação gráfica",
+      "corpo": "Dúvidas sobre retas (y = mx + b), coeficiente angular e interseção. Dicas de estudo e exercícios são bem-vindos.",
+      "autor": "Aluno A",
+      "criadoEm": 1731361200000,
+      "curtidas": 0,
+      "salvo": false,
+      "comentarios": [
+        {
+          "id": "seed-coment-2",
+          "autor": "Ana P.",
+          "corpo": "Tente variar o m para ver a inclinação no gráfico.",
+          "criadoEm": 1731363000000,
+          "curtidas": 0
+        },
+        {
+          "id": "seed-coment-3",
+          "autor": "Tutor",
+          "corpo": "Veja exercícios graduais na seção de Álgebra (comece pela página 3).",
+          "criadoEm": 1731364800000,
+          "curtidas": 0
+        }
+      ]
+    },
+    {
+      "id": "seed-topico-3",
+      "titulo": "Cálculo I — Limites básicos",
+      "corpo": "Como entender o conceito de limite antes de partir para derivadas? Alguma dica prática de exercícios?",
+      "autor": "Aluno B",
+      "criadoEm": 1731447600000,
+      "curtidas": 1,
+      "salvo": true,
+      "comentarios": [
+        {
+          "id": "seed-coment-4",
+          "autor": "Maria",
+          "corpo": "Comece com tabelas de aproximação e gráficos simples. Depois veja limites laterais.",
+          "criadoEm": 1731448800000,
+          "curtidas": 2
+        },
+        {
+          "id": "seed-coment-5",
+          "autor": "Carlos",
+          "corpo": "O canal 3Blue1Brown tem uma visualização ótima de limites!",
+          "criadoEm": 1731450600000,
+          "curtidas": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,29 +1,21 @@
 <!doctype html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MathTrack — Home</title>
 
-  <!-- Estilo da Página:
-   Tem que colocar CSS da Página, Navbar, Footer e Bse -->
+  <!-- CSS -->
   <link rel="stylesheet" href="/src/styles/Base.css" />
   <link rel="stylesheet" href="/src/styles/pages/Home.css" />
   <link rel="stylesheet" href="/src/styles/components/navbar.css">
   <link rel="stylesheet" href="/src/styles/components/footer.css" />
-
-
-  <!-- Aqui incluímos o Navbar-->
   <div data-include="/src/components/navbar.html"></div>
 </head>
 
 <body>
-
-
   <main id="conteudo">
-    <!--  Componentes da Página --
-      Título -->
+    <!--  Componentes da Página -->
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__copy">
@@ -55,8 +47,7 @@
       </div>
     </section>
 
-    <!-- Quadros de chamadaa --
-      Fórum / Módulos / Conteúdo -->
+    <!-- Quadros de chamadaa -->
     <section class="pillars" aria-label="Seções principais">
       <div class="container pillars__grid">
         <article class="card">
@@ -100,15 +91,15 @@
         </article>
       </div>
     </section>
-
   </main>
-
-  <!-- Aqui é para colocar o Footer:
-   Precisa de JS (Próxima Etapa)-->
   <div data-include="/src/components/footer.html"></div>
 
-  <!-- JS para incluir a Navbar e o Footer -->
+  <!-- Scripts -->
   <script type="module" src="/src/Scripts/incluir-partes.js"></script>
+  <script src="/src/scripts/auth.js" defer></script>
+      <!-- Favor não mexer no auth.js pois fiquei mais de 3h para descobrir um erro 
+    e não sei mais como resolver caso se acontecer de novo -->
+    <!-- Caso ainda queira mexer no auth.js, deixe comentado tudo o que fizer. Nesse caso,
+    da para ir desfazendo se acontecer algo que me tire o sono novamente -->
 </body>
-
 </html>

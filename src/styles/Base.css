@@ -1,6 +1,4 @@
-/* Base */
-
-/* ---------- Reset mínimo (não agressivo) ---------- */
+/* Reset mínimo */
 *,
 *::before,
 *::after { box-sizing: border-box; }

@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>MathTrack — historico</title>
 
-    <!-- Estilo da Página:
-   Tem que colocar CSS da Página, Navbar, Footer e Bse -->
+    <!-- CSS -->
     <link rel="stylesheet" href="/src/styles/Base.css" />
     <link rel="stylesheet" href="/src/styles/pages/historico.css" />
     <link rel="stylesheet" href="/src/styles/components/navbar.css">
     <link rel="stylesheet" href="/src/styles/components/footer.css" />
 
-    <!-- Aqui incluímos o Navbar-->
+    <!-- Navbar -->
     <div data-include="/src/components/navbar.html"></div>
 </head>
 
@@ -66,11 +65,17 @@
         </section>
     </main>
 
-    <!-- Aqui é para colocar o Footer-->
+    <!-- Footer-->
     <div data-include="/src/components/footer.html"></div>
 
-    <!-- JS para incluir a Navbar e o Footer -->
+    <!-- Scripts -->
     <script type="module" src="/src/Scripts/incluir-partes.js"></script>
+    <script src="/src/scripts/auth.js" defer></script>
+    <!-- Favor não mexer no auth.js pois fiquei mais de 3h para descobrir um erro 
+    e não sei mais como resolver caso se acontecer de novo -->
+    <!-- Caso ainda queira mexer no auth.js, deixe comentado tudo o que fizer. Nesse caso,
+    da para ir desfazendo se acontecer algo que me tire o sono novamente -->
+  
 
 </body>
 

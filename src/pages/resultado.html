@@ -16,38 +16,53 @@
     <div data-include="/src/components/navbar.html"></div>
 </head>
 <body>
-       <main> 
+    <main> 
         <div class="resultado">
-            <h4>Resultado do Teste:</h4>
-            <p class="nivel">Básico</p>
+            <h4>Resultado do Teste de Nivelamento:</h4>
+            <p class="nivel" id="nivel-texto">Carregando...</p>
 
-            <div class="barra-de-progresso">
-                <div class="progresso"></div>
+            <div class="estatisticas">
+                <div class="stat-item">
+                    <strong>Acertos:</strong>
+                    <span id="acertos">0</span> de <span id="total">10</span>
+                </div>
+                <div class="stat-item">
+                    <strong>Porcentagem:</strong>
+                    <span id="porcentagem">0</span>%
+                </div>
             </div>
 
-        <div class="info">
-            <p class="alerta">❗ Defasagem: álgebra, funções, trigonometria.</p>
-            <br>
-            <p class="sucesso">✔️ Pontos fortes: soma, multiplicação, mdc, mmc.</p>
-            <br>
-            <p>Vamos iniciar a trilha de aprendizagem?</p>
-            <br>
-        </div>
+            <div class="barra-de-progresso">
+                <div class="progresso" id="barra-progresso"></div>
+            </div>
 
-        <div class="botoes">
-            <a href="\src\pages\historico.html"> <button class="relatorio">Emitir relatório completo</button> </a>
-            <a href="\src\pages\trilha-de-aprendizado.html"> <button class="iniciar">Ir para trilha de aprendizado</button> </a>
-            <br>
-        </div>
+            <div class="info">
+                <p class="mensagem-resultado" id="mensagem">Carregando resultado...</p>
+                <br>
+                <p><strong>Próximos passos:</strong> Vamos iniciar a trilha de aprendizagem personalizada para você!</p>
+                <br>
+            </div>
+
+            <div class="botoes">
+                <a href="\src\pages\trilha-de-aprendizado.html"> 
+                    <button class="iniciar">Ir para Trilha de Aprendizado</button> 
+                </a>
+                <a href="\src\pages\formulario.html"> 
+                    <button class="relatorio">Refazer Teste</button> 
+                </a>
+                <br>
+            </div>
         </div>
     </main>
-
 
     <!-- Aqui é para colocar o Footer-->
     <div data-include="/src/components/footer.html"></div>
 
     <!-- JS para incluir a Navbar e o Footer -->
     <script type="module" src="/src/Scripts/incluir-partes.js"></script>
+    
+    <!-- JS para exibir resultado -->
+    <script src="/src/scripts/exibir-resultado.js"></script>
 
 </body>
 </html>

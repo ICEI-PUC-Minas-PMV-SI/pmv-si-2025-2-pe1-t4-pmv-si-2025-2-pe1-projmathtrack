@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>MathTrack — formulario </title>
 
-    <!-- Estilo da Página:
-   Tem que colocar CSS da Página, Navbar, Footer e Bse -->
     <link rel="stylesheet" href="/src/styles/Base.css" />
     <link rel="stylesheet" href="/src/styles/pages/formulario.css" />
     <link rel="stylesheet" href="/src/styles/components/navbar.css">
     <link rel="stylesheet" href="/src/styles/components/footer.css" />
 
-    <!-- Aqui incluímos o Navbar-->
     <div data-include="/src/components/navbar.html"></div>
 </head>
 <body>
@@ -23,36 +20,243 @@
         </header>
         <section class="content">
             <h2>Teste de Nivelamento</h2>
+            <p class="subtitulo">Responda as questões abaixo para avaliarmos seu nível em matemática.</p>
+            
             <form action="#">
                 <div class="input-group">
-                    <label for="p1"> Quanto é 15 + 12?</label>
-                    <input type="text" id="p1" placeholder="Resposta">
+                    <label><strong>1.</strong> Calcule: 15 + 12 - 8 = ?</label>
+                    <div class="opcoes-radio">
+                        <label class="radio-opcao">
+                            <input type="radio" name="p1" value="17" required>
+                            <span>17</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p1" value="19" required>
+                            <span>19</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p1" value="21" required>
+                            <span>21</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p1" value="23" required>
+                            <span>23</span>
+                        </label>
+                    </div>
                 </div>
                 
                 <div class="input-group">
-                    <label for="p2"> Quanto é 9 - 5?</label>
-                    <input type="text" id="p2" placeholder="Resposta">
+                    <label><strong>2.</strong> Quanto é 12 × 7?</label>
+                    <div class="opcoes-radio">
+                        <label class="radio-opcao">
+                            <input type="radio" name="p2" value="74" required>
+                            <span>74</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p2" value="84" required>
+                            <span>84</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p2" value="94" required>
+                            <span>94</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p2" value="104" required>
+                            <span>104</span>
+                        </label>
+                    </div>
                 </div>
 
                 <div class="input-group">
-                    <label for="p3"> Quanto é 12 x 4?</label>
-                    <input type="text" id="p3" placeholder="Resposta">
+                    <label><strong>3.</strong> Resolva: 144 ÷ 12 = ?</label>
+                    <div class="opcoes-radio">
+                        <label class="radio-opcao">
+                            <input type="radio" name="p3" value="10" required>
+                            <span>10</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p3" value="11" required>
+                            <span>11</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p3" value="12" required>
+                            <span>12</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p3" value="13" required>
+                            <span>13</span>
+                        </label>
+                    </div>
                 </div>
 
                 <div class="input-group">
-                    <label for="p4"> Quanto é 60 ÷ 6?</label>
-                    <input type="text" id="p4" placeholder="Resposta">
+                    <label><strong>4.</strong> Calcule: 3 + 5 × 2 = ?</label>
+                    <div class="opcoes-radio">
+                        <label class="radio-opcao">
+                            <input type="radio" name="p4" value="10" required>
+                            <span>10</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p4" value="13" required>
+                            <span>13</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p4" value="16" required>
+                            <span>16</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p4" value="19" required>
+                            <span>19</span>
+                        </label>
+                    </div>
                 </div>
-                <a href="\src\pages\historico.html" class="btn-submit">Enviar</a>
+
+                <div class="input-group">
+                    <label><strong>5.</strong> Quanto é 1/2 + 1/4?</label>
+                    <div class="opcoes-radio">
+                        <label class="radio-opcao">
+                            <input type="radio" name="p5" value="2/6" required>
+                            <span>2/6</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p5" value="3/4" required>
+                            <span>3/4</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p5" value="2/4" required>
+                            <span>2/4</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p5" value="1/3" required>
+                            <span>1/3</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label><strong>6.</strong> Calcule 20% de 150:</label>
+                    <div class="opcoes-radio">
+                        <label class="radio-opcao">
+                            <input type="radio" name="p6" value="20" required>
+                            <span>20</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p6" value="25" required>
+                            <span>25</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p6" value="30" required>
+                            <span>30</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p6" value="35" required>
+                            <span>35</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label><strong>7.</strong> Resolva: 2x + 5 = 15. Qual é o valor de x?</label>
+                    <div class="opcoes-radio">
+                        <label class="radio-opcao">
+                            <input type="radio" name="p7" value="3" required>
+                            <span>x = 3</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p7" value="4" required>
+                            <span>x = 4</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p7" value="5" required>
+                            <span>x = 5</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p7" value="6" required>
+                            <span>x = 6</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label><strong>8.</strong> Quanto é √64 (raiz quadrada de 64)?</label>
+                    <div class="opcoes-radio">
+                        <label class="radio-opcao">
+                            <input type="radio" name="p8" value="6" required>
+                            <span>6</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p8" value="7" required>
+                            <span>7</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p8" value="8" required>
+                            <span>8</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p8" value="9" required>
+                            <span>9</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label><strong>9.</strong> Calcule: 2³ (2 elevado a 3):</label>
+                    <div class="opcoes-radio">
+                        <label class="radio-opcao">
+                            <input type="radio" name="p9" value="4" required>
+                            <span>4</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p9" value="6" required>
+                            <span>6</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p9" value="8" required>
+                            <span>8</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p9" value="10" required>
+                            <span>10</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label><strong>10.</strong> Na equação x² - 5x + 6 = 0, qual é a soma das raízes?</label>
+                    <div class="opcoes-radio">
+                        <label class="radio-opcao">
+                            <input type="radio" name="p10" value="3" required>
+                            <span>3</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p10" value="4" required>
+                            <span>4</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p10" value="5" required>
+                            <span>5</span>
+                        </label>
+                        <label class="radio-opcao">
+                            <input type="radio" name="p10" value="6" required>
+                            <span>6</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-info">
+                    <p>💡 <strong>Dica:</strong> Responda com calma e atenção. Este teste nos ajuda a personalizar seu aprendizado!</p>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Teste</button>
             </form>
         </section>
     </main>
 
-    <!-- Aqui é para colocar o Footer-->
     <div data-include="/src/components/footer.html"></div>
 
-    <!-- JS para incluir a Navbar e o Footer -->
     <script type="module" src="/src/Scripts/incluir-partes.js"></script>
+    
+    <script src="/src/scripts/formulario-nivelamento.js"></script>
 
 </body>
 </html>

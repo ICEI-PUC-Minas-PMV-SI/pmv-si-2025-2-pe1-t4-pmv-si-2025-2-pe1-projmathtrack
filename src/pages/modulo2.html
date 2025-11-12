@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MathTrack — Módulo 2: Sistema de Equações</title>
+
+    <link rel="stylesheet" href="/src/styles/Base.css" />
+    <link rel="stylesheet" href="/src/styles/pages/conteudo.css" />
+    <link rel="stylesheet" href="/src/styles/components/navbar.css">
+    <link rel="stylesheet" href="/src/styles/components/footer.css" />
+
+    <div data-include="/src/components/navbar.html"></div>
+</head>
+
+<body>
+    <main>
+        <div class="navegacao-topo">
+            <a href="trilha-de-aprendizado.html" class="btn-voltar-trilha">
+                ← Voltar para Trilha de Aprendizado
+            </a>
+        </div>
+
+        <h2 class="titulo-modulo" id="titulo-modulo">Carregando...</h2>
+
+        <div class="conteudo">
+            <div class="video-container" id="video-container">
+                <p>Carregando vídeo...</p>
+            </div>
+
+            <section id="conteudo-texto">
+                <p>Carregando conteúdo...</p>
+            </section>
+
+            <div class="progresso-modulo" id="progresso-indicador">
+                <p>📚 Conteúdo visualizado</p>
+                <p id="status-teste">⏳ Aguardando conclusão do teste</p>
+            </div>
+
+            <button class="iniciar" id="btn-fazer-teste" disabled>
+                🔒 Complete o conteúdo para fazer o teste
+            </button>
+        </div>
+    </main>
+
+    <div data-include="/src/components/footer.html"></div>
+
+    <script type="module" src="/src/Scripts/incluir-partes.js"></script>
+    <script src="/src/Scripts/modulo.js"></script>
+</body>
+</html>

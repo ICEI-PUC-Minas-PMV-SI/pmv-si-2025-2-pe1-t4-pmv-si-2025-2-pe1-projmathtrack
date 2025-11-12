@@ -47,15 +47,11 @@ header p {
 }
 
 .modulos {
-  grid-column: 1 / 3;
+  grid-column: 1 / 4;
   display: flex;
   justify-content: space-around;
   align-items: stretch;
   gap: 20px;
-}
-
-.ranking {
-  grid-column: 3;
 }
 
 .continuar {
@@ -63,27 +59,15 @@ header p {
 }
 
 .forum {
-  grid-column: 2;
-}
-
-.testes {
-  grid-column: 3;
+  grid-column: 2 / 4;
 }
 
 .evolucao {
-  grid-column: 1 / 3;
-}
-
-.fortes {
-  grid-column: 3;
-}
-
-.melhorar {
-  grid-column: 3;
+  grid-column: 1;
 }
 
 .tarefa {
-  grid-column: 1 / 3;
+  grid-column: 2 / 4;
 }
 
 .modulo {
@@ -115,6 +99,7 @@ header p {
   background-color: #e0e0e0;
   border-radius: 5px;
   margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .barra-progresso {
@@ -129,6 +114,7 @@ header p {
   margin-top: 8px;
   display: block;
   font-weight: 600;
+  text-align: center;
 }
 
 .continuar-modulo,
@@ -153,17 +139,9 @@ header p {
   margin-top: 10px;
 }
 
-
-
-.fortes h3, .melhorar h3, .tarefa h3, .continuar h3, .ranking h3, .forum h3, .testes h3 {
+.tarefa h3, .continuar h3, .forum h3, .evolucao h3 {
   color: #0056b3;
   margin-bottom: 10px;
-}
-
-.fortes p, .melhorar p {
-  margin-left: 10px;
-  font-size: 0.95em;
-  color: #444;
 }
 
 .evolucao {
@@ -182,4 +160,153 @@ header p {
   .modulo {
     width: 80%;
   }
+}
+
+/* Estilos adicionais para funcionalidades JavaScript */
+.modulo-bloqueado {
+  opacity: 0.6;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.modulo-bloqueado a {
+  pointer-events: none;
+  color: #999 !important;
+}
+
+.bloqueio-msg {
+  margin-top: 10px;
+  font-size: 0.85em;
+  color: #888;
+  font-style: italic;
+}
+
+.continuar-data {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.continuar-data small {
+  color: #888;
+  font-size: 0.85em;
+}
+
+.caixa-forum h4 {
+  font-size: 0.95em;
+  color: #0056b3;
+  margin-bottom: 5px;
+}
+
+.caixa-forum small {
+  display: block;
+  margin-top: 5px;
+  color: #888;
+  font-size: 0.8em;
+}
+
+.btn-ver-mais {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0056b3;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.btn-ver-mais:hover {
+  text-decoration: underline;
+}
+
+.evolucao-stats {
+  margin: 15px 0;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-weight: normal;
+  color: #666;
+}
+
+.stat-valor {
+  font-weight: bold;
+  color: #0056b3;
+  font-size: 1.2em;
+}
+
+.progresso-geral {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progresso-geral .barra-progresso {
+  height: 100%;
+  background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.evolucao-msg {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #e8f4fd;
+  border-left: 4px solid #007bff;
+  border-radius: 4px;
+  color: #0056b3;
+  font-weight: 500;
+}
+
+.testes-info {
+  margin-top: 10px;
+}
+
+.testes-info p {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95em;
+}
+
+.testes-info p:last-child {
+  border-bottom: none;
+}
+
+/* Botão de ação "Continuar onde parou" */
+.btn-continuar {
+  display: block;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.btn-acao {
+  width: 100%;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #0056b3 0%, #007bff 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 86, 179, 0.2);
+}
+
+.btn-acao:hover {
+  background: linear-gradient(135deg, #004494 0%, #0056b3 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 86, 179, 0.3);
+}
+
+.btn-acao:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 86, 179, 0.2);
 }

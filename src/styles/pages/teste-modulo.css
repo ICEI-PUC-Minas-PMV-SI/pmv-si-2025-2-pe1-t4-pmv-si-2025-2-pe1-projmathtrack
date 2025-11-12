@@ -1,0 +1,189 @@
+/* Estilos específicos para página de teste do módulo */
+
+.info-teste {
+    background-color: #e8f4fd;
+    border-left: 4px solid #0056b3;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.info-teste p {
+    margin: 8px 0;
+    color: #333;
+}
+
+.questao-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.questao-label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #12223a;
+}
+
+.opcoes-radio {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: 10px;
+}
+
+.radio-opcao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.radio-opcao:hover {
+    background-color: #f0f8ff;
+    border-color: #0056b3;
+}
+
+.radio-opcao input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.radio-opcao input[type="radio"]:checked + span {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.radio-opcao span {
+    flex: 1;
+    font-size: 1em;
+}
+
+.acoes-teste {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-cancelar {
+    padding: 12px 30px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cancelar:hover {
+    background-color: #5a6268;
+}
+
+.resultado-teste {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.resultado-teste h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.resultado-stats {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.resultado-stats p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.resultado-stats strong {
+    color: #0056b3;
+}
+
+#nota {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#status-aprovacao {
+    font-size: 1.1em;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.resultado-acoes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btn-refazer {
+    padding: 12px 30px;
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-refazer:hover {
+    background-color: #e0a800;
+}
+
+/* Animação de entrada para resultado */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.resultado-teste {
+    animation: slideIn 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .acoes-teste,
+    .resultado-acoes {
+        flex-direction: column;
+    }
+    
+    .questao-label {
+        font-size: 1em;
+    }
+    
+    .resultado-teste h2 {
+        font-size: 1.5em;
+    }
+}

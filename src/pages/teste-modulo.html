@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MathTrack — Teste do Módulo</title>
+
+    <link rel="stylesheet" href="/src/styles/Base.css" />
+    <link rel="stylesheet" href="/src/styles/pages/formulario.css" />
+    <link rel="stylesheet" href="/src/styles/pages/teste-modulo.css" />
+    <link rel="stylesheet" href="/src/styles/components/navbar.css">
+    <link rel="stylesheet" href="/src/styles/components/footer.css" />
+
+    <div data-include="/src/components/navbar.html"></div>
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>MathTrack</h1>
+            <p class="subtitulo" id="titulo-teste">Carregando teste...</p>
+        </header>
+        
+        <section class="content">
+            <div class="info-teste">
+                <p>📝 <strong>Total de questões:</strong> <span id="total-questoes">5</span></p>
+                <p>✅ <strong>Nota mínima para aprovação:</strong> 60%</p>
+                <p>⏱️ <strong>Tempo estimado:</strong> 10 minutos</p>
+            </div>
+
+            <form id="form-teste">
+                <div id="questoes-container">
+                    <p>Carregando questões...</p>
+                </div>
+
+                <div class="acoes-teste">
+                    <button type="submit" class="btn-submit">Enviar Respostas</button>
+                    <button type="button" class="btn-cancelar" onclick="voltarModulo()">Cancelar</button>
+                </div>
+            </form>
+
+            <div id="resultado-teste" class="resultado-teste" style="display: none;">
+                <h2 id="resultado-titulo">Resultado do Teste</h2>
+                <div class="resultado-stats">
+                    <p><strong>Acertos:</strong> <span id="acertos">0</span> de <span id="total">5</span></p>
+                    <p><strong>Nota:</strong> <span id="nota">0</span>%</p>
+                    <p id="status-aprovacao"></p>
+                </div>
+                <div class="resultado-acoes">
+                    <button class="btn-submit" onclick="voltarTrilha()">Voltar para Trilha</button>
+                    <button class="btn-refazer" onclick="refazerTeste()" id="btn-refazer">Refazer Teste</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div data-include="/src/components/footer.html"></div>
+
+    <script type="module" src="/src/Scripts/incluir-partes.js"></script>
+    <script src="/src/Scripts/teste-modulo.js"></script>
+</body>
+</html>

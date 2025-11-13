@@ -1,0 +1,5 @@
+{
+  "titulo": "Módulo 1: Equação do Primeiro Grau",
+  "video": "https://www.youtube.com/embed/yj3pvWVe4c4",
+  "descricao": "<h2>Equação do 1º grau e métodos de resolução</h2><p>Uma equação do 1º grau é uma igualdade que pode ser escrita na forma <em>ax + b = 0</em>, onde <em>a</em> e <em>b</em> são números reais e <em>a ≠ 0</em>. O objetivo é encontrar o valor de <em>x</em> que torna a igualdade verdadeira.</p><h3>Métodos básicos de resolução</h3><ol><li><strong>Isolamento da incógnita:</strong> simplificar ambos os lados, juntar termos semelhantes e deixar <em>x</em> sozinho.</li><li><strong>Transposição:</strong> passar termos de um lado para o outro trocando o sinal.</li><li><strong>Divisão pelo coeficiente:</strong> dividir pelo número que multiplica <em>x</em>.</li><li><strong>Verificação:</strong> substituir o valor encontrado e conferir se a igualdade é satisfeita.</li></ol><h3>Exemplo</h3><p>Resolver: <em>3x − 6 = 0</em></p><ol><li><em>3x = 6</em></li><li><em>x = 6 ÷ 3 = 2</em></li><li><em>3·2 − 6 = 0</em> ✅</li></ol><a href='teste.html'><button class='iniciar'>Teste do Módulo</button></a>"
+}

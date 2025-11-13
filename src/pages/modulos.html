@@ -1,98 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MathTrack — modulos</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MathTrack — Módulos</title>
 
-    <link rel="stylesheet" href="/src/styles/Base.css" />
-    <link rel="stylesheet" href="/src/styles/pages/modulos.css" />
-    <link rel="stylesheet" href="/src/styles/components/navbar.css">
-    <link rel="stylesheet" href="/src/styles/components/footer.css" />
+  <link rel="stylesheet" href="/src/styles/Base.css" />
+  <link rel="stylesheet" href="/src/styles/pages/modulos.css" />
+  <link rel="stylesheet" href="/src/styles/components/navbar.css">
+  <link rel="stylesheet" href="/src/styles/components/footer.css" />
 
-    <div data-include="/src/components/navbar.html"></div>
+  <div data-include="/src/components/navbar.html"></div>
 </head>
 
 <body>
-    <header> <h1 class="moduloss">Módulos</h1> <p> Esta seção apresenta os módulos do curso de Nivelamento em Matemática. Cada módulo foi desenvolvido para revisar conceitos fundamentais e preparar você para os conteúdos mais avançados. Explore os temas, siga a sequência recomendada e fortaleça sua base matemática. </p> </header>
-<main>
-  <section class="pesquisar">
-    <input class="pesquisar" type="text" placeholder="Pesquisar">
-    <button class="botao2">Buscar</button>
-  </section>
+  <header>
+    <h1 class="moduloss">Módulos</h1>
+    <p>
+      Esta seção apresenta os módulos do curso de Nivelamento em Matemática.
+      Cada módulo foi desenvolvido para revisar conceitos fundamentais e preparar você
+      para os conteúdos mais avançados. Explore os temas, siga a sequência recomendada
+      e fortaleça sua base matemática.
+    </p>
+  </header>
 
-  <article class="selecione-o-modulo">
-    <h3>Selecione o módulo</h3>
-  </article>
+  <main>
+    <section class="pesquisar">
+      <input id="Buscar" class="pesquisar" type="text" placeholder="Pesquisar">
+      <button id="botaoBuscar" class="botao2">Buscar</button>
+    </section>
 
-  <div class="container">
-    <div class="box">
-      <button class="botao1">Módulo 1</button>
-      <p>Conteúdo: Equação do Primeiro grau</p>
-      <p>Nível: Básico</p>
-      <p>Pré-requisito: nenhum</p>
+    <article class="selecione-o-modulo">
+      <h3>Selecione o módulo</h3>
+    </article>
+
+    <div class="container" id="modulosContainer">
     </div>
+  </main>
 
-    <div class="box">
-      <button class="botao1">Módulo 2</button>
-      <p>Conteúdo: Sistemas de Equação</p>
-      <p>Nível: Básico</p>
-      <p>Pré-requisito: Módulo 1</p>
-    </div>
+  <div data-include="/src/components/footer.html"></div>
 
-    <div class="box">
-      <button class="botao1">Módulo 3</button>
-      <p>Conteúdo: Equação do Segundo grau</p>
-      <p>Nível: Básico</p>
-      <p>Pré-requisito: Módulo 1</p>
-    </div>
-
-    <div class="box">
-      <button class="botao1">Módulo 4</button>
-      <p>Conteúdo: Potência e Radiciação</p>
-      <p>Nível: Básico</p>
-      <p>Pré-requisito: nenhum</p>
-    </div>
-
-    <div class="box">
-      <button class="botao1">Módulo 5</button>
-      <p>Conteúdo: Polinômios e fatoração</p>
-      <p>Nível: Intermediário</p>
-      <p>Pré-requisito: Módulo 1, Módulo 2, Módulo 3 e Módulo 4</p>
-    </div>
-
-    <div class="box">
-      <button class="botao1">Módulo 6</button>
-      <p>Conteúdo: Conjuntos numéricos</p>
-      <p>Nível: Básico</p>
-      <p>Pré-requisito: Nenhum</p>
-    </div>
-
-    <div class="box">
-      <button class="botao1">Módulo 7</button>
-      <p>Conteúdo: Fundamentos de funções</p>
-      <p>Nível: Intermediário</p>
-      <p>Pré-requisito: Módulo 1, Módulo 2, Módulo 3 e Módulo 4</p>
-    </div>
-
-    <div class="box">
-      <button class="botao1">Módulo 8</button>
-      <p>Conteúdo: Funções polinomiais do 1º e 2º grau</p>
-      <p>Nível: Intermediário</p>
-      <p>Pré-requisito: Módulo 1, Módulo 2, Módulo 3 e Módulo 4</p>
-    </div>
-  </div>
-</main>
-
-
-    <div data-include="/src/components/footer.html"></div>
-
-    <script type="module" src="/src/Scripts/incluir-partes.js"></script>
-
-    <!-- Favor não mexer no auth.js pois fiquei mais de 3h para descobrir um erro mínimo 
-   e não sei mais como resolver caso ocorra outro erro -->
-    <!-- Caso ainda queira mexer no auth.js, deixe comentado tudo o que fizer. Nesse caso,
-     da para ir desfazendo se acontecer algo que me tire o sono novamente -->
-    <script src="/src/scripts/auth.js" defer></script>
+  <script type="module" src="/src/Scripts/incluir-partes.js"></script>
+  <script src="src\pages\modulos.js"></script>
 </body>
 </html>
+
+

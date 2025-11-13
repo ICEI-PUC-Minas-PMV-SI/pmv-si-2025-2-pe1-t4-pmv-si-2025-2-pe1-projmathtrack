@@ -1,0 +1,50 @@
+[
+  {
+    "numero": 1,
+    "conteudo": "Equação do Primeiro Grau",
+    "nivel": "Básico",
+    "prerequisito": "Nenhum"
+  },
+  {
+    "numero": 2,
+    "conteudo": "Sistemas de Equação",
+    "nivel": "Básico",
+    "prerequisito": "Módulo 1"
+  },
+  {
+    "numero": 3,
+    "conteudo": "Equação do Segundo Grau",
+    "nivel": "Básico",
+    "prerequisito": "Módulo 1"
+  },
+  {
+    "numero": 4,
+    "conteudo": "Potência e Radiciação",
+    "nivel": "Básico",
+    "prerequisito": "Nenhum"
+  },
+  {
+    "numero": 5,
+    "conteudo": "Polinômios e Fatoração",
+    "nivel": "Intermediário",
+    "prerequisito": "Módulo 1, 2, 3 e 4"
+  },
+  {
+    "numero": 6,
+    "conteudo": "Conjuntos Numéricos",
+    "nivel": "Básico",
+    "prerequisito": "Nenhum"
+  },
+  {
+    "numero": 7,
+    "conteudo": "Fundamentos de Funções",
+    "nivel": "Intermediário",
+    "prerequisito": "Módulo 1, 2, 3 e 4"
+  },
+  {
+    "numero": 8,
+    "conteudo": "Funções Polinomiais do 1º e 2º Grau",
+    "nivel": "Intermediário",
+    "prerequisito": "Módulo 1, 2, 3 e 4"
+  }
+]

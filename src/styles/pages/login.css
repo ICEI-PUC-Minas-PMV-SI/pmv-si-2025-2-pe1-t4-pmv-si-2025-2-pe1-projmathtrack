@@ -95,3 +95,19 @@ a {
 .btn-secondary:hover {
     background-color: #5a2d9e;
 }
+
+.error-text {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.input-field.is-invalid {
+    border-color: #d32f2f;
+}
+
+.input-field.is-invalid:focus {
+    border-color: #d32f2f;
+    box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.2);
+}

@@ -6,40 +6,43 @@
     <title>MathTrack — Teste do Módulo</title>
 
     <link rel="stylesheet" href="/src/styles/Base.css" />
-    <link rel="stylesheet" href="/src/styles/pages/formulario.css" />
-    <link rel="stylesheet" href="/src/styles/pages/teste-modulo.css" />
+    <link rel="stylesheet" href="/src/styles/pages/teste.css" />
     <link rel="stylesheet" href="/src/styles/components/navbar.css">
     <link rel="stylesheet" href="/src/styles/components/footer.css" />
 
     <div data-include="/src/components/navbar.html"></div>
 </head>
-<body>
 
-    <main class="container">
-        <header>
-            <h1>MathTrack</h1>
-            <p class="subtitulo" id="titulo-teste">Carregando teste...</p>
-        </header>
-        
-        <section class="content">
+<body>
+    <main class="teste-page">
+        <div class="teste-container">
+            <div class="teste-header">
+                <h1 id="teste-titulo">Teste do Módulo</h1>
+                <p id="teste-descricao">Responda às questões abaixo</p>
+            </div>
+
             <div class="info-teste">
                 <p>📝 <strong>Total de questões:</strong> <span id="total-questoes">5</span></p>
                 <p>✅ <strong>Nota mínima para aprovação:</strong> 60%</p>
                 <p>⏱️ <strong>Tempo estimado:</strong> 10 minutos</p>
             </div>
 
-            <form id="form-teste">
-                <div id="questoes-container">
-                    <p>Carregando questões...</p>
+            <form id="form-teste" class="teste-form">
+                <div id="questoes-container" class="questoes-container">
+                    <div class="loading">Carregando questões...</div>
                 </div>
 
-                <div class="acoes-teste">
-                    <button type="submit" class="btn-submit">Enviar Respostas</button>
-                    <button type="button" class="btn-cancelar" onclick="voltarModulo()">Cancelar</button>
+                <div class="teste-actions">
+                    <button type="button" class="btn btn-secondary" onclick="window.history.back()">
+                        ← Voltar
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        Enviar Respostas
+                    </button>
                 </div>
             </form>
 
-            <div id="resultado-teste" class="resultado-teste" style="display: none;">
+            <div id="resultado-teste" class="resultado-container" style="display: none;">
                 <h2 id="resultado-titulo">Resultado do Teste</h2>
                 <div class="resultado-stats">
                     <p><strong>Acertos:</strong> <span id="acertos">0</span> de <span id="total">5</span></p>
@@ -47,22 +50,26 @@
                     <p id="status-aprovacao"></p>
                 </div>
                 <div class="resultado-acoes">
-                    <button class="btn-submit" onclick="voltarTrilha()">Voltar para Trilha</button>
-                    <button class="btn-refazer" onclick="refazerTeste()" id="btn-refazer">Refazer Teste</button>
+                    <button class="btn btn-primary" onclick="voltarTrilha()">Voltar para Trilha</button>
+                    <button class="btn btn-secondary" onclick="refazerTeste()" id="btn-refazer">Refazer Teste</button>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <div data-include="/src/components/footer.html"></div>
 
-    <script type="module" src="/src/Scripts/incluir-partes.js"></script>
-
-    <!-- Favor não mexer no auth.js pois fiquei mais de 3h para descobrir um erro mínimo 
-   e não sei mais como resolver caso ocorra outro erro -->
-    <!-- Caso ainda queira mexer no auth.js, deixe comentado tudo o que fizer. Nesse caso,
-     da para ir desfazendo se acontecer algo que me tire o sono novamente -->
+    <script type="module" src="/src/scripts/incluir-partes.js"></script>
+    <script src="/src/scripts/teste-modulo.js"></script>
     <script src="/src/scripts/auth.js" defer></script>
-    <script src="/src/Scripts/teste-modulo.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (!window.requireLoginPopup || !requireLoginPopup('Você precisa estar logado para fazer o teste.')) {
+          const main = document.querySelector('main');
+          if (main) main.style.filter = 'blur(3px)';
+        }
+      });
+    </script>
 </body>
 </html>
+

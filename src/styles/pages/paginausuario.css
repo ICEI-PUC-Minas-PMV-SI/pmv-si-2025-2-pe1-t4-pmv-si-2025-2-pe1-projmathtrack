@@ -179,6 +179,69 @@ body {
   text-decoration: underline;
 }
 
+/* Formulários de edição */
+.input-field {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.btn-save {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-save:hover {
+  background-color: #0056b3;
+}
+
+.btn-cancel {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-cancel:hover {
+  background-color: #5a6268;
+}
+
+/* Avatar com inicial */
+#userAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#avatarInitial {
+  display: block;
+}
+
 /* Responsividade */
 @media (max-width: 900px) {
   .perfil-container {

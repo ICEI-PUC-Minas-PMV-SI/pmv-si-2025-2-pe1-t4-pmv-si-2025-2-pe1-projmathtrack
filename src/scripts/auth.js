@@ -60,32 +60,55 @@ function showLoginPopup(message) {
   const box = document.createElement('div');
   box.className = 'popup-box';
   box.innerHTML = `
-    <h3>Login necessário</h3>
-    <p>${message || 'Você precisa estar logado para continuar.'}</p>
+    <div class="popup-header">
+      <h3 class="popup-title">Login necessário</h3>
+      <p class="popup-message">${message || 'Você precisa estar logado para continuar.'}</p>
+    </div>
 
-    <form id="popupForm" novalidate>
+    <form id="popupForm" class="popup-form" novalidate>
       <div class="popup-field">
-        <label for="popupEmail">E-mail</label>
-        <input type="email" id="popupEmail" placeholder="seuemail@exemplo.com" required />
+        <label for="popupEmail" class="popup-label">E-mail</label>
+        <input 
+          type="email" 
+          id="popupEmail" 
+          class="popup-input"
+          placeholder="seuemail@exemplo.com" 
+          required 
+          autocomplete="email"
+        />
       </div>
 
       <div class="popup-field">
-        <label for="popupPass">Senha</label>
+        <label for="popupPass" class="popup-label">Senha</label>
         <div class="popup-passwrap">
-          <input type="password" id="popupPass" placeholder="Sua senha" required />
-          <button type="button" id="popupTogglePass" class="popup-eye" aria-label="Mostrar senha">👁️</button>
+          <input 
+            type="password" 
+            id="popupPass" 
+            class="popup-input"
+            placeholder="Digite sua senha" 
+            required 
+            autocomplete="current-password"
+          />
+          <button 
+            type="button" 
+            id="popupTogglePass" 
+            class="popup-eye" 
+            aria-label="Mostrar senha"
+            title="Mostrar/Ocultar senha"
+          >
+            👁️
+          </button>
         </div>
-        <div id="popupError" class="error-text" style="display:none"></div>
+        <div id="popupError" class="popup-error" style="display:none"></div>
       </div>
 
       <div class="popup-links">
-        <a href="/src/pages/recuperar-senha.html" id="popupForgot">Esqueceu a senha?</a>
-        <a href="/src/pages/criar-conta.html" id="popupSignup">Criar conta</a>
+        <a href="/src/pages/recuperar-senha.html" id="popupForgot" class="popup-link">Esqueceu a senha?</a>
+        <a href="/src/pages/criar-conta.html" id="popupSignup" class="popup-link">Criar conta</a>
       </div>
 
       <div class="popup-actions">
-        <button id="popupCancel" class="btn btn--ghost" type="button">Cancelar</button>
-        <button id="popupConfirm" class="btn btn--primary" type="submit">Entrar</button>
+        <button id="popupConfirm" class="popup-btn popup-btn-primary" type="submit">Entrar</button>
       </div>
     </form>
   `;
@@ -97,7 +120,6 @@ function showLoginPopup(message) {
   const passEl  = document.getElementById('popupPass');
   const formEl  = document.getElementById('popupForm');
   const togglePassBtn = document.getElementById('popupTogglePass');
-  const cancelBtn = document.getElementById('popupCancel');
   const forgotA  = document.getElementById('popupForgot');
   const signupA  = document.getElementById('popupSignup');
   const errorEl  = document.getElementById('popupError');
@@ -107,22 +129,19 @@ function showLoginPopup(message) {
   function showError(msg) {
     errorEl.textContent = msg;
     errorEl.style.display = 'block';
-    passEl.classList.add('is-invalid');
+    passEl.classList.add('input-error');
+    errorEl.classList.add('shake');
+    setTimeout(() => errorEl.classList.remove('shake'), 500);
   }
   function clearError() {
     errorEl.style.display = 'none';
-    passEl.classList.remove('is-invalid');
+    passEl.classList.remove('input-error');
   }
 
   togglePassBtn.addEventListener('click', function(){
     const isPwd = passEl.type === 'password';
     passEl.type = isPwd ? 'text' : 'password';
     this.textContent = isPwd ? '🙈' : '👁️';
-  });
-
-  cancelBtn.addEventListener('click', function(){
-    overlay.remove();
-    if (mainEl) mainEl.style.filter = 'none';
   });
 
   function closeAndGo() {
@@ -166,6 +185,14 @@ function showLoginPopup(message) {
     overlay.remove();
     if (mainEl) mainEl.style.filter = 'none';
     renderAuthUI();
+    
+    // Remove blur de todos os elementos main na página (caso tenha sido aplicado pelo script de proteção)
+    const allMainElements = document.querySelectorAll('main');
+    allMainElements.forEach(el => {
+      if (el.style.filter === 'blur(3px)') {
+        el.style.filter = 'none';
+      }
+    });
   });
 }
 
@@ -180,10 +207,13 @@ function requireLoginPopup(message) {
 
 //  Inicialização
 function initAuth() {
+
   const ok = document.getElementById('actionsGuest') || document.getElementById('actionsUser');
   if (!ok) { setTimeout(initAuth, 120); return; }
   renderAuthUI();
   bindLogout();
 }
 document.addEventListener('DOMContentLoaded', initAuth);
+// Expor funções globalmente para uso por outros scripts
 window.requireLoginPopup = requireLoginPopup;
+window.getUser = getUser;

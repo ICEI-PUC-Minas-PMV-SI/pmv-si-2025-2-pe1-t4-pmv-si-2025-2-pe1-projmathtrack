@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MathTrack — Perfil</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="/src/styles/Base.css" />
+  <link rel="stylesheet" href="/src/styles/pages/paginausuario.css" />
+  <link rel="stylesheet" href="/src/styles/components/navbar.css">
+  <link rel="stylesheet" href="/src/styles/components/footer.css" />
+
+  <!-- Navbar incluída por script -->
+  <div data-include="/src/components/navbar.html"></div>
+</head>
+
+<body>
+  <header class="topo-azul">
+    <h1>Meu Perfil</h1>
+    <p>Visualize e gerencie suas informações pessoais</p>
+  </header>
+
+  <main class="perfil-container">
+    <!-- Caixa do usuário -->
+    <div class="caixa-usuario">
+      <div class="foto" id="userAvatar">
+        <span id="avatarInitial">U</span>
+      </div>
+      <h3 id="userName">Carregando...</h3>
+      <p id="userEmail">-</p>
+      <hr>
+      <p style="font-size: 12px; color: #999;">Membro desde</p>
+      <p id="memberSince" style="font-size: 13px; color: #666;">-</p>
+    </div>
+
+    <!-- Caixas de informação -->
+    <div class="caixas-info">
+      <!-- Informações Pessoais -->
+      <div class="caixa">
+        <h3>
+          Informações Pessoais
+          <a href="#" class="editar" id="editPersonal">Editar</a>
+        </h3>
+        <div id="personalInfo">
+          <p><strong>Nome:</strong> <span id="displayName">-</span></p>
+          <p><strong>E-mail:</strong> <span id="displayEmail">-</span></p>
+          <p><strong>Data de Nascimento:</strong> <span id="displayBirth">-</span></p>
+          <p><strong>Celular:</strong> <span id="displayPhone">-</span></p>
+        </div>
+        <form id="personalForm" style="display: none;">
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Nome:</label>
+            <input type="text" id="editName" class="input-field" required />
+          </div>
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">E-mail:</label>
+            <input type="email" id="editEmail" class="input-field" required />
+          </div>
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Data de Nascimento:</label>
+            <input type="date" id="editBirth" class="input-field" />
+          </div>
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Celular:</label>
+            <input type="tel" id="editPhone" class="input-field" placeholder="(00) 00000-0000" />
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <button type="submit" class="btn-save">Salvar</button>
+            <button type="button" class="btn-cancel" id="cancelPersonal">Cancelar</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Alterar Senha -->
+      <div class="caixa">
+        <h3>
+          Segurança
+          <a href="#" class="editar" id="editPassword">Alterar senha</a>
+        </h3>
+        <div id="passwordInfo">
+          <p>Senha: ••••••••</p>
+        </div>
+        <form id="passwordForm" style="display: none;">
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Senha Atual:</label>
+            <input type="password" id="currentPassword" class="input-field" required />
+          </div>
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Nova Senha:</label>
+            <input type="password" id="newPassword" class="input-field" required />
+          </div>
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Confirmar Nova Senha:</label>
+            <input type="password" id="confirmPassword" class="input-field" required />
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <button type="submit" class="btn-save">Alterar senha</button>
+            <button type="button" class="btn-cancel" id="cancelPassword">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div data-include="/src/components/footer.html"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/scripts/incluir-partes.js"></script>
+  <script src="/src/scripts/auth.js" defer></script>
+  <script src="/src/scripts/perfil.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!window.requireLoginPopup || !requireLoginPopup('Você precisa estar logado para acessar seu perfil.')) {
+        const main = document.querySelector('main');
+        if (main) main.style.filter = 'blur(3px)';
+      }
+    });
+  </script>
+</body>
+</html>
+

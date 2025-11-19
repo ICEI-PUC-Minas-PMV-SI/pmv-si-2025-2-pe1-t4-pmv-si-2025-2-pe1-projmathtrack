@@ -3,9 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MathTrack — cadastrar
-        
-    </title>
+    <title>MathTrack — Login</title>
 
     <!-- Estilo da Página:
    Tem que colocar CSS da Página, Navbar, Footer e Bse -->
@@ -23,21 +21,26 @@
             <div class="welcome-title">
                 <h1><span class="bold">Bem-vindo</span> <span class="normal">ao</span> <span class="bold">MathTrack!</span></h1>
             </div>
-            <div class="login-form">
-                <input type="email" placeholder="Email:" class="input-field">
-                <input type="password" placeholder="Senha:" class="input-field">
+            <form id="loginForm" class="login-form" novalidate>
+                <input id="loginEmail" type="email" placeholder="Email:" class="input-field" required />
+                <input id="loginSenha" type="password" placeholder="Senha:" class="input-field" required />
                 
-                <a href="\src\pages\formulario.html" class="btn btn-primary">Entrar</a>
-                <a href="\src\pages\recuperar-senha.html" class="btn btn-secondary">Esqueci minha senha</a>
-                <a href="\src\pages\criar-conta.html" class="btn btn-secondary">Novo por aqui? Criar conta</a>
-            </div>
+                <div id="loginError" class="error-text" style="display:none; color: red; margin-bottom: 10px;"></div>
+                
+                <button type="submit" class="btn btn-primary">Entrar</button>
+                <a href="/src/pages/recuperar-senha.html" class="btn btn-secondary">Esqueci minha senha</a>
+                <a href="/src/pages/criar-conta.html" class="btn btn-secondary">Novo por aqui? Criar conta</a>
+            </form>
         </div>
     </div>
         <!-- Aqui é para colocar o Footer-->
     <div data-include="/src/components/footer.html"></div>
 
     <!-- JS para incluir a Navbar e o Footer -->
-    <script type="module" src="/src/Scripts/incluir-partes.js"></script>
+    <script type="module" src="/src/scripts/incluir-partes.js"></script>
+
+    <!-- Script de login -->
+    <script src="/src/scripts/login.js" defer></script>
 
     <!-- Favor não mexer no auth.js pois fiquei mais de 3h para descobrir um erro mínimo 
    e não sei mais como resolver caso ocorra outro erro -->

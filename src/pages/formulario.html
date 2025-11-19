@@ -262,6 +262,14 @@
     e não sei mais como resolver caso se acontecer de novo -->
     <!-- Caso ainda queira mexer no auth.js, deixe comentado tudo o que fizer. Nesse caso,
     da para ir desfazendo se acontecer algo que me tire o sono novamente -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (!window.requireLoginPopup || !requireLoginPopup('Você precisa estar logado para fazer o teste de nivelamento.')) {
+          const main = document.querySelector('main');
+          if (main) main.style.filter = 'blur(3px)';
+        }
+      });
+    </script>
 
 
 </body>

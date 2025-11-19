@@ -1,116 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MathTrack — Trilha de aprendizado</title>
+    <title>MathTrack — Trilha de Aprendizado</title>
 
-    <!-- Estilo da Página:
-   Tem que colocar CSS da Página, Navbar, Footer e Bse -->
+    <!-- Estilos -->
     <link rel="stylesheet" href="/src/styles/Base.css" />
     <link rel="stylesheet" href="/src/styles/pages/trilha.css" />
     <link rel="stylesheet" href="/src/styles/components/navbar.css">
     <link rel="stylesheet" href="/src/styles/components/footer.css" />
 
-    <!-- Aqui incluímos o Navbar-->
+    <!-- Navbar -->
     <div data-include="/src/components/navbar.html"></div>
 </head>
 
-
     <body>
+    <header class="trilha-header">
+        <div class="container">
+            <h1 class="trilha-title">Trilha de Aprendizado</h1>
+            <p class="trilha-description">Acompanhe seu progresso e continue evoluindo em matemática</p>
+        </div>
+    </header>
  
         <div class="container">
-            <div class="modulos"> 
-                <div class="modulo">
-                    <a href="modulo1.html"> <h3>Módulo 1</h3> </a> 
-                    <p>Equação do Primeiro Grau</p>
-                    <br>
-                    <div class="progresso">
-                        <div class="barra-progresso" style="width: 80%;"></div>
-                         <span class="texto-progresso">80%</span>
-                        </div>
-                        <br>
-                        <br>
+        <!-- Módulos -->
+        <div class="modulos" id="modulosContainer">
+            <div class="loading">Carregando módulos...</div>
                 </div>
                
-                <div class="modulo">
-                    <a href="modulo2.html"> <h3>Módulo 2</h3> </a>
-                    <p>Sistema de Equações</p>
-                    <br>
-                    <div class="progresso">
-                        <div class="barra-progresso" style="width: 0%;"></div>
-                         <span class="texto-progresso">0</span>
-                        </div>
+        <!-- Estágio Atual -->
+        <div class="estagio" id="estagioContainer">
+            <h3>Seu Estágio Atual</h3>
+            <div class="loading">Carregando...</div>
                 </div>
 
-
-                <div class="modulo">
-                    <a href="modulo2.html"> <h3>Módulo 3</h3> </a>
-                    <p>Equação do segundo grau</p>
-                    <br>
-                    <div class="progresso">
-                        <div class="barra-progresso" style="width: 0%;"></div>
-                         <span class="texto-progresso">0</span>
-                        </div>
+        <!-- Continuar -->
+        <div class="continuar" id="continuarContainer">
+            <h3>Continuar onde parou</h3>
+            <div class="loading">Carregando...</div>
                 </div>
 
+        <!-- Fórum -->
+        <div class="forum" id="forumContainer">
+            <h3>Fóruns</h3>
+            <div class="loading">Carregando...</div>
             </div>
 
-            <div class="continuar">
-                <a href="continuar.html"> <h3> Continuar onde parou </h3> </a>
-
-                <div class="continuar-modulo"> 
-                    <h3> Módulo: </h3>
-                    <p> Unidade: </p>
+        <!-- Evolução -->
+        <div class="evolucao" id="evolucaoContainer">
+            <h3>Desempenho: Evolução dos Estudos</h3>
+            <div class="loading">Carregando...</div>
                 </div>
 
-                 <div class="continuar-modulo"> 
-                    <h3> Módulo: </h3>
-                    <p>Unidade: </p>
+        <!-- Testes -->
+        <div class="tarefa" id="tarefaContainer">
+            <h3>Testes</h3>
+            <div class="loading">Carregando...</div>
                 </div>
             </div>
 
-            <div class="forum">
-                <h3> Fóruns </h3>
-                <div class="caixa-forum">
-                    <a href="forum.html"> <h3> Título da pergunta </h3> </a>
-                    <p> pergunta pergunta pergunta</p>
-                </div>
-            </div>
-
-            <div class="evolucao">
-               <a href="desempenho.html"> <h3> Desempenho: Evolução dos Estudos </h3> </a>
-               <img src="evolucao.jpg" width="200px" height="200px">
-            </div>
-
-            <div class="tarefa">
-                <a href="testes.html"> <h3> Testes </h3> </a>
-            </div>
-
-        </div>
-
-    </body>
-    
-    <!-- Aqui é para colocar o Footer-->
+    <!-- Footer -->
     <div data-include="/src/components/footer.html"></div>
 
-    <!-- JS para incluir a Navbar e o Footer -->
+    <!-- Scripts -->
     <script type="module" src="/src/scripts/incluir-partes.js"></script>
-
-    <!-- Favor não mexer no auth.js pois fiquei mais de 3h para descobrir um erro mínimo 
-   e não sei mais como resolver caso ocorra outro erro -->
-    <!-- Caso ainda queira mexer no auth.js, deixe comentado tudo o que fizer. Nesse caso,
-     da para ir desfazendo se acontecer algo que me tire o sono novamente -->
     <script src="/src/scripts/auth.js" defer></script>
     <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    if (!requireLoginPopup('Entre na sua conta para acessar o fórum.')) {
-      // impede o conteúdo de carregar até o login
-      document.querySelector('main').style.filter = 'blur(3px)';
-    }
-  });
-</script>
-    
-    <!-- JS para funcionalidades da Trilha de Aprendizado -->
-    <script src="/src/scripts/trilha-aprendizado.js"></script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (!window.requireLoginPopup || !requireLoginPopup('Você precisa estar logado para acessar sua trilha de aprendizado.')) {
+          const main = document.querySelector('main');
+          if (main) main.style.filter = 'blur(3px)';
+        }
+      });
+    </script>
+    <script src="/src/scripts/trilha-aprendizado.js" defer></script>
+</body>
 </html>

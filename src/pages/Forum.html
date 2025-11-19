@@ -18,13 +18,13 @@
     <!-- Sidebar -->
     <aside class="sidebar" aria-label="Navegação do fórum">
       <nav class="side-nav">
-        <a class="side-link is-active" href="#">Home</a>
-        <a class="side-link" href="#">Seus tópicos</a>
+        <a class="side-link is-active" href="#" data-filtro-assunto="">Home</a>
+        <a class="side-link" href="#" data-meus-topicos="true">Seus tópicos</a>
         <h4 class="side-title">Módulos em Curso</h4>
         <ul class="side-list">
-          <li><a href="#">Álgebra</a></li>
-          <li><a href="#">Cálculo I</a></li>
-          <li><a href="#">Estruturas Lógicas</a></li>
+          <li><a href="#" data-filtro-assunto="Álgebra">Álgebra</a></li>
+          <li><a href="#" data-filtro-assunto="Cálculo I">Cálculo I</a></li>
+          <li><a href="#" data-filtro-assunto="Estruturas Lógicas">Estruturas Lógicas</a></li>
         </ul>
       </nav>
     </aside>
@@ -51,6 +51,12 @@
         <div>
           <div style="display:grid; gap:10px; margin-top:8px">
             <input id="novoTitulo" class="search-input" placeholder="Título do tópico" />
+            <select id="novoAssunto" class="search-input" required>
+              <option value="">Selecione o assunto</option>
+              <option value="Álgebra">Álgebra</option>
+              <option value="Cálculo I">Cálculo I</option>
+              <option value="Estruturas Lógicas">Estruturas Lógicas</option>
+            </select>
             <input id="novoAutor" class="search-input" placeholder="Seu nome (opcional)" />
             <textarea id="novoCorpo" class="search-input" placeholder="Escreva o conteúdo inicial"></textarea>
             <div style="display:flex; gap:10px; justify-content:flex-end">
@@ -86,10 +92,17 @@
   <script src="/src/Scripts/incluir-partes.js" defer></script>
   <script src="/src/scripts/forum-view.js" defer></script>
   <script src="/src/scripts/auth.js" defer></script>
-    <script src="/src/scripts/auth.js" defer></script>
-    <!-- Favor não mexer no auth.js pois fiquei mais de 3h para descobrir um erro 
+<!-- Favor não mexer no auth.js pois fiquei mais de 3h para descobrir um erro 
     e não sei mais como resolver caso se acontecer de novo -->
     <!-- Caso ainda queira mexer no auth.js, deixe comentado tudo o que fizer. Nesse caso,
     da para ir desfazendo se acontecer algo que me tire o sono novamente -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (!window.requireLoginPopup || !requireLoginPopup('Você precisa estar logado para acessar seu histórico.')) {
+          const main = document.querySelector('main');
+          if (main) main.style.filter = 'blur(3px)';
+        }
+      });
+    </script>
 </body>
 </html>

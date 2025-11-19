@@ -4,12 +4,13 @@
 
 // Configuração das chaves localStorage
 var DB_KEY = 'mt_forum_v1';
-var USER_KEY = 'mt_user';
 
 // Estado
 var estado = carregar();
 var mostrarSalvos = false;
 var termoBusca = "";
+var assuntoFiltro = ""; // Filtro por assunto (vazio = todos)
+var mostrarMeusTopicos = false; // Filtro para mostrar apenas tópicos do usuário logado
 
 // Elementos da página 
 var elBusca = document.getElementById('busca');
@@ -28,6 +29,7 @@ if (!estado || !estado.topicos || estado.topicos.length === 0) {
         titulo: "Bem-vindo ao Fórum MathTrack",
         corpo: "Crie tópicos, comente, edite, exclua, curta e salve tópicos. Tudo funciona com Front-end + localStorage.",
         autor: "Equipe",
+        assunto: "Álgebra",
         criadoEm: Date.now(),
         curtidas: 2,
         salvo: false,
@@ -46,77 +48,26 @@ if (!estado || !estado.topicos || estado.topicos.length === 0) {
   salvar(estado);
 }
 
-// Login simples (localStorage)
+
 function getUser() {
-  try {
-    var txt = localStorage.getItem(USER_KEY);
-    if (txt) return JSON.parse(txt);
-  } catch (e) {}
+  // Usa a função global do auth.js 
+  if (window.getUser) {
+    return window.getUser();
+  }
   return null;
-}
-
-function setUser(name) {
-  localStorage.setItem(USER_KEY, JSON.stringify({ name: name }));
-}
-
-function clearUser() {
-  localStorage.removeItem(USER_KEY);
 }
 
 function isLogged() {
   return !!getUser();
 }
 
-function syncAuthBar() {
-  var u = getUser();
-  var info = document.getElementById('userInfo');
-  var bLogin = document.getElementById('btnLogin');
-  var bLogout = document.getElementById('btnLogout');
-
-  if (!info || !bLogin || !bLogout) return; // caso a navbar ainda não esteja no DOM
-
-  if (u) {
-    info.textContent = u.name;
-    bLogin.style.display = 'none';
-    bLogout.style.display = 'inline-flex';
-  } else {
-    info.textContent = 'Visitante';
-    bLogin.style.display = 'inline-flex';
-    bLogout.style.display = 'none';
-  }
-}
-
-// Popup de login
-function mostrarPopupLogin() {
-  var popup = document.getElementById('loginPopup');
-  if (!popup) return;
-  popup.style.display = 'flex';
-
-  var fechar = document.getElementById('closePopup');
-  if (fechar) {
-    fechar.onclick = function () { popup.style.display = 'none'; };
-  }
-
-  // Se existir um botão "Fazer login" sem link (id="popupGoLogin"), apenas foca o botão da navbar
-  var go = document.getElementById('popupGoLogin');
-  if (go) {
-    go.onclick = function () {
-      popup.style.display = 'none';
-      var loginBtn = document.getElementById('btnLogin');
-      if (loginBtn) loginBtn.focus();
-    };
-  }
-
-  // Fechar clicando fora
-  popup.addEventListener('click', function (e) {
-    if (e.target === popup) popup.style.display = 'none';
-  });
-}
-
-// Bloqueia ações se não estiver logado e usa o popup de login
+// Bloqueia ações se não estiver logado e usa o popup de login do auth.js
 function requireLogin() {
   if (!isLogged()) {
-    mostrarPopupLogin();
+    // Usa o popup do auth.js 
+    if (window.requireLoginPopup) {
+      window.requireLoginPopup('Você precisa estar logado para realizar esta ação.');
+    }
     return false;
   }
   return true;
@@ -164,6 +115,34 @@ function obterTopicosFiltrados() {
     arr.push(estado.topicos[i]);
   }
 
+  // Filtro por assunto
+  if (assuntoFiltro && assuntoFiltro.trim() !== "") {
+    var filtradosAssunto = [];
+    for (i = 0; i < arr.length; i++) {
+      if (arr[i].assunto === assuntoFiltro) {
+        filtradosAssunto.push(arr[i]);
+      }
+    }
+    arr = filtradosAssunto;
+  }
+
+  // Filtro "Seus tópicos" - mostra apenas tópicos do usuário logado
+  if (mostrarMeusTopicos) {
+    var u = getUser();
+    if (u && u.name) {
+      var meusTopicos = [];
+      for (i = 0; i < arr.length; i++) {
+        if (arr[i].autor === u.name) {
+          meusTopicos.push(arr[i]);
+        }
+      }
+      arr = meusTopicos;
+    } else {
+      // Se não estiver logado, não mostra nada
+      arr = [];
+    }
+  }
+
   if (mostrarSalvos) {
     var salvos = [];
     for (i = 0; i < arr.length; i++) if (arr[i].salvo) salvos.push(arr[i]);
@@ -198,11 +177,12 @@ function renderLista() {
   for (var i = 0; i < itens.length; i++) {
     var t = itens[i];
     var salvoBadge = t.salvo ? '<span class="chip -alt">Salvo</span>' : '';
+    var assuntoBadge = t.assunto ? '<span class="chip">' + escaparHTML(t.assunto) + '</span>' : '';
     var html = ''
       + '<article class="thread-card">'
       + '  <header class="thread-head">'
       + '    <h2 class="thread-title">' + escaparHTML(t.titulo) + '</h2>'
-      + '    <div class="thread-tags">' + salvoBadge + '</div>'
+      + '    <div class="thread-tags">' + assuntoBadge + salvoBadge + '</div>'
       + '  </header>'
       + '  <div class="thread-meta">'
       + '    <img class="avatar" src="/assets/avatar1.jpg" alt="">'
@@ -242,7 +222,7 @@ function abrirTopico(id) {
   html += '<section class="thread-card">';
   html += '  <header class="thread-head">';
   html += '    <h1 class="thread-title">' + escaparHTML(t.titulo) + '</h1>';
-  html += '    <div class="thread-tags">' + (t.salvo ? '<span class="chip -alt">Salvo</span>' : '') + '</div>';
+  html += '    <div class="thread-tags">' + (t.assunto ? '<span class="chip">' + escaparHTML(t.assunto) + '</span>' : '') + (t.salvo ? '<span class="chip -alt">Salvo</span>' : '') + '</div>';
   html += '  </header>';
   html += '  <div class="thread-meta">';
   html += '    <img class="avatar" src="/assets/avatar1.jpg" alt="">';
@@ -309,12 +289,13 @@ function encontrarTopico(id) {
   return null;
 }
 
-function criarTopico(titulo, autor, corpo) {
+function criarTopico(titulo, autor, corpo, assunto) {
   var t = {
     id: gerarId(),
     titulo: titulo,
     corpo: corpo,
     autor: autor,
+    assunto: assunto || "",
     criadoEm: Date.now(),
     curtidas: 0,
     salvo: false,
@@ -477,7 +458,9 @@ document.addEventListener('click', function (e) {
     var i2;
     for (i2 = 0; i2 < t2.comentarios.length; i2++) {
       if (t2.comentarios[i2].id === p2[1]) {
-        if (!u2 || t2.comentarios[i2].autor !== u2.name) {
+        // Verifica se o usuário existe e se o nome corresponde
+        var userName = u2 && u2.name ? u2.name : null;
+        if (!userName || t2.comentarios[i2].autor !== userName) {
           alert('Você só pode excluir seus próprios comentários.');
           return;
         }
@@ -499,7 +482,9 @@ document.addEventListener('click', function (e) {
     var i3;
     for (i3 = 0; i3 < t3.comentarios.length; i3++) {
       if (t3.comentarios[i3].id === p3[1]) {
-        if (!u3 || t3.comentarios[i3].autor !== u3.name) {
+        // Verifica se o usuário existe e se o nome corresponde
+        var userName3 = u3 && u3.name ? u3.name : null;
+        if (!userName3 || t3.comentarios[i3].autor !== userName3) {
           alert('Você só pode editar seus próprios comentários.');
           return;
         }
@@ -536,7 +521,10 @@ document.addEventListener('click', function (e) {
     var autor = document.getElementById('novoAutorComent').value;
     // Auto-preencher com usuário logado se vazio
     if ((!autor || autor.trim() === "") && isLogged()) {
-      autor = getUser().name;
+      var u = getUser();
+      if (u && u.name) {
+        autor = u.name;
+      }
     }
 
     var corpo = document.getElementById('novoComentario').value;
@@ -564,21 +552,26 @@ document.getElementById('btnPublicarTopico').addEventListener('click', function 
   if (!requireLogin()) return;
 
   var titulo = document.getElementById('novoTitulo').value;
+  var assunto = document.getElementById('novoAssunto').value;
   var autor = document.getElementById('novoAutor').value;
   if ((!autor || autor.trim() === "") && isLogged()) {
-    autor = getUser().name;
+    var u = getUser();
+    if (u && u.name) {
+      autor = u.name;
+    }
   }
   var corpo = document.getElementById('novoCorpo').value;
 
-  if (!titulo || titulo.trim() === "" || !corpo || corpo.trim() === "") {
-    alert('Informe título e conteúdo.');
+  if (!titulo || titulo.trim() === "" || !corpo || corpo.trim() === "" || !assunto || assunto.trim() === "") {
+    alert('Informe título, assunto e conteúdo.');
     return;
   }
 
-  var novoId = criarTopico(titulo, autor, corpo);
+  var novoId = criarTopico(titulo, autor, corpo, assunto);
 
   // limpar Formulário
   document.getElementById('novoTitulo').value = "";
+  document.getElementById('novoAssunto').value = "";
   document.getElementById('novoAutor').value = "";
   document.getElementById('novoCorpo').value = "";
   boxNovo.style.display = "none";
@@ -600,33 +593,45 @@ btnFiltrarSalvos.addEventListener('click', function () {
   renderLista();
 });
 
-// Inicia a barra de auth quando a navbar estiver no DOM
-function initAuthBindings() {
-  var btnLoginEl = document.getElementById('btnLogin');
-  var btnLogoutEl = document.getElementById('btnLogout');
-  var userInfoEl = document.getElementById('userInfo');
-
-  // Se a navbar ainda não foi colocada, tenta de novo
-  if (!btnLoginEl || !btnLogoutEl || !userInfoEl) {
-    setTimeout(initAuthBindings, 120);
+// Filtro por assunto e "Seus tópicos" (sidebar)
+document.addEventListener('click', function (e) {
+  var alvo = e.target;
+  var filtroAssunto = alvo.getAttribute('data-filtro-assunto');
+  var meusTopicos = alvo.getAttribute('data-meus-topicos');
+  
+  if (filtroAssunto !== null || meusTopicos !== null) {
+    e.preventDefault();
+    
+    if (meusTopicos !== null) {
+      // Filtro "Seus tópicos"
+      mostrarMeusTopicos = true;
+      assuntoFiltro = ""; // Limpa o filtro de assunto
+      
+      // Verifica se o usuário está logado
+      if (!isLogged()) {
+        if (window.requireLoginPopup) {
+          window.requireLoginPopup('Você precisa estar logado para ver seus tópicos.');
+        }
     return;
   }
-
-  btnLoginEl.onclick = function () {
-    var nome = prompt('Digite seu nome para entrar:');
-    if (!nome || nome.trim() === '') return;
-    setUser(nome.trim());
-    syncAuthBar();
-  };
-
-  btnLogoutEl.onclick = function () {
-    clearUser();
-    syncAuthBar();
-  };
-
-  syncAuthBar();
+    } else {
+      // Filtro por assunto ou Home
+      mostrarMeusTopicos = false;
+      assuntoFiltro = filtroAssunto || "";
+    }
+    
+    // Atualiza a classe ativa na sidebar
+    var links = document.querySelectorAll('.side-link, .side-list a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].classList.remove('is-active');
+    }
+    alvo.classList.add('is-active');
+    
+    // Renderiza a lista filtrada
+    renderLista();
 }
+});
 
 // Primeira renderização
+// Nota: A autenticação é gerenciada pelo auth.js, não precisamos mais de initAuthBindings()
 renderLista();
-initAuthBindings(); 

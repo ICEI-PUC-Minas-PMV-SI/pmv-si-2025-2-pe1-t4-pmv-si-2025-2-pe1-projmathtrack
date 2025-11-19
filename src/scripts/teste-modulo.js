@@ -1,16 +1,12 @@
-// Script para gerenciar teste do módulo
-
 let DADOS_TESTE = null;
 let moduloId = null;
 let respostasUsuario = {};
 
-// Obter ID do módulo da URL
 function obterModuloDaURL() {
     const params = new URLSearchParams(window.location.search);
     return parseInt(params.get('modulo')) || 1;
 }
 
-// Carregar dados do teste
 async function carregarDadosTeste() {
     try {
         const response = await fetch('/src/dados.json');
@@ -37,7 +33,6 @@ async function carregarDadosTeste() {
     }
 }
 
-// Renderizar questões do teste
 function renderizarQuestoes() {
     if (!DADOS_TESTE) return;
 
@@ -76,7 +71,6 @@ function renderizarQuestoes() {
     `).join('');
 }
 
-// Coletar respostas do formulário
 function coletarRespostas() {
     respostasUsuario = {};
     
@@ -93,7 +87,6 @@ function coletarRespostas() {
     return respostasUsuario;
 }
 
-// Calcular resultado do teste
 function calcularResultado() {
     let acertos = 0;
     const total = DADOS_TESTE.questoes.length;
@@ -116,22 +109,18 @@ function calcularResultado() {
     };
 }
 
-// Exibir resultado
 function exibirResultado(resultado) {
-    // Esconder formulário
     const form = document.getElementById('form-teste');
     if (form) form.style.display = 'none';
     
     const infoTeste = document.querySelector('.info-teste');
     if (infoTeste) infoTeste.style.display = 'none';
     
-    // Mostrar resultado
     const resultadoDiv = document.getElementById('resultado-teste');
     if (!resultadoDiv) return;
     
     resultadoDiv.style.display = 'block';
     
-    // Preencher dados
     document.getElementById('acertos').textContent = resultado.acertos;
     document.getElementById('total').textContent = resultado.total;
     document.getElementById('nota').textContent = resultado.nota;
@@ -147,7 +136,6 @@ function exibirResultado(resultado) {
         statusAprovacao.style.color = '#28a745';
         btnRefazer.style.display = 'none';
         
-        // Salvar aprovação
         salvarAprovacao();
     } else {
         resultadoTitulo.textContent = '📝 Não foi desta vez...';
@@ -157,32 +145,26 @@ function exibirResultado(resultado) {
         btnRefazer.style.display = 'inline-block';
     }
     
-    // Rolar para o resultado
     resultadoDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// Salvar aprovação no localStorage
 function salvarAprovacao() {
     const chave = `modulo_${moduloId}_aprovado`;
     localStorage.setItem(chave, 'true');
     
-    // Atualizar progresso na trilha diretamente
     atualizarProgressoTrilha();
     
     console.log(`✅ Módulo ${moduloId} aprovado e salvo!`);
 }
 
-// Atualizar progresso na trilha de aprendizado
 function atualizarProgressoTrilha() {
     try {
-        // Carregar dados do usuário
         const dadosSalvos = localStorage.getItem('mathtrack_usuario');
         let dadosUsuario;
         
         if (dadosSalvos) {
             dadosUsuario = JSON.parse(dadosSalvos);
         } else {
-            // Inicializar dados se não existir
             dadosUsuario = {
                 nome: 'Usuário',
                 modulosProgresso: [
@@ -203,17 +185,14 @@ function atualizarProgressoTrilha() {
             };
         }
         
-        // Atualizar progresso do módulo atual
         const modulo = dadosUsuario.modulosProgresso.find(m => m.id === moduloId);
         if (modulo) {
             modulo.progresso = 100;
             
-            // Calcular total de pontos
             dadosUsuario.ranking.pontos = dadosUsuario.modulosProgresso.reduce(
                 (total, m) => total + (m.progresso * 10), 0
             );
             
-            // Determinar nível
             if (dadosUsuario.ranking.pontos <= 500) {
                 dadosUsuario.ranking.nivel = 'Iniciante';
             } else if (dadosUsuario.ranking.pontos <= 2000) {
@@ -222,7 +201,6 @@ function atualizarProgressoTrilha() {
                 dadosUsuario.ranking.nivel = 'Avançado';
             }
             
-            // Desbloquear próximo módulo
             const proximoModulo = dadosUsuario.modulosProgresso.find(m => m.id === moduloId + 1);
             if (proximoModulo) {
                 proximoModulo.ativo = true;
@@ -230,20 +208,16 @@ function atualizarProgressoTrilha() {
                 dadosUsuario.continuar.unidadeIndex = 0;
                 console.log(`🔓 Módulo ${moduloId + 1} desbloqueado!`);
             } else {
-                // Se não há próximo módulo, mantém no atual
                 dadosUsuario.continuar.moduloId = moduloId;
                 dadosUsuario.continuar.unidadeIndex = 0;
             }
             
-            // Atualizar data de último acesso
             dadosUsuario.continuar.ultimoAcesso = new Date().toISOString().split('T')[0];
             
-            // Atualizar posição no ranking (simulado)
             const baseRanking = 200;
             dadosUsuario.ranking.posicao = Math.max(1, baseRanking - Math.floor(dadosUsuario.ranking.pontos / 20));
         }
         
-        // Salvar dados atualizados
         localStorage.setItem('mathtrack_usuario', JSON.stringify(dadosUsuario));
         console.log('✅ Progresso atualizado na trilha:', dadosUsuario);
         
@@ -252,7 +226,6 @@ function atualizarProgressoTrilha() {
     }
 }
 
-// Salvar tentativa de teste (mesmo se reprovado)
 function salvarTentativa(resultado) {
     const chave = `modulo_${moduloId}_tentativas`;
     const tentativas = JSON.parse(localStorage.getItem(chave) || '[]');
@@ -266,29 +239,39 @@ function salvarTentativa(resultado) {
     localStorage.setItem(chave, JSON.stringify(tentativas));
 }
 
-// Função para refazer teste
 function refazerTeste() {
     window.location.reload();
 }
 
-// Função para voltar ao módulo
+const MODULO_CAMINHOS = {
+    1: '/src/pages/modulos/basico/equacao-primeiro-grau.html',
+    2: '/src/pages/modulos/basico/sistemas-equacao.html',
+    3: '/src/pages/modulos/basico/equacao-segundo-grau.html',
+    4: '/src/pages/modulos/basico/potencia-radiciacao.html',
+    5: '/src/pages/modulos/intermediario/polinomios-fatoracao.html',
+    6: '/src/pages/modulos/basico/conjuntos-numericos.html',
+    7: '/src/pages/modulos/intermediario/fundamentos-funcoes.html',
+    8: '/src/pages/modulos/intermediario/funcoes-polinomiais.html'
+};
+
 function voltarModulo() {
-    window.location.href = `modulo${moduloId}.html`;
+    const caminho = MODULO_CAMINHOS[moduloId];
+    if (caminho) {
+        window.location.href = caminho;
+    } else {
+        window.location.href = '/src/pages/trilha-de-aprendizado.html';
+    }
 }
 
-// Função para voltar à trilha
 function voltarTrilha() {
-    window.location.href = 'trilha-de-aprendizado.html';
+    window.location.href = '/src/pages/trilha-de-aprendizado.html';
 }
 
-// Handler do formulário
 function handleSubmit(event) {
     event.preventDefault();
     
-    // Coletar respostas
     const respostas = coletarRespostas();
     
-    // Verificar se todas as questões foram respondidas
     if (Object.keys(respostas).length < DADOS_TESTE.questoes.length) {
         alert('Por favor, responda todas as questões antes de enviar!');
         return;
@@ -296,31 +279,26 @@ function handleSubmit(event) {
     
     console.log('📝 Respostas coletadas:', respostas);
     
-    // Calcular resultado
     const resultado = calcularResultado();
     console.log('📊 Resultado:', resultado);
     
-    // Salvar tentativa
     salvarTentativa(resultado);
     
-    // Exibir resultado
     exibirResultado(resultado);
 }
 
-// Inicialização
 async function inicializar() {
     console.log('🚀 Iniciando teste do módulo...');
     
     const sucesso = await carregarDadosTeste();
     if (!sucesso) {
         alert('Erro ao carregar o teste. Redirecionando...');
-        window.location.href = 'trilha-de-aprendizado.html';
+        window.location.href = '/src/pages/trilha-de-aprendizado.html';
         return;
     }
     
     renderizarQuestoes();
     
-    // Adicionar handler ao formulário
     const form = document.getElementById('form-teste');
     if (form) {
         form.addEventListener('submit', handleSubmit);
@@ -329,15 +307,12 @@ async function inicializar() {
     console.log('✅ Teste carregado com sucesso!');
 }
 
-// Aguardar DOM estar pronto
 document.addEventListener('DOMContentLoaded', inicializar);
 
-// Exportar funções globais
 window.refazerTeste = refazerTeste;
 window.voltarModulo = voltarModulo;
 window.voltarTrilha = voltarTrilha;
 
-// Exportar para uso global
 window.TesteModulo = {
     obterDados: () => DADOS_TESTE,
     obterModuloId: () => moduloId,

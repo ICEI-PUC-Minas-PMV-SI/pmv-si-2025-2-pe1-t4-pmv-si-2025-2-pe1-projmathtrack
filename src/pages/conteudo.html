@@ -17,8 +17,10 @@
 <body>
 
     <main>
-        <!-- Onde o JS vai colocar o conteúdo -->        <h2 id="titulo-modulo" class="titulo-modulo"></h2>
+        <!-- Título do módulo -->
+        <h2 id="titulo-modulo" class="titulo-modulo"></h2>
 
+        <!-- Conteúdo do módulo -->
         <div class="conteudo">
             <div class="video-container" id="video-container"></div>
             <section id="conteudo-texto"></section>
@@ -28,9 +30,17 @@
     <div data-include="/src/components/footer.html"></div>
 
 
-    <script type="module" src="/src/Scripts/incluir-partes.js"></script>
-
-    <script src="conteudo.js"></script>
+    <script type="module" src="/src/scripts/incluir-partes.js"></script>
+    <script src="/src/scripts/auth.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (!window.requireLoginPopup || !requireLoginPopup('Você precisa estar logado para acessar o conteúdo.')) {
+          const main = document.querySelector('main');
+          if (main) main.style.filter = 'blur(3px)';
+        }
+      });
+    </script>
+    <script src="/src/scripts/conteudo.js"></script>
 </body>
 
 </html>

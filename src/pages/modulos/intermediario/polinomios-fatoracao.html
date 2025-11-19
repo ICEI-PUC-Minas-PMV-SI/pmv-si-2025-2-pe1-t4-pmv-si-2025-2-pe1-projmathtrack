@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MathTrack — Módulo 2: Sistema de Equações</title>
+    <title>MathTrack — Polinômios e Fatoração</title>
 
     <link rel="stylesheet" href="/src/styles/Base.css" />
     <link rel="stylesheet" href="/src/styles/pages/conteudo.css" />
@@ -16,8 +16,8 @@
 <body>
     <main>
         <div class="navegacao-topo">
-            <a href="trilha-de-aprendizado.html" class="btn-voltar-trilha">
-                ← Voltar para Trilha de Aprendizado
+            <a href="/src/pages/modulos.html" class="btn-voltar-trilha">
+                ← Voltar para Módulos
             </a>
         </div>
 
@@ -47,11 +47,15 @@
 
     <script type="module" src="/src/Scripts/incluir-partes.js"></script>
     <script src="/src/Scripts/modulo.js"></script>
-
-    <!-- Favor não mexer no auth.js pois fiquei mais de 3h para descobrir um erro mínimo 
-   e não sei mais como resolver caso ocorra outro erro -->
-    <!-- Caso ainda queira mexer no auth.js, deixe comentado tudo o que fizer. Nesse caso,
-     da para ir desfazendo se acontecer algo que me tire o sono novamente -->
     <script src="/src/scripts/auth.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (!window.requireLoginPopup || !requireLoginPopup('Você precisa estar logado para acessar os módulos.')) {
+          const main = document.querySelector('main');
+          if (main) main.style.filter = 'blur(3px)';
+        }
+      });
+    </script>
 </body>
 </html>
+

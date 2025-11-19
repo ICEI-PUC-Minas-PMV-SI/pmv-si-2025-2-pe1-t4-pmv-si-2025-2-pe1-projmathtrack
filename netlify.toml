@@ -1,0 +1,17 @@
+[build]
+  publish = "."
+  command = "echo 'No build step required'"
+
+# Redireciona a raiz do site para Home.html
+[[redirects]]
+  from = "/"
+  to = "/src/pages/Home.html"
+  status = 200
+  force = false
+
+# Preserva todas as outras rotas
+[[redirects]]
+  from = "/*"
+  to = "/:splat"
+  status = 200
+

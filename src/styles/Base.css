@@ -215,3 +215,268 @@ a:hover{ color: var(--brand-600); text-decoration: underline; }
   *{ animation-duration: .01ms !important; animation-iteration-count: 1 !important;
      transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
+
+/* ==========================================
+   POPUP DE LOGIN
+   ========================================== */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 34, 58, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.popup-box {
+  background: var(--bg);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 440px;
+  width: 100%;
+  animation: slideUp 0.3s ease-out;
+}
+
+.popup-header {
+  background: var(--bg);
+  padding: 28px 28px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.popup-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.popup-message {
+  font-size: 14px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.popup-form {
+  padding: 24px 28px 28px;
+}
+
+.popup-field {
+  margin-bottom: 20px;
+}
+
+.popup-label {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.popup-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--bg);
+  transition: border-color 0.2s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.popup-input:focus {
+  border-color: var(--brand);
+}
+
+.popup-input::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.popup-input.input-error {
+  border-color: #ef4444;
+}
+
+.popup-passwrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.popup-passwrap .popup-input {
+  padding-right: 48px;
+}
+
+.popup-eye {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 100%;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  line-height: 1;
+  margin: 0;
+}
+
+.popup-eye:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.popup-eye:focus {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  opacity: 1;
+}
+
+.popup-eye:active {
+  transform: scale(0.95);
+}
+
+.popup-error {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: #fef2f2;
+  border-radius: 6px;
+  color: #dc2626;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.popup-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+  gap: 12px;
+}
+
+.popup-link {
+  font-size: 13px;
+  color: var(--brand);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.popup-link:hover {
+  color: var(--brand-600);
+  text-decoration: underline;
+}
+
+.popup-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.popup-btn {
+  flex: 1;
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.popup-btn-primary {
+  background: var(--brand);
+  color: white;
+}
+
+.popup-btn-primary:hover {
+  background: var(--brand-600);
+}
+
+.popup-btn-secondary {
+  background: var(--bg);
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.popup-btn-secondary:hover {
+  background: var(--surface);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+.shake {
+  animation: shake 0.3s ease-out;
+}
+
+/* Responsividade do Popup */
+@media (max-width: 540px) {
+  .popup-box {
+    max-width: 100%;
+    margin: 0 10px;
+  }
+
+  .popup-header {
+    padding: 20px;
+  }
+
+  .popup-form {
+    padding: 20px;
+  }
+
+  .popup-actions {
+    flex-direction: column;
+  }
+
+  .popup-btn {
+    width: 100%;
+  }
+}

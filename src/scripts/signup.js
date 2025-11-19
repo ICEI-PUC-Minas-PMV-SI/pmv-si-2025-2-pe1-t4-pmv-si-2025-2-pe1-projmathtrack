@@ -52,7 +52,8 @@
         password: senha,
         name: nome,
         birth: nasc,
-        phone: cel
+        phone: cel,
+        createdAt: new Date().toISOString()
       };
       saveUsers(db);
 

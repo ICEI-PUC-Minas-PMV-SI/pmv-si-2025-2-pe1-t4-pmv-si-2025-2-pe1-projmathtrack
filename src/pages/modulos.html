@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,34 +14,61 @@
 </head>
 
 <body>
-  <header>
-    <h1 class="moduloss">Módulos</h1>
-    <p>
-      Esta seção apresenta os módulos do curso de Nivelamento em Matemática.
-      Cada módulo foi desenvolvido para revisar conceitos fundamentais e preparar você
-      para os conteúdos mais avançados. Explore os temas, siga a sequência recomendada
-      e fortaleça sua base matemática.
-    </p>
-  </header>
+  <main class="modulos-page">
+    <!-- Header Section -->
+    <header class="modulos-header">
+      <div class="container">
+        <h1 class="modulos-title">Módulos de Aprendizado</h1>
+        <p class="modulos-description">
+          Esta seção apresenta os módulos do curso de Nivelamento em Matemática.
+          Cada módulo foi desenvolvido para revisar conceitos fundamentais e preparar você
+          para os conteúdos mais avançados. Explore os temas, siga a sequência recomendada
+          e fortaleça sua base matemática.
+        </p>
+      </div>
+    </header>
 
-  <main>
-    <section class="pesquisar">
-      <input id="Buscar" class="pesquisar" type="text" placeholder="Pesquisar">
-      <button id="botaoBuscar" class="botao2">Buscar</button>
+    <!-- Search Section -->
+    <section class="search-section">
+      <div class="container">
+        <div class="search-wrapper">
+          <input 
+            id="Buscar" 
+            class="search-input" 
+            type="text" 
+            placeholder="Buscar módulos por nome, nível ou pré-requisito..."
+            aria-label="Buscar módulos"
+          />
+          <button id="botaoBuscar" class="btn-search" aria-label="Buscar">
+            🔍 Buscar
+          </button>
+        </div>
+      </div>
     </section>
 
-    <article class="selecione-o-modulo">
-      <h3>Selecione o módulo</h3>
-    </article>
-
-    <div class="container" id="modulosContainer">
-    </div>
+    <!-- Modules Container -->
+    <section class="modules-section">
+      <div class="container">
+        <div id="modulosContainer" class="modulos-container">
+          <div class="loading">Carregando módulos...</div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <div data-include="/src/components/footer.html"></div>
 
-  <script type="module" src="/src/Scripts/incluir-partes.js"></script>
-  <script src="src\pages\modulos.js"></script>
+  <script src="/src/scripts/incluir-partes.js" defer></script>
+  <script src="/src/scripts/modulos.js" defer></script>
+  <script src="/src/scripts/auth.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!window.requireLoginPopup || !requireLoginPopup('Você precisa estar logado para acessar os módulos.')) {
+        const main = document.querySelector('main');
+        if (main) main.style.filter = 'blur(3px)';
+      }
+    });
+  </script>
 </body>
 </html>
 

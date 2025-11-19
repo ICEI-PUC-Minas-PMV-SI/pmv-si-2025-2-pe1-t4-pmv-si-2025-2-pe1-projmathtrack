@@ -4,7 +4,7 @@
       "id": 1,
       "titulo": "Módulo 1",
       "descricao": "Equação do Primeiro Grau",
-      "link": "modulo1.html",
+      "link": "modulos/basico/equacao-primeiro-grau.html",
       "videoUrl": "https://www.youtube.com/embed/yj3pvWVe4c4",
       "conteudoTexto": {
         "introducao": "Uma equação do 1º grau é uma igualdade que pode ser escrita na forma ax + b = 0, onde a e b são números reais e a ≠ 0. O objetivo é encontrar o valor de x que torna a igualdade verdadeira.",
@@ -66,7 +66,7 @@
       "id": 2,
       "titulo": "Módulo 2",
       "descricao": "Sistema de Equações",
-      "link": "modulo2.html",
+      "link": "modulos/basico/sistemas-equacao.html",
       "videoUrl": "https://www.youtube.com/embed/tBU853Fh4e8",
       "conteudoTexto": {
         "introducao": "Um sistema de equações do primeiro grau é formado por duas ou mais equações que devem ser satisfeitas simultaneamente. O objetivo é encontrar valores para as variáveis que satisfaçam todas as equações ao mesmo tempo.",
@@ -128,7 +128,7 @@
       "id": 3,
       "titulo": "Módulo 3",
       "descricao": "Equação do Segundo Grau",
-      "link": "modulo3.html",
+      "link": "modulos/basico/equacao-segundo-grau.html",
       "videoUrl": "https://www.youtube.com/embed/r-Vuvb18kUk",
       "conteudoTexto": {
         "introducao": "Uma equação do 2º grau é uma equação que pode ser escrita na forma ax² + bx + c = 0, onde a, b e c são números reais e a ≠ 0. Essas equações podem ter duas, uma ou nenhuma solução real.",
@@ -205,5 +205,10 @@
       "autor": "Maria Silva",
       "data": "2025-11-09"
     }
-  ]
+  ],
+  "usuarioBase": {
+    "email": "teste@gmail.com",
+    "senha": "1234",
+    "nome": "Usuário Teste"
+  }
 }

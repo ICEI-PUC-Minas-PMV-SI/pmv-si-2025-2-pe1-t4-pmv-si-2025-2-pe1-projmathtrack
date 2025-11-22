@@ -120,11 +120,49 @@ calcularProgressoGeral(): Calcula a média do progresso entre os módulos.
 
 ObterMensagem(progresso): retorna mensagem com base no progresso total. 
 
-renderizarTodosComponentes(): renderiza todos os blocos da página em sequência. 
+renderizarTodosComponentes(): renderiza todos os blocos da página em sequência.
 
 DOMContentLoaded: Ao carregar a página os dados do usuário são recarregados, os pontos recalculados, desbloqueia módulos, salva todos os dados, renderiza toda a interface e exibe logs no console para depuração. 
 
 
+## Módulo
+
+![Image](https://github.com/user-attachments/assets/a89bb62e-d92f-420c-b661-a1b2d6ff07f8)
+
+Esta página em JavaScript é responsável por gerenciar o funcionamento da página de módulo individual. Suas principais tarefas são: detectar qual módulo está atrasado; validar os pré-requisitos; carregar dados de um JSON; monitorar os progresso do usuário, liberando o teste após o vídeo ou o conteúdo ser visualizado, monitorar o progresso do usuário. 
+Suas estruturas principais são: 
+
+let moduloId = null: guarda o número do módulo detectado pela URL 
+
+MapeamentoCaminho: relaciona trechos da URL com o número do módulo 
+
+prerequisitosModulos: estabele quais módulos precisam ser finalizados antes do usuário acessar o módulo atual. 
+
+detectarModulo(): identifica o módulo atual.
+
+verificarModuloCompleto(numeroModulo): identifica se o módulo foi finalizado pelo usuário.
+
+verificarAcessoModulo(numeroModulo): a partir do pré-requisito definido, libera ou bloqueia o módulo. 
+
+bloqeuarAcessoModulo: exibe um alerta informando que módulos obrigatórios que ainda não foram concluídos e direciona o usuário automaticamente para página geral de módulos. 
+
+async function carregarDadosModulo(): responsável or buscar o arquivo em dados.json, detectar qual módulo está seno acesso e se o usuário tem os pré-requisitos, seleciona os dados do módulo dentro do JSON e os armazena em DADOS_MODULO, liberar o acesso a página caso tudo esteja correto. 
+
+renderizarModulo(): exibe o conteúdo carregado no html. 
+
+marcarVideoVisualizado(): salva no localStorage que o usuário assistiu o vídeo ou rolou a página, liberando o botão "Fazer Teste".
+
+habilitarBotaoTeste(): Ativa o botão para fazer o teste quando a visualização do vídeo é confirmada. 
+
+verificarStatusModulo(): Exibe "Assista ao vídeo para desbloquear o teste" caso o vídeo não tenha sido visto, "Faça o teste para concluir o módulo" caso o video tenha sido visto, e "Módulo concluido" e "Ver próximo" caso o usuário tenha sido aprovado no módulo. 
+
+Scroll listener: se o usuário scrollar mais de 70% da página, o módulo registra o vídeo como visualizado; 
+
+async function inicializar(): Executa a iniciação da página, carrega os dados do módulo, renderiza o conteúdo e finaliza com "página do módulo carregada!"
+
+document.addEventListener('DOMContentLoaded', inicializar): carrega o html antes do JS  funcionar. 
+
+window.ModuloAtual = {}: permite que outras parte do sistema consultem os dados do módulo atual, o ID do módulo atual, se o vídeo foi visualizado e o módulo aprovado.
 
 
 

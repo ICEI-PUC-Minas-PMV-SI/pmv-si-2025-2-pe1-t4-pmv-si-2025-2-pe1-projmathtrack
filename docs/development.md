@@ -73,7 +73,8 @@ salvarNivelUsuario(resultado): carrega o objeto mathtrack_usuario, atualiza os n
 ![Image](https://github.com/user-attachments/assets/1dd9c63b-2e79-4abb-9580-c498301c38a6)
 ![Image](https://github.com/user-attachments/assets/9fb77ef6-fb15-43db-9054-330b4ac9e584)
 Esta página em JavaScript implementa executa a progressão de estudos do MathTrack. Ele controla os módulos, progresso do usuário, desbloqueios, rankings, armazenamento de dados, renderização dinâmica da interface e controle das trilhas de estudo.
-Segue abaixo um detalhamento das funções e eventos utilizadas em javascript.
+
+Suas principais estruturas são: 
 
 DADOS_USUARIO:  A variável  que armazena todas as informações do usuário carregadas do localStorage, tais como nome,  módulo atual, progresso por módulo, posição no ranking, acesso. 
 MODULOS_POR_NIVEL: Organiza os módulos por nível de dificuldade e permite saber quais módulos percentem a cada nível. 
@@ -130,6 +131,7 @@ DOMContentLoaded: Ao carregar a página os dados do usuário são recarregados, 
 ![Image](https://github.com/user-attachments/assets/a89bb62e-d92f-420c-b661-a1b2d6ff07f8)
 
 Esta página em JavaScript é responsável por gerenciar o funcionamento da página de módulo individual. Suas principais tarefas são: detectar qual módulo está atrasado; validar os pré-requisitos; carregar dados de um JSON; monitorar os progresso do usuário, liberando o teste após o vídeo ou o conteúdo ser visualizado, monitorar o progresso do usuário. 
+
 Suas estruturas principais são: 
 
 let moduloId = null: guarda o número do módulo detectado pela URL 
@@ -165,5 +167,43 @@ document.addEventListener('DOMContentLoaded', inicializar): carrega o html antes
 window.ModuloAtual = {}: permite que outras parte do sistema consultem os dados do módulo atual, o ID do módulo atual, se o vídeo foi visualizado e o módulo aprovado.
 
 
+## Módulos 
 
+![Image](https://github.com/user-attachments/assets/6f1604d7-eb11-4499-9754-bd730b851494)
+
+Essa página em JavaScript é responsável pela organização dos módulos do MahtTrack, controle do proogresso do usuário, bloqueio ou desbloqueio com base nos pré-requisitos e navegação para os modulos individuais. 
+
+Suas estruturas principais são: 
+
+todosModulos: lista completa vinda do JSON 
+
+modulosFiltrados: lista módificada após os filtros
+
+async function carregarModulos(): busca o arquivo JSON com a lista de módulos, salva os módulos carregados e inicializa a renderização na página. 
+
+organizarPorNivel(modulos): agrupa os módulos conforme o campo "nível". 
+
+renderizarModulos(): Organiza os módulos por nível, monta dinamicamente o html dos grupos e card, ativ os event listener de cada módulo. 
+
+criarCardModulo(modulo): Gera o bloco HTML de cada módulo, definindo a classe visual com base no nível, badge de status, mensagem indicando os pré-requisitos em falta, identificação numérica do módulo, verificar  prérequisito e o progresso. 
+
+adicionarEventListeners(): relaciona eventos aos botões, sendo que cada botão leva o usuário ao módulo correspondente. 
+
+mapeamentoModulos: um objeto que relaciona o número do módulo ao arquivo da página de conteúdo. 
+
+carregarDadosUsuario(): Carrega o progresso salvo no localStorage. 
+
+moduloCompleto(numero): verifica se o módulo foi concluído. 
+
+marcarModuloCompleto(numero): marca um módulo como finalizado
+
+desbloquearModulosDependentes(numeroCompleto, dados): ao completar um módulo, a função irá verificar quais módulos dependem dele, confere os pré-requisitos e desbloqueia o p´roximo. 
+
+verificarPrerequisitos(modulo): Extrai do texto os números dos módulos requeridos e verifica se o usuário já os concluiu. 
+
+navegarParaModulo(numero): valida os pré-requisitos, exibe alert caso esteja bloqueado e redireciona para a página html correspondente. 
+
+buscarModulos(termo): realiza uma busca por meio do nome do conteúdo, do nível, pré-requisito e número do módulo. 
+
+DOMContentLoaded: executa inicializarDadosSeNecessario(), carregarModulos(), configuração da busca em tempo real e exibição do progresso no console. 
 

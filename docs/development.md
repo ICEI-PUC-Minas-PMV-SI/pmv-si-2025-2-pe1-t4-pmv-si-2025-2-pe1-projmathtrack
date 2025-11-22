@@ -35,6 +35,7 @@ Para usuário já cadastrados, o JavaScript irá recuperar os dados utilizando o
 ![Image](https://github.com/user-attachments/assets/1dd9c63b-2e79-4abb-9580-c498301c38a6)
 ![Image](https://github.com/user-attachments/assets/9fb77ef6-fb15-43db-9054-330b4ac9e584)
 Esta página em JavaScript implementa executa a progressão de estudos do MathTrack. Ele controla os módulos, progresso do usuário, desbloqueios, rankings, armazenamento de dados, renderização dinâmica da interface e controle das trilhas de estudo.
+Segue abaixo um detalhamento das funções e eventos utilizadas em javascript.
 
 DADOS_USUARIO:  A variável  que armazena todas as informações do usuário carregadas do localStorage, tais como nome,  módulo atual, progresso por módulo, posição no ranking, acesso. 
 MODULOS_POR_NIVEL: Organiza os módulos por nível de dificuldade e permite saber quais módulos percentem a cada nível. 

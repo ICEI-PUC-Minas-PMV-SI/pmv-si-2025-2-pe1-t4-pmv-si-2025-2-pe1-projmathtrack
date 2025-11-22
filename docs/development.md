@@ -30,7 +30,37 @@ Se algum campo não atender aos requisitos, o script impede a continuação do c
 
 Para usuário já cadastrados, o JavaScript irá recuperar os dados utilizando o localStorage.setItem(). O JavaScript também pode controlar elementos visuais da página, como exibir mensagem de sucesso ou erro, habilitar/desabilitar botões conforme os inputs, alterar CSS para enfatizar campos inválidos. Essas ações são feitas usando métodos como: document.getElementById(); element.classList.add(); element.textContent = ""
 
-# Trilha de Aprendizado 
+## Teste de nivelamento
+
+![Image](https://github.com/user-attachments/assets/4df3b5b0-2474-40e5-a81f-9009e13a9506)
+
+![Image](https://github.com/user-attachments/assets/3c12b840-6bbe-4227-9b75-700ef5a7a650)
+
+Está página em JavaScript é responsável pelo formulário de nivelamento de matemática, validar respostas, calcular a pontuação do aluno, determinar seu nível de conhecimento e armazenar o resultado no localStorage para uso posterior na página de resultados.
+Ele é carregado assim que a página inicia e funciona de forma totalmente automática após o envio do formulário.
+
+RESPOSTAS_CORRETAS: objeto que contém cada questão e seu respectivo resultado correto. 
+processsar_formulario(): responsável pelo processamento das respostas fornecidas pelo usuário, verificando se todas as questões foram respondidas, os acertos do usuário e seu desempenho percentual. O resultado será salvo em um localStorage. 
+
+window.location.href = 'resultado.html': envia o usuário para tela final 
+document.addEventListener('DOMContentLoaded', () => { ... }): responsável por localizar o formulário, ativar o listener de envio e registrar no console que tudo está funcionando.
+
+## Resultados 
+
+![Image](https://github.com/user-attachments/assets/b7d8a95f-24db-486b-bf02-ada6ac13d06a)
+
+Está página é responsável por carregar e exibir os resultados do teste de nivelamento realizado pelo usuário. Ela também integra esses resultados ao perfil salvo no sistema, permitindo que a plataforma personalize a trilha de aprendizado com base no desempenho do estudante.
+exibirResultado(): inicia carregando, via localStorage, o JSON previamente salvo durante o envio do formulário.
+document.getElementById('nivel-texto').textContent = `Nível: ${resultado.nivel}`: Exibe o nível do usuário. 
+document.getElementById('acertos').textContent = resultado.acertos: Exibe número de acertos.
+document.getElementById('total').textContent = resultado.total: Exibe o total de questões.
+document.getElementById('porcentagem').textContent = resultado.porcentagem: Exibe a porcentagem de desempenho.
+document.getElementById('mensagem').textContent = resultado.mensagem: Renderiza a mensagem personalizada de acordo com o nível;
+salvarNivelUsuario(resultado): carrega o objeto mathtrack_usuario, atualiza os nivel do usuário e salva no LocalStorage. 
+
+
+
+## Trilha de Aprendizado 
 
 ![Image](https://github.com/user-attachments/assets/1dd9c63b-2e79-4abb-9580-c498301c38a6)
 ![Image](https://github.com/user-attachments/assets/9fb77ef6-fb15-43db-9054-330b4ac9e584)
@@ -85,4 +115,9 @@ ObterMensagem(progresso): retorna mensagem com base no progresso total.
 renderizarTodosComponentes(): renderiza todos os blocos da página em sequência. 
 
 DOMContentLoaded: Ao carregar a página os dados do usuário são recarregados, os pontos recalculados, desbloqueia módulos, salva todos os dados, renderiza toda a interface e exibe logs no console para depuração. 
+
+
+
+
+
 

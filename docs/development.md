@@ -20,10 +20,11 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |RF-012| O sistema deve permitir que o usuário avalie e forneça feedback sobre os materiais de estudo e exercícios, para ajudar a curadoria de conteúdo da plataforma. | Wallison, Patrick, Bóris, Bianca | conteudo.html, |
 
 
-
+src
 Ao acessar o site, o usuário será direcionada a página principial “Home”. Nessa página, o usuário poderá visualizar toda a estrutura de páginas. Na navbar, o usuário poderá acessar as demais páginas por meio de links feitos em html. 
 Para acessar as funcionalidades do site, o usuário deverá fazer login – caso já esteja cadastrado – ou realizar um cadastro. Para criar o cadastro, o usuário deverá fazer fornecer informações como nome, email, data de nascimento e telefone, que serão armazenados em um localstorage. Campos do tipo input, cada um com sua respectiva id, foram definidos para receber esses dados. Após preenchê-los, o usuário conclui o processo clicando no botão “Criar conta”, implementado por meio de uma tag HTML do tipo button.
-  
+
+  <img src="criarconta.jpg" alt="Texto Alternativo">
 Antes de salvar ou processar os dados, o JavaScript realiza verificações para garantir que: nenhum campo obrigatório esteja vazio; o email tenha um formato válido; a data de nascimento tenha sido informada corretamente; o telefone contenha apenas números ou siga um padrão determinado.
 Se algum campo não atender aos requisitos, o script impede a continuação do cadastro e exibe mensagens de alerta. Após validar os dados, o JavaScript reúne todas as informações em um objeto e o armazena no localStorage. Esse armazenamento permite persistência dos dados mesmo após o fechamento do navegador. O script utiliza a função localStorage.setItem(), geralmente convertendo o objeto em JSON com JSON.stringify(). 
 

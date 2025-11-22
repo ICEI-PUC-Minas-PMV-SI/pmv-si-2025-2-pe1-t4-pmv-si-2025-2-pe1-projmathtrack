@@ -50,13 +50,21 @@ document.addEventListener('DOMContentLoaded', () => { ... }): responsável por l
 ![Image](https://github.com/user-attachments/assets/b7d8a95f-24db-486b-bf02-ada6ac13d06a)
 
 Está página é responsável por carregar e exibir os resultados do teste de nivelamento realizado pelo usuário. Ela também integra esses resultados ao perfil salvo no sistema, permitindo que a plataforma personalize a trilha de aprendizado com base no desempenho do estudante.
+
 exibirResultado(): inicia carregando, via localStorage, o JSON previamente salvo durante o envio do formulário.
+
 document.getElementById('nivel-texto').textContent = `Nível: ${resultado.nivel}`: Exibe o nível do usuário. 
+
 document.getElementById('acertos').textContent = resultado.acertos: Exibe número de acertos.
+
 document.getElementById('total').textContent = resultado.total: Exibe o total de questões.
+
 document.getElementById('porcentagem').textContent = resultado.porcentagem: Exibe a porcentagem de desempenho.
-document.getElementById('mensagem').textContent = resultado.mensagem: Renderiza a mensagem personalizada de acordo com o nível;
+
+document.getElementById('mensagem').textContent = resultado.mensagem: Renderiza a mensagem personalizada de acordo com o nível.
+
 salvarNivelUsuario(resultado): carrega o objeto mathtrack_usuario, atualiza os nivel do usuário e salva no LocalStorage. 
+
 
 
 

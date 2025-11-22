@@ -38,28 +38,50 @@ Esta página em JavaScript implementa executa a progressão de estudos do MathTr
 
 DADOS_USUARIO:  A variável  que armazena todas as informações do usuário carregadas do localStorage, tais como nome,  módulo atual, progresso por módulo, posição no ranking, acesso. 
 MODULOS_POR_NIVEL: Organiza os módulos por nível de dificuldade e permite saber quais módulos percentem a cada nível. 
+
 PREREQUISITOS: Tabela que define os módulos que precisam ser concluídos para desbloquear os posteriores. 
+
 MODULOS_INFO: Armazena informações de cada módulo. 
+
 CarregarDadosUsuario(): Carrega os dados do usuário do localStorage. 
+
 InicializarDadosUsuario(): cria uma estrutura padrão para novos usuários contendo progressos inificial, módulos liberados e bloqueados, ranking e controle de onde o usuário parou. 
-SincronizarAprovacoes()
+
 sincronizarAprovacoes(): verifica os módulos marcados como aprovados no localStorage e permite que o progresso seja ajustado para 100%.
+
 moduloCompleto(id): verifica se o módulo foi concluído pelo usuário. 
+
 VerificarPrerequisitos(id): verifica se o módulo já pode ser acessado e quais pré-requisitos ainda faltam. 
+
 nivelCompleto(nivel): verifica se todos os módulos de um determinado nível foram completados. 
+
 DeterminarEstagio(): delimita o estágio do usuário e quais módulos serão exibidos. 
+
 obterModulosVisiveis(): Controla a exibição dos módulos em “páginas” de 3 módulos por vez, conforme a evolução do usuário. 
+
 desbloquarModulosdependentes(): libera os módulos após os pré-requisitos terem sido atingidos
+
 recalcularDados(): recalcula os pontos do usuário e determina seu nível no ranking com base no total acumulado. 
+
 salvarDadosUsuario(): salva DADOS_USUARIOS no localStorage. 
+
 RenderizarEstagio(): a função determina o estágio do usuário, a porcentagem concluída em cada nível, barra de progresso e o número de módulos finalizados.
+
 RenderizarModulos(): Mostra os módulos visíveis. 
+
 RenderizarContinuar(): Mostra o próximo módulo que o usuário deve continuar estudando.
+
 RenderizarForum(): Mostra exemplos estáticos de tópicos recentes do fórum. 
+
 RenderizarEvolucao()> Mostra o progresso do usuário. 
+
 RenderizarTeste(): Mostra se a atividade está completa, bloqueada ou disponível. 
+
 calcularProgressoGeral(): Calcula a média do progresso entre os módulos. 
+
 ObterMensagem(progresso): retorna mensagem com base no progresso total. 
+
 renderizarTodosComponentes(): renderiza todos os blocos da página em sequência. 
+
 DOMContentLoaded: Ao carregar a página os dados do usuário são recarregados, os pontos recalculados, desbloqueia módulos, salva todos os dados, renderiza toda a interface e exibe logs no console para depuração. 
 

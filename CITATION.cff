@@ -2,19 +2,31 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: Web Application Template
+title: MathTrack
 message: >-
   Repositório padrão para o Eixo 1 - Projeto 1: Aplicações
   Web da PUC Minas.
 type: software
 authors:
-  - given-names: Aluno 1
-    family-names: Bianca Karoline Vieira 
+  - given-names: Bianca Karoline
+    family-names: Vieira 
     email: bianca.vieira.1117370@sga.pucminas.br
     affiliation: PUC Minas
   - given-names: Aluno 2
     family-names: Boris Silva Mazuchi 
-    email: bianca.vieira.1117370@sga.pucminas.br
+    email: 1518312@sga.pucminas.br
+    affiliation: PUC Minas
+  - given-names: Iury Thurler 
+    family-names: Pereira Barros Campos 
+    email: itpcampos@sga.pucminas.br
+    affiliation: PUC Minas
+  - given-names: Patrick Junio 
+    family-names: Pereira de Oliveira
+    email: 1383541@sga.pucminas.br
+    affiliation: PUC Minas
+  - given-names: Wallison Victor
+    family-names: de Souza Oliveira
+    email: wallison.oliveira.1094283@sga.pucminas.br
     affiliation: PUC Minas
   - given-names: Professor
     name-particle: Marco Rodrigo
@@ -24,14 +36,16 @@ authors:
     affiliation: PUC Minas
     orcid: 'https://orcid.org/0000-0002-6193-3205'
 repository-code: >-
-  https://github.com/ICEI-PUC-Minas-PMV-SI/WebApplicationProject-Template
+  https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe1-t4-pmv-si-2025-2-pe1-projmathtrack
 abstract: >-
-  Descrever resumidamente, em um ou dois parágrafos, o
-  projeto que foi desenvolvido.
+O projeto é uma plataforma educacional de Matemática que personaliza o aprendizado. No primeiro acesso, o usuário realiza um teste diagnóstico que identifica suas habilidades e lacunas. A partir desse resultado, o sistema cria um plano de estudos adaptativo, indicando exatamente quais tópicos precisam ser revisados. Além disso, sugere materiais de aprofundamento nas áreas em que o usuário tem mais domínio, garantindo um progresso individual mais eficiente.
 keywords:
   - Desenvolvimento Web
   - HTML
   - CSS
   - JavaScript
   - Template
+  - Matematica
+  - Nivelamento 
+  - Aplicacao web
 date-released: '2024-06-23'

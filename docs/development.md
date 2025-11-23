@@ -257,3 +257,56 @@ window.voltarTrilha: acessa funções pelo console e por botões do HTML
 
 window.TesteModulo: acessa funções pelo console e por botões do HTML
 
+
+## Fórum 
+
+![Image](https://github.com/user-attachments/assets/d7c0a3f2-1ed4-4bc5-a692-6a3a9a859c83)
+
+Está página em JavaScrip permite o armazenamento local, autenticação, CRUD de tópicos e comentários, renderização dinâmica da interface e filtros. 
+
+Suas principais estruturas são:
+
+carregar(): carrega dados do fórum do localStorage
+
+salvar(dados): grava as alterações do fórum no localStorage. 
+
+gerarld(): Gera um ID único para tópicos e comentários. 
+
+formartarData(ms): converte timestamps em datas legíveis. 
+
+escaparHTML(s): Sanitiza textos para evitar HTML injection.
+
+getUser(): retorna o usuário logado via auth.js.
+
+isLogged(): verifica se o usuário está autenticado .
+
+
+requireLogin(): impede ações protegidas e abre o popup de login. 
+
+obterTopicosFiltrados(): aplica filtros e retorna os tópicos pedidos.
+
+renderLista(): renderiza a página principal do fórum com a lista de tópicos. 
+
+abrirTopico(id): visão detalhada do tópico com comentários.
+
+encontrarTopico(id): localiza um tópico específico. 
+
+criarTopico(titulo, autor, corpo, assunto): cria um novo tópico. 
+
+editarTopico(id, novoTitulo,novoCorpo): Edita um tópico existente. 
+
+excluirTopico(id): remove um tópico.
+
+curtirTopico(id): adiciona curtidas do tópico.
+
+alternarSalvo(id): Marca/desmarca tópico como salvo. 
+
+comentar(idTopico,autor, corpo): adiciona um comentário no tópico.
+
+curtirComentario(idTopico, idComentario): Adiciona uma curtida ao comentário. 
+
+editarComentario(idTopico,idComentario,novoTexto): permite o usuário-autor adicionar um comentario. 
+
+excluirComentario(idTopico, idComentario): permite o usuário-autor remover um comentário. 
+
+document.addEventListerner('click',...): intercepta os cliques do site e permite abrir tópico, editar, curtir, exluir comentário e etc. 

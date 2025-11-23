@@ -207,3 +207,53 @@ buscarModulos(termo): realiza uma busca por meio do nome do conteúdo, do nível
 
 DOMContentLoaded: executa inicializarDadosSeNecessario(), carregarModulos(), configuração da busca em tempo real e exibição do progresso no console. 
 
+## Testes
+
+![Image](https://github.com/user-attachments/assets/84dee19b-22ef-4c6f-b0d5-26e2eba55fbb)
+![Image](https://github.com/user-attachments/assets/4165d2b3-20d5-4b33-8df0-ee523effe221)
+
+Está página é responsável pela execução do testes dos módulos. O JavaScript é responsável pelo carregamento das questões, renderização da interface, coleta de respostas, cálculo da nota, atualização do progresso e salvamento dos resultados no localStorage. 
+Suas principais estruturas são: 
+
+let DADOS_TESTE = null: armaneza as informações do teste 
+
+let moduloId = null: guardo o ID do módulo 
+
+let respostasUsuario={}: Objeto que registra todas as respostas escolhidas pelo usuário durante o teste. 
+
+obterModuloDaURL: extrai modulo dos query params da URL e retorna o número do módulo. 
+
+async carregarDadosTeste(): carrega o arquivo /src/dados.json e extrai os dados do módulo. 
+
+renderizarQuestoes(): para cada questão cria um label com a pergunta, um grupo de pergunta, input radio com identificação única, atualiza o título do teste e mostra o número total de questões. 
+
+coletarRespostas(): analisa todas as questões renderizadas e identifica qual alternativa foi escolhida.
+
+CalcularResultado(): Calcula o número de acertos e a porcentagem da nota. 
+
+exibirResultado(resultado): mostra o número de acertos, nota final, botão de refazer. Caso o usuáro seja aprovado, chama a função salvarAprovacao() e atualiza o estilo visual. 
+
+salvarAprovacao(): registra no localStorage que o módulo foi concluído e chama a função atualizarProgressocTrilha()
+
+atualizarProgressoTrilha(): atualiza o progresso módulo e o nível do usuário, libera o próximo modulo e atualiza a seção "continue de onde parou", ajusta a posição do ranking com base nos pontos. 
+
+salvarTentativa(resultado): salva todas as tentativas o usuario no histórico. 
+
+refazerTeste(): recarrega a página para zerar tudo. 
+
+voltarModulo(): Redireciona o usuário de volta para a página do módulo. 
+
+voltarTrilha(): leva diretamente para a página de trilha de aprendizado. 
+
+handleSubmit(event): função ativada quando o usuário envia o teste. 
+
+async inicializar(): executada quando o DOM carrega. 
+
+window.refazerTeste: acessa funções pelo console e por botões do HTML
+
+window.voltarModulo: acessa funções pelo console e por botões do HTML
+
+window.voltarTrilha: acessa funções pelo console e por botões do HTML
+
+window.TesteModulo: acessa funções pelo console e por botões do HTML
+

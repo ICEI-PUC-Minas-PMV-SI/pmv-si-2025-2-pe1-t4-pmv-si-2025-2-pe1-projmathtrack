@@ -310,3 +310,38 @@ editarComentario(idTopico,idComentario,novoTexto): permite o usuário-autor adic
 excluirComentario(idTopico, idComentario): permite o usuário-autor remover um comentário. 
 
 document.addEventListerner('click',...): intercepta os cliques do site e permite abrir tópico, editar, curtir, exluir comentário e etc. 
+
+## Perfil 
+
+![Image](https://github.com/user-attachments/assets/e4f86a8e-ee92-4141-b309-a18edced868f)
+
+Esta página em JavaScript é responsável por carregar os dados do usuário logado a partir do localStorage e exibir nome, e-mail, data de nascimento e telefone. Além disso, formata automaticamente datas, telefone e iniciais do avatar. Também permite editar informações pessoais com validação e atualização no banco local de usuários. Também permite alterar a senha com validações ) e atualizar o perfil na tela em tempo real e mantém a persistência dos dados no navegador.
+
+As estruturas dessa página são: 
+
+getUser(): Obtém o usuário atualmente logado do localStorage.
+
+getUsers() :  Recupera a base completa de usuários cadastrados.
+
+saveUsers(db): Salva a base de usuários atualizada no localStorage.
+
+setUser(user): Atualiza os dados do usuário logado.
+
+capitalize(s): Coloca a primeira letra em maiúsculo.
+
+localPart(email): Retorna a parte antes do “@” do e-mail.
+
+formatDate(dateStr): Converte datas para o formato pt-BR.
+
+getInitials(name): Gera iniciais para o avatar.
+
+loadProfile(): Verifica login do usuário, carrega suas informações completas, Preenche avatar, nome, email, telefone, data de nascimento, Mostra a data de criação da conta, Preenche os formulários de edição.
+
+setupEditPersonal(): Habilita formulário de edição, cancela edição e restaura valores anteriores, valida nome, e-mail e duplicações, permite trocar e-mail mantendo consistência na base, atualiza o usuário logado.
+
+setupEditPassword(): Alterna entre visualização e edição da senha, valida senha atual, impede senha nova igual à antiga, confirmação de senha, salva nova senha no banco local.
+
+DOMContentLoaded: Verfifica se o usuário está logado. Executa loadProfile, setupEditPersonal(), setupEditPassword(). 
+
+
+

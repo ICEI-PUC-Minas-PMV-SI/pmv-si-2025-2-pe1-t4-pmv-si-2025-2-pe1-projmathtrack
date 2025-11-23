@@ -9,11 +9,11 @@ message: >-
 type: software
 authors:
   - given-names: Aluno 1
-    family-names: Nome Completo
-    email: aluno@pucminas.br
+    family-names: Bianca Karoline Vieira 
+    email: bianca.vieira.1117370@sga.pucminas.br
     affiliation: PUC Minas
-  - given-names: Hugo
-    name-particle: 'B '
+  - given-names: Aluno 2
+    name-particle: Boris Silva Mazuchi
     family-names: de Paula
     name-suffix: Prof.
     email: hugo@pucminas.br

@@ -1,5 +1,5 @@
 // Esse arquivo faz muita coisa! Tem muito detalhe, cuidado para não excluir nada ou gerar algum erro. 
-// Lembre-se um arquivo longo é BEM DIFICIL ACHAR O ERRO! Ajude a colega a dormir no horário certo.
+// Lembre-se um arquivo longo é BEM DIFICIL ACHAR O ERRO!
 // Aqui tem: criar/abrir tópicos, comentar, editar, excluir, curtir, salvar e exige login do usuário para algumas coisas.
 
 // Configuração das chaves localStorage

@@ -71,10 +71,7 @@
     <!-- Scripts -->
     <script type="module" src="/src/scripts/incluir-partes.js"></script>
     <script src="/src/scripts/auth.js" defer></script>
-    <!-- Favor não mexer no auth.js pois fiquei mais de 3h para descobrir um erro 
-    e não sei mais como resolver caso se acontecer de novo -->
-    <!-- Caso ainda queira mexer no auth.js, deixe comentado tudo o que fizer. Nesse caso,
-    da para ir desfazendo se acontecer algo que me tire o sono novamente -->
+
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         if (!window.requireLoginPopup || !requireLoginPopup('Você precisa estar logado para acessar seu histórico.')) {

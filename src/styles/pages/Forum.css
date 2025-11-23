@@ -358,7 +358,7 @@
   }
 }
 
-/* Responsividade (Mesma coisa do outro arquivo. Fiz mas não sei como, então cuidado ao mexer pois provavelmente não saberei a solução de um possível erro do nada) */
+/* Responsividade */
 @media (max-width: 1080px) {
   .forum-layout {
     grid-template-columns: 1fr;

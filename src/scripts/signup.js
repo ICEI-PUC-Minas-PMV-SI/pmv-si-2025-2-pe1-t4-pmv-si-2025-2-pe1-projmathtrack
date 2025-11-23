@@ -16,7 +16,7 @@
     localStorage.setItem(USER_KEY, JSON.stringify(u));
   }
 
-  // Eu não to doida com esse tanto de símbulo. É so pra validar o formato do email mesmo. 
+  // É so pra validar o formato do email mesmo!! 
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email).toLowerCase());
   }

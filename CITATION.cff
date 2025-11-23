@@ -13,8 +13,12 @@ authors:
     email: bianca.vieira.1117370@sga.pucminas.br
     affiliation: PUC Minas
   - given-names: Aluno 2
-    name-particle: Boris Silva Mazuchi
-    family-names: de Paula
+    family-names: Boris Silva Mazuchi 
+    email: bianca.vieira.1117370@sga.pucminas.br
+    affiliation: PUC Minas
+  - given-names: Professor
+    name-particle: Marco Rodrigo
+    family-names: Costa
     name-suffix: Prof.
     email: hugo@pucminas.br
     affiliation: PUC Minas

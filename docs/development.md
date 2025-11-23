@@ -24,12 +24,54 @@ src
 Ao acessar o site, o usuário será direcionada a página principial “Home”. Nessa página, o usuário poderá visualizar toda a estrutura de páginas. Na navbar, o usuário poderá acessar as demais páginas por meio de links feitos em html. 
 Para acessar as funcionalidades do site, o usuário deverá fazer login – caso já esteja cadastrado – ou realizar um cadastro. Para criar o cadastro, o usuário deverá fazer fornecer informações como nome, email, data de nascimento e telefone, que serão armazenados em um localstorage. Campos do tipo input, cada um com sua respectiva id, foram definidos para receber esses dados. Após preenchê-los, o usuário conclui o processo clicando no botão “Criar conta”, implementado por meio de uma tag HTML do tipo button.
 
-  <img src="criarconta.jpg" alt="Texto Alternativo">
-Antes de salvar ou processar os dados, o JavaScript realiza verificações para garantir que: nenhum campo obrigatório esteja vazio; o email tenha um formato válido; a data de nascimento tenha sido informada corretamente; o telefone contenha apenas números ou siga um padrão determinado.
-Se algum campo não atender aos requisitos, o script impede a continuação do cadastro e exibe mensagens de alerta. Após validar os dados, o JavaScript reúne todas as informações em um objeto e o armazena no localStorage. Esse armazenamento permite persistência dos dados mesmo após o fechamento do navegador. O script utiliza a função localStorage.setItem(), geralmente convertendo o objeto em JSON com JSON.stringify(). 
+# Descrição das funcionalidades das páginas programadas em JavaScript
 
-Para usuário já cadastrados, o JavaScript irá recuperar os dados utilizando o localStorage.setItem(). O JavaScript também pode controlar elementos visuais da página, como exibir mensagem de sucesso ou erro, habilitar/desabilitar botões conforme os inputs, alterar CSS para enfatizar campos inválidos. Essas ações são feitas usando métodos como: document.getElementById(); element.classList.add(); element.textContent = ""
+## Cadastro
+![Image](https://github.com/user-attachments/assets/8046aec2-ce9b-4594-a3a9-c25b8a027c11) 
 
+Esta página em JavaScrip é responsável por todo processo de cadastro de usuários, armazenando os dados no navegador via localStorage. 
+
+As funcionalidades são: 
+getUsers(): Recupera do localStorage todos os usuários já cadastrados, retornando um objeto com os dados. 
+
+saveUsers(db): Salva no localStorage o banco completo de usuários atualizado. 
+
+setUser(u): Define o usuário atualmente logado armazenando-o em localStorage.
+
+isValidEmail(email): Valida o formato do e-mail usando expressão regular. 
+
+form.addEventListener('submit'):Captura o envio do formulário, valida dados, grava o usuário no localStorage, efetua login automático e redireciona para a Home. 
+
+## Login 
+
+![Image](https://github.com/user-attachments/assets/37fd2bf1-6f55-40fd-bf04-6f0226a4e91a)
+
+Está pagina é responsável por permiter que o usuário acesso o sistema através do login. 
+
+As suas funcionalidades são: 
+
+getUsers(): Obtém do localStorage todos os usuários cadastrados, retornando um objeto com os dados. 
+
+setUser(u): Salva no localStorage o usuário atualmente logado. 
+
+localPart(email): Extrai a parte inicial do e-mail, usada como nome padrão. 
+
+capitalize(s): Coloca a primeira letra da string em maiúsculo. 
+
+isValidEmail(email): Valida o formato do e-mail usando expressão regular. 
+
+showError(msg): Exibe mensagens de erro no login e ativa a classe visual de erro. 
+
+clearError(): Limpa mensagens e estados de erro assim que o usuário começa a digitar. 
+
+submit: Valida e-mail e senha, verifica credenciais no localStorage e autentica o usuário. 
+
+Evento `input: Remove erros automaticamente ao digitar nos campos de e-mail ou senha.
+
+Redirecionamento: Ao logar com sucesso, redireciona o usuário para /src/pages/Home.html.
+
+
+ 
 ## Teste de nivelamento
 
 ![Image](https://github.com/user-attachments/assets/4df3b5b0-2474-40e5-a81f-9009e13a9506)
@@ -74,7 +116,7 @@ salvarNivelUsuario(resultado): carrega o objeto mathtrack_usuario, atualiza os n
 ![Image](https://github.com/user-attachments/assets/9fb77ef6-fb15-43db-9054-330b4ac9e584)
 Esta página em JavaScript implementa executa a progressão de estudos do MathTrack. Ele controla os módulos, progresso do usuário, desbloqueios, rankings, armazenamento de dados, renderização dinâmica da interface e controle das trilhas de estudo.
 
-Suas principais estruturas são: 
+Suas principais funcionalidades são: 
 
 DADOS_USUARIO:  A variável  que armazena todas as informações do usuário carregadas do localStorage, tais como nome,  módulo atual, progresso por módulo, posição no ranking, acesso. 
 MODULOS_POR_NIVEL: Organiza os módulos por nível de dificuldade e permite saber quais módulos percentem a cada nível. 
@@ -132,7 +174,7 @@ DOMContentLoaded: Ao carregar a página os dados do usuário são recarregados, 
 
 Esta página em JavaScript é responsável por gerenciar o funcionamento da página de módulo individual. Suas principais tarefas são: detectar qual módulo está atrasado; validar os pré-requisitos; carregar dados de um JSON; monitorar os progresso do usuário, liberando o teste após o vídeo ou o conteúdo ser visualizado, monitorar o progresso do usuário. 
 
-Suas estruturas principais são: 
+Suas funcionalidades principais são: 
 
 let moduloId = null: guarda o número do módulo detectado pela URL 
 
@@ -173,7 +215,7 @@ window.ModuloAtual = {}: permite que outras parte do sistema consultem os dados 
 
 Essa página em JavaScript é responsável pela organização dos módulos do MahtTrack, controle do proogresso do usuário, bloqueio ou desbloqueio com base nos pré-requisitos e navegação para os modulos individuais. 
 
-Suas estruturas principais são: 
+Suas funcionalidade principais são: 
 
 todosModulos: lista completa vinda do JSON 
 
@@ -213,7 +255,7 @@ DOMContentLoaded: executa inicializarDadosSeNecessario(), carregarModulos(), con
 ![Image](https://github.com/user-attachments/assets/4165d2b3-20d5-4b33-8df0-ee523effe221)
 
 Está página é responsável pela execução do testes dos módulos. O JavaScript é responsável pelo carregamento das questões, renderização da interface, coleta de respostas, cálculo da nota, atualização do progresso e salvamento dos resultados no localStorage. 
-Suas principais estruturas são: 
+Suas principais funcionalidades são: 
 
 let DADOS_TESTE = null: armaneza as informações do teste 
 

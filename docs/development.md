@@ -70,6 +70,33 @@ Evento `input: Remove erros automaticamente ao digitar nos campos de e-mail ou s
 
 Redirecionamento: Ao logar com sucesso, redireciona o usuário para /src/pages/Home.html.
 
+## Recuperar senha
+
+Está página é responsável por recuperar a senha, realizando validações dos dados de entrada, criação de um objeto com os dados do usuário e envio dessas informações para um servidor por meio de uma requisição HTTP.
+
+![Image](https://github.com/user-attachments/assets/68be5867-e40a-4f8a-8d05-a4da06a81fa8)
+
+Suas principais funcionalidaes são:
+                                                                                        
+DOMContentLoaded: Aguarda o carregamento completo do DOM e então inicializa todos os elementos e eventos da página.   
+
+Captura dos Inputs: Obtém referências aos campos de nome, nascimento, email e confirmação de email usando getElementById().
+
+enviarButton.addEventListener('click'): ao clicar em enviar, inicia todo o processo de validação e envio dos dados.
+
+Validação de email: Verifica se o email e a confirmação coincidem. Caso contrário, exibe um alert.       
+
+Validação de campos vazios: Confere se nome, email ou data estão preenchidos antes de prosseguir.
+
+dadosDoUsuario: Cria um objeto contendo as informações inseridas pelo usuário.                 
+
+JSON.stringify():  Converte os dados do usuário para o formato JSON para envio ao servidor.                               
+
+enviarParaServidor(json): Função assíncrona que realiza o envio (por meio do fetch) para a API de recuperação de senha.        
+
+fetch(): Faz uma requisição POST para o servidor com os dados JSON.             
+
+Tratamento da resposta: Exibe alertas de sucesso, erro de validação ou erro de conexão dependendo da resposta do servidor.        
 
  
 ## Teste de nivelamento

@@ -80,15 +80,8 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Dados de entrada** | Acesso via cliques
 **Resultado obtido** | Sucesso. O usuário irá fazer uma publicação e/ou acessar outras que estejam disponíveis. 
 
-**Caso de Teste** | **CT10 - Forum/Comunidade**
- :--------------: | ------------
-**Procedimento**  | 1) Clicar em “Novo Tópico” <br> 2) Clicar em “Salvar” <br> 3) Clicar em “Home” <br> 4) Clicar em “Seus tópicos” <br> 5) Clicar em “Álgebra” <br> 6) Clicar em “Cálculo I” <br> 7) Clicar em “Estruturas lógicas" <br> 7) Clicar em “Curtir” <br> 8) Clicar em “Salvar” <br> 9) Clicar em “Editar” <br> 10) Clicar em “Excluir" <br> 11) Clicar em “Publicar” <br> 12) Clicar em “Cancelar”
-**Requisitos associados** | RF-005
-**Resultado esperado** | O usuário deve ser capaz de criar um novo tópico, adicionando um título, associando o tópico a um conteúdo, e escrever o conteúdo principal. Ao clicar em “Publicar”, o tópico ficará disponível para outros usuários. 
-**Dados de entrada** | Acesso via cliques
-**Resultado obtido** | Sucesso. O usuário irá fazer uma publicação e/ou acessar outras que estejam disponíveis. 
 
-**Caso de Teste** | **CT11 - Módulos**
+**Caso de Teste** | **CT10 - Módulos**
  :--------------: | ------------
 **Procedimento**  | 1) Clicar em “Acessar módulo” <br> 2) Clicar em “Revisar módulo” <br> 3) Preencher campo de formulário <br> 4) Clicar em ”buscar”
 **Requisitos associados** | RF-008; RF-010;
@@ -96,7 +89,7 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Dados de entrada** | Acesso via cliques <br> Inserção de dados
 **Resultado obtido** | Sucesso. O usuário conseguirá acessar os módulos diretamente ou por meio de pesquisa.
 
-**Caso de Teste** | **CT12 - Perfil**
+**Caso de Teste** | **CT11 - Perfil**
  :--------------: | ------------
 **Procedimento**  | 1) Clicar em “editar” <br> 2) Clicar em alterar senha <br> 3) Preencher campo de formulário
 **Requisitos associados** | RF-008; RF-010;
@@ -104,7 +97,8 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Dados de entrada** | Acesso via cliques <br> Inserção de dados
 **Resultado obtido** | Sucesso. 
 
-# Plamo de teste dos requisitos não-funcionais
+
+# Plano de teste dos requisitos não-funcionais
 
 ## Responsividade
 
@@ -125,4 +119,18 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Funcionalidade avaliada**: proteção de direitos autorais.
 **Grupo de Usuários**: Todos os usuários.
 **Requisitos**: RNF-011.
+
+# Registro de Teste de Software 
+
+| **Caso de Teste** | CT01 - Criar conta|
+|------------------|------------------------------------------------------------------------------------|
+| **Requisitos Associados** | RF-01 - O sistema deve permitir que o usuário realize um cadastro/login na plataforma.	|
+| **Objetivo do Teste** | Verificar se é possível realizar o cadastro e login do usuário de forma correta. <br> Verificar se é possível alterar as informações como nome, e-mail e senha. |
+| **Passos** | 1. Testar, na tela de cadastro, se o sistema permite a criação de conta com sucesso. <br> 2. Testar, na tela de login, se o sistema permite o acesso apenas a contas previamente cadastradas. <br> |
+| **Critérios de Êxito** | O usuário é criado com sucesso. <br> O usuário consegue alterar as informações do cadastro. |
+| **Critérios de Não Êxito** | O usuário não consegue efetuar o cadastro e consequentemente o login. <br> As alterações na tela de edição de perfil não são efetuadas. |
+
+https://github.com/user-attachments/assets/d4d2d033-0557-4627-b83d-1d71eba848a6
+
+
 

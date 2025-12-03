@@ -16,23 +16,16 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Dados de entrada** | Inserção de dados válidos no formulário de cadastro
 **Resultado obtido** | Sucesso
 
-**Caso de Teste** | **CT02 - Criar conta parte 2**
+**Caso de Teste** | **CT02 - Fazer Teste/Teste de nivelamento**
  :--------------: | ------------
-**Procedimento**  | Clicar em “Fazer Teste”  
+**Procedimento**  | Clicar em “Fazer Teste”; Responder as perguntas do teste de nivelamento 
 **Requisitos associados** | RF-002
-**Resultado esperado** | Direcionar o usuário para página de teste 
+**Resultado esperado** | Direcionar o usuário para página de teste; Direcionar o usuário para página de resultados ao finalizar o teste. 
 **Dados de entrada** | Acesso via cliques
-**Resultado obtido** | Sucesso. O usuário poderá fazer o teste. 
+**Resultado obtido** | Sucesso. O usuário poderá fazer o teste. O usuário será direcionado para página de “resultados” 
 
-**Caso de Teste** | **CT03 - Teste de Nivelamento**
- :--------------: | ------------
-**Procedimento**  | Responder as perguntas do teste de nivelamento 
-**Requisitos associados** | RF-002
-**Resultado esperado** | Direcionar o usuário para página de resultados ao finalizar o teste. 
-**Dados de entrada** | Acesso via cliques
-**Resultado obtido** | Sucesso. O usuário será direcionado para página de “resultados” 
 
-**Caso de Teste** | **CT04 - Resultados**
+**Caso de Teste** | **CT03 - Resultados**
  :--------------: | ------------
 **Procedimento**  | 1) Mostrar o resultado  <br> 2) Clicar em “Ir para a trilha de aprendizado” <br> 3) Clicar em “refazer teste”
 **Requisitos associados** | RF-002
@@ -131,6 +124,41 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 | **Critérios de Não Êxito** | O usuário não consegue efetuar o cadastro e consequentemente o login. <br> As alterações na tela de edição de perfil não são efetuadas. |
 
 https://github.com/user-attachments/assets/d4d2d033-0557-4627-b83d-1d71eba848a6
+
+
+
+| **Caso de Teste** | CT02 e CT03 - Criar conta e Resultado|
+|------------------|------------------------------------------------------------------------------------|
+| **Requisitos Associados** | RF-02 - O sistema deve emitir um relatório de avaliação do nível que o usuário está em relação a matemática, indicando possíveis defasagens, pontos fortes e pontos que precisam de melhoria.		|
+| **Objetivo do Teste** | Verificar se o usuário consegue acessar a página de teste, fazer o teste e obter o nível de conhecimento matemático |
+| **Passos** | 1. Clicar em fazer teste. <br> 2. Clicar nos itens de formulário que indicam a resposta. <br> 3. Clicar em enviar teste|
+| **Critérios de Êxito** | O usuário será direcionado para uma página que exibirá seu nível de conhecimento e poderá escolher seguir para trilha de aprendizado ou refazer o teste. |
+| **Critérios de Não Êxito** | O usuário não consegue enviar as respotas. <br> O usuário não é direcionado para página que contém o nível do usuário. |
+
+https://github.com/user-attachments/assets/9589a6ce-a717-4a9a-9187-6821954c2077
+
+
+| **Caso de Teste** | CT04 - Trilha de Aprendizado|
+|------------------|------------------------------------------------------------------------------------|
+| **Requisitos Associados** | RF-009 - O sistema deve gerar uma trilha de aprendizagem personalizada com base nos resultados da avaliação do usuário.	 		|
+| **Objetivo do Teste** | Verificar se o usuário consegue acessar a página de teste, fazer o teste e obter o nível de conhecimento matemático |
+| **Passos** | 1) Clicar em “Módulo X” <br> 2) Exibir o estágio do usuário <br> 3) Clicar em “Continuar estudando” <br> 4) Clicar em post do fórum; <br> 5) Clicar em “Ver todos os fóruns”; <br> 6) Exibir “Desempenho: evolução dos estudos” <br> 7) Exibir em testes disponíveis e os que se encontram bloqueados.| 
+| **Critérios de Êxito** | Direcionar  para “Módulo”; <br> Direcionar para o módulo que o usuário parou; <br> Direcionar para publicação do fórum; <br> Direcionar para página do fórum; <br> Exibir estágio atual do usuário <br> Exibir desempenho do usuário <br> Exibir testes feitos e aqueles que estão disponíveis|
+| **Critérios de Não Êxito** | O usuário não é direcionado às páginas. <br> A página não exibe o desempenho dos usuários nem os teste feitos/disponíveis. |
+
+https://github.com/user-attachments/assets/9a71ffe9-87da-49b0-8a8d-960326953fa6
+
+| **Caso de Teste** | CT05 - Módulo|
+|------------------|------------------------------------------------------------------------------------|
+| **Requisitos Associados** | RF-004  - O sistema deve apresentar links externos contendo referências bibliográficas e/ou indicação de exercícios voltados aos pontos fracos destacados na avaliação. |
+| **Objetivo do Teste** | 	Direcionar o usuário para página de teste do módulo ; <br> Exibir vídeo de link externo dentro da página. |
+| **Passos** | liberar o acesso ao teste de módulo após o usuário assistir alguns segundos de vídeo e scrollar a tela <br> Clicar em "enviar resposta" <br> Mostrar resultado do teste|  
+| **Critérios de Êxito** | Liberar o botão que irá direcionar para página de tste do módulo|
+| **Critérios de Não Êxito** | O botão não é disponibilizado após o usuário clicar no vídeo e scrollar a página. <br> O usuário não é direcionado para página de teste do módulo. |
+
+https://github.com/user-attachments/assets/9397775c-6b02-4489-87d5-4a8ccb6c88c5
+
+
 
 
 

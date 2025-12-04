@@ -158,7 +158,14 @@ https://github.com/user-attachments/assets/9a71ffe9-87da-49b0-8a8d-960326953fa6
 
 https://github.com/user-attachments/assets/9397775c-6b02-4489-87d5-4a8ccb6c88c5
 
+| **Caso de Teste** | CT06 e CT08 - Módulos e teste do módulo |
+|------------------|------------------------------------------------------------------------------------|
+| **Requisitos Associados** | RF-010  - O sistema deve prover uma ferramenta de busca que permita ao usuário encontrar conteúdos específicos por palavra-chave.	. |
+| **Objetivo do Teste** | 	Exibir os módulos da página ; <br> realizar pesquisa por palavras-chaves dos conteúdos. |
+| **Passos** | 1) Clicar em “Acessar módulo” <br> Preencher campo de formulário <br> Clicar em ”buscar” <br> 	Clicar em “Voltar para trilha” <br> Clicar em “Refazer o teste”|  
+| **Critérios de Êxito** | Acessar o módulo <br> Encontrar objeto da pesquisa <br> Mostrar o resultado após o usuário realizar os testes|
+| **Critérios de Não Êxito** | O usuário não consegue realizar pesquisa. <br> O usuário não visualiza os módulos <br> O usuário não consegue ver o resultado do teste. |
 
-
+ https://github.com/user-attachments/assets/4dcd40ef-db4d-4e90-a9da-768eefed1e57
 
 

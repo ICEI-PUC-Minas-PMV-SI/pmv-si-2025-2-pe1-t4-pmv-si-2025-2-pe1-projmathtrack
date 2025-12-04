@@ -33,7 +33,7 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Dados de entrada** | Acesso via cliques
 **Resultado obtido** | Sucesso. O usuário será direcionado para página que clicou. 
 
-**Caso de Teste** | **CT05 - Trilha de Aprendizado**
+**Caso de Teste** | **CT04 - Trilha de Aprendizado**
  :--------------: | ------------
 **Procedimento**  | 1) Clicar em “Módulo X” <br> 2) Exibir o estágio do usuário <br> 3) Clicar em “Continuar estudando”  <br> 4) Clicar em post do fórum; <br> 5) Clicar em “Ver todos os fóruns”; <br> 6) Exibir “Desempenho: evolução dos estudos” <br> 7) Exibir em testes disponíveis e os que se encontram bloqueados. 
 **Requisitos associados** | RF-007
@@ -41,7 +41,7 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Dados de entrada** | Acesso via cliques
 **Resultado obtido** | Sucesso. O usuário será direcionado para página que clicou. 
 
-**Caso de Teste** | **CT06 - Módulo**
+**Caso de Teste** | **CT05 - Módulo**
  :--------------: | ------------
 **Procedimento**  | 1) Clicar em “Fazer teste do módulo” <br> 2) Clicar em vídeo 
 **Requisitos associados** | RF-004
@@ -49,7 +49,7 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Dados de entrada** | Acesso via cliques
 **Resultado obtido** | Sucesso. O usuário será direcionado para página “Testes do módulo”.
 
-**Caso de Teste** | **CT07 - Teste do módulo**
+**Caso de Teste** | **CT06 - Teste do módulo**
  :--------------: | ------------
 **Procedimento**  | 1) Clicar na opção desejada. <br> 2) Clicar em “enviar respostas” <br> 3) Clicar em “voltar”
 **Requisitos associados** | RF-004
@@ -57,7 +57,7 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Dados de entrada** | Acesso via cliques
 **Resultado obtido** | Sucesso. O usuário será direcionado para página “Testes do módulo”.
 
-**Caso de Teste** | **CT08 - Teste do módulo-Resultado**
+**Caso de Teste** | **CT07 - Teste do módulo-Resultado**
  :--------------: | ------------
 **Procedimento**  | 1) Clicar em “Voltar para trilha” <br> 2) Clicar em “Refazer o teste”
 **Requisitos associados** | RF-004
@@ -65,7 +65,7 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Dados de entrada** | Acesso via cliques
 **Resultado obtido** | Sucesso. O usuário poderá escolher qual página seguir com base no resultado do teste. 
 
-**Caso de Teste** | **CT09 - Forum/Comunidade**
+**Caso de Teste** | **CT08 - Forum/Comunidade**
  :--------------: | ------------
 **Procedimento**  | 1) Clicar em “Novo Tópico” <br> 2) Clicar em “Salvar” <br> 3) Clicar em “Home” <br> 4) Clicar em “Seus tópicos” <br> 5) Clicar em “Álgebra” <br> 6) Clicar em “Cálculo I” <br> 7) Clicar em “Estruturas lógicas" <br> 7) Clicar em “Curtir” <br> 8) Clicar em “Salvar” <br> 9) Clicar em “Editar” <br> 10) Clicar em “Excluir" <br> 11) Clicar em “Publicar” <br> 12) Clicar em “Cancelar”
 **Requisitos associados** | RF-005
@@ -74,7 +74,7 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Resultado obtido** | Sucesso. O usuário irá fazer uma publicação e/ou acessar outras que estejam disponíveis. 
 
 
-**Caso de Teste** | **CT10 - Módulos**
+**Caso de Teste** | **CT9 - Módulos**
  :--------------: | ------------
 **Procedimento**  | 1) Clicar em “Acessar módulo” <br> 2) Clicar em “Revisar módulo” <br> 3) Preencher campo de formulário <br> 4) Clicar em ”buscar”
 **Requisitos associados** | RF-008; RF-010;
@@ -82,7 +82,7 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Dados de entrada** | Acesso via cliques <br> Inserção de dados
 **Resultado obtido** | Sucesso. O usuário conseguirá acessar os módulos diretamente ou por meio de pesquisa.
 
-**Caso de Teste** | **CT11 - Perfil**
+**Caso de Teste** | **CT10 - Perfil**
  :--------------: | ------------
 **Procedimento**  | 1) Clicar em “editar” <br> 2) Clicar em alterar senha <br> 3) Preencher campo de formulário
 **Requisitos associados** | RF-008; RF-010;
@@ -158,7 +158,7 @@ https://github.com/user-attachments/assets/9a71ffe9-87da-49b0-8a8d-960326953fa6
 
 https://github.com/user-attachments/assets/9397775c-6b02-4489-87d5-4a8ccb6c88c5
 
-| **Caso de Teste** | CT06 e CT08 - Módulos e teste do módulo |
+| **Caso de Teste** | CT06, CT07 e CT09 - Testes do módulo, Resultados e Módulos |
 |------------------|------------------------------------------------------------------------------------|
 | **Requisitos Associados** | RF-010  - O sistema deve prover uma ferramenta de busca que permita ao usuário encontrar conteúdos específicos por palavra-chave.	. |
 | **Objetivo do Teste** | 	Exibir os módulos da página ; <br> realizar pesquisa por palavras-chaves dos conteúdos. |
@@ -167,5 +167,16 @@ https://github.com/user-attachments/assets/9397775c-6b02-4489-87d5-4a8ccb6c88c5
 | **Critérios de Não Êxito** | O usuário não consegue realizar pesquisa. <br> O usuário não visualiza os módulos <br> O usuário não consegue ver o resultado do teste. |
 
  https://github.com/user-attachments/assets/4dcd40ef-db4d-4e90-a9da-768eefed1e57
+
+ | **Caso de Teste** | CT9 - Fórum |
+|------------------|------------------------------------------------------------------------------------|
+| **Requisitos Associados** | RF-005 - O sistema deve permitir ao usuário participar de fóruns online sobre assuntos pontuais voltados à matemática, permitindo interação com outros usuários.		. |
+| **Objetivo do Teste** | 	O usuário deve ser capaz de criar um novo tópico, adicionando um título, associando o tópico a um conteúdo, e escrever o conteúdo principal. Ao clicar em “Publicar”, o tópico ficará disponível para outros usuários. . |
+| **Passos** | 	1) Clicar em “Novo Tópico” <br> Clicar em “Salvar” <br> Clicar em “Home” <br> Clicar em “Seus tópicos” <br> Clicar em “Álgebra” <br> Clicar em “Cálculo I” <br> Clicar em “Estruturas lógicas" <br> Clicar em “Curtir” <br> Clicar em “Salvar” <br> Clicar em “Editar” <br> Clicar em “Excluir" <br> Clicar em “Publicar” <br> Clicar em “Cancelar”|  
+| **Critérios de Êxito** | O usuário consegue acessar o fórum e suas funcionalidades|
+| **Critérios de Não Êxito** | O usuário não consegue fazer publicações, editar, curtir ou excluir a publicação |
+
+https://github.com/user-attachments/assets/ba7eb34a-1760-4617-8e1c-1f0196f8ef5b
+
 
 

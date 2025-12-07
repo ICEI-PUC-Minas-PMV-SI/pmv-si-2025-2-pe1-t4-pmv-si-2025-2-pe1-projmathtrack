@@ -27,7 +27,7 @@ if (!estado || !estado.topicos || estado.topicos.length === 0) {
       {
         id: gerarId(),
         titulo: "Bem-vindo ao Fórum MathTrack",
-        corpo: "Crie tópicos, comente, edite, exclua, curta e salve tópicos. Tudo funciona com Front-end + localStorage.",
+        corpo: "Neste espaço, você pode discutir tópicos relacionados à matemática, compartilhar dúvidas e ajudar outros membros da comunidade. Sinta-se à vontade para criar novos tópicos e participar das discussões!",
         autor: "Equipe",
         assunto: "Álgebra",
         criadoEm: Date.now(),

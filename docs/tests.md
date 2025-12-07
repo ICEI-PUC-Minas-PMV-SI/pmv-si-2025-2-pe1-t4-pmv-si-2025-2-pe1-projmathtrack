@@ -91,6 +91,131 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Resultado obtido** | Sucesso. 
 
 
+# Plano de Teste de Usabilidade
+
+## Introdução 
+
+O objetivo deste plano de testes de usabilidade é validar a experiência do usuário na plataforma MathTrack, garantindo que ela cumpra seu propósito de auxiliar no nivelamento matemático de forma intuitiva, fluida e acessível. Os testes verificarão a aderência da interface aos objetivos de reduzir a evasão acadêmica e promover o engajamento, conforme as especificações do projeto. A validação será realizada percorrendo os fluxos reais de navegação implementados no site, desde o acesso à página inicial até as funcionalidades de diagnóstico, estudo modular, interação comunitária e registro de conta. 
+
+## Objetivos dos Testes 
+
+Avaliar a Navegabilidade: Verificar se a estrutura de menus e botões direciona o usuário corretamente para as seções de Diagnóstico, Módulos, Fórum e Cadastro. 
+
+Validar o Fluxo de Diagnóstico: Confirmar se o usuário consegue acessar e submeter o formulário de teste de nível sem impedimentos. 
+
+Verificar a Acessibilidade do Conteúdo: Garantir que os módulos de ensino estão organizados e visíveis. 
+
+Testar a Interação Social: Checar o acesso à área de Fórum para troca de conhecimentos. 
+
+Validar o Registro de Usuário: Assegurar que o processo de criação de conta e acesso à área de membros funciona conforme a lógica do sistema. 
+
+## Público-Alvo e Participantes 
+
+Os testes serão conduzidos com participantes que representam os perfis reais descritos na documentação do projeto: 
+
+Estudantes do Ensino Médio: Focados em revisão para vestibulares e uso via dispositivos móveis. 
+
+Estudantes do Ensino Superior: Recém-ingressos em Computação/Exatas que necessitam preencher lacunas de base. 
+
+Profissionais em Transição: Buscam atualização rápida e objetiva para o mercado de TI. 
+
+Monitores: Interessados na organização das dúvidas e acompanhamento dos alunos. 
+
+## Cenários de Teste de Usabilidade (Passo a Passo Detalhado) 
+
+Abaixo estão descritos os cenários de teste, mapeando a jornada do usuário através das páginas reais do site. 
+
+Cenário 1: Navegação Inicial e Compreensão da Proposta 
+
+Objetivo: Avaliar se a página inicial comunica claramente o propósito da ferramenta e se os elementos de navegação funcionam de forma responsiva e rápida. Requisitos Verificados: Responsividade, Facilidade de Navegação, Clareza da Interface. 
+
+Passo 1: O usuário acessa a URL principal da aplicação. 
+
+Passo 2: O usuário deve visualizar o cabeçalho "MathTrack — Home" e a chamada principal "Prepare-se Para Seu Futuro: Seu Livro de Matemática Personalizado". 
+
+Passo 3: O usuário realiza a rolagem (scroll) da página para identificar as seções principais disponíveis: Conteúdos, Nosso Fórum e Participe do Projeto. 
+
+Passo 4: O usuário clica no botão "Saiba Mais" (vinculado à página /sobreoprojeto) para buscar informações institucionais. 
+
+Critério de Sucesso: A página deve carregar rapidamente, adaptar-se à tela do dispositivo (mobile/desktop) e os textos devem ser legíveis, permitindo que o usuário entenda que se trata de uma plataforma de nivelamento. 
+
+Cenário 2: Realização da Avaliação Diagnóstica 
+
+Objetivo: Testar o fluxo de acesso e preenchimento do teste que define o nível de conhecimento do usuário. Requisitos Verificados: Avaliação de Nível, Envio de Formulário, Interface Intuitiva. 
+
+Passo 1: Na página inicial (Home), o usuário localiza e clica no botão destacado "Fazer o teste". 
+
+Passo 2: O sistema deve redirecionar o usuário para a página de formulário. 
+
+Passo 3: O usuário interage com os campos apresentados para responder às questões de diagnóstico. 
+
+Passo 4: O usuário finaliza o preenchimento e busca a opção de submissão/envio das respostas. 
+
+Critério de Sucesso: O botão de ação deve ser visível, os campos devem permitir a entrada de dados e o usuário não deve encontrar erros de validação impeditivos ao tentar enviar suas respostas. 
+
+Cenário 3: Acesso aos Conteúdos e Módulos de Estudo 
+
+Objetivo: Verificar a facilidade de encontrar e acessar os materiais didáticos organizados por módulos. Requisitos Verificados: Modularização dos Tópicos, Trilha de Aprendizagem, Links para Referências. 
+
+Passo 1: A partir da página inicial, o usuário navega até a seção identificada como "Conteúdos". 
+
+Passo 2: O usuário lê a descrição sobre "aprender no seu ritmo" e clica no botão "Learn more" (ou "Saiba Mais") associado a esta seção. 
+
+Passo 3: O sistema redireciona para a página de módulos. 
+
+Passo 4: O usuário deve visualizar a lista de tópicos ou módulos interativos disponíveis para estudo. 
+
+Critério de Sucesso: A transição entre a Home e a página de Módulos deve ser fluida. A organização visual deve permitir que o aluno identifique claramente os diferentes tópicos de matemática disponíveis. 
+
+Cenário 4: Interação e Colaboração no Fórum 
+
+Objetivo: Avaliar o acesso à área comunitária destinada à retirada de dúvidas e interação entre estudantes e monitores. Requisitos Verificados: Fórum Online, Interação entre Usuários, Ferramenta de Busca (se disponível na interface). 
+
+Passo 1: Na página inicial, o usuário localiza a seção "Nosso Fórum". 
+
+Passo 2: O usuário clica no botão de acesso "Learn more" correspondente a esta seção. 
+
+Passo 3: O sistema carrega a página dedicada ao fórum. 
+
+Passo 4: O usuário verifica a visualização das discussões ou a interface para postagem de dúvidas. 
+
+Critério de Sucesso: O usuário deve compreender que entrou em um ambiente colaborativo. A interface deve deixar claro como visualizar ou iniciar interações. 
+
+Cenário 5: Área de Membros e Cadastro 
+
+Objetivo: Testar a funcionalidade técnica de registro de novos usuários e o acesso à área restrita da plataforma. Requisitos Verificados: Cadastro/Login, Segurança dos Dados, Criação de Conta. 
+
+Passo 1: O usuário navega até a seção "Participe do Projeto" na página inicial. 
+
+Passo 2: O usuário clica no botão "Learn more" para iniciar o processo de registro. 
+
+Passo 3: O sistema direciona para a página de criação de conta. 
+
+Passo 4: O usuário visualiza os campos necessários para o registro (nome, e-mail, senha) e simula o preenchimento. 
+
+Passo 5: O usuário aciona o comando para finalizar a criação da conta. 
+
+Critério de Sucesso: O formulário de cadastro deve ser claro e objetivo. O sistema deve processar a solicitação ou fornecer feedback visual ao usuário, garantindo que ele entenda que o acesso aos recursos exclusivos (como salvar progresso) depende desta etapa. 
+
+## Registro e Análise dos Resultados 
+
+Após a conclusão dos cenários por todos os participantes, os dados serão consolidados em um relatório descritivo contendo: 
+
+Taxa de Sucesso por Tarefa: Porcentagem de usuários que completaram cada cenário sem ajuda. 
+
+Tempo Médio de Execução: Tempo gasto em cada fluxo (ex: tempo entre clicar em "Fazer o teste" e submeter o formulário). 
+
+Problemas Identificados: Descrição narrativa de quaisquer obstáculos, links quebrados ou confusões mentais relatadas pelos usuários durante a navegação. 
+
+Sugestões de Otimização: Recomendações baseadas nas observações para refinar a interface, como ajustes no tamanho das fontes, cores dos botões ou clareza dos textos instrucionais. 
+
+## Conclusão 
+
+A execução deste plano de testes garantirá que a plataforma MathTrack esteja alinhada com as necessidades reais de seus usuários. Ao validar cada passo — do diagnóstico ao estudo e interação — asseguramos que a tecnologia atue como uma facilitadora no processo de aprendizagem, contribuindo diretamente para a diminuição da evasão nos cursos de exatas e tecnologia. 
+
+
+ 
+
 # Plano de teste dos requisitos não-funcionais
 
 ## Responsividade
@@ -177,6 +302,17 @@ https://github.com/user-attachments/assets/9397775c-6b02-4489-87d5-4a8ccb6c88c5
 | **Critérios de Não Êxito** | O usuário não consegue fazer publicações, editar, curtir ou excluir a publicação |
 
 https://github.com/user-attachments/assets/ba7eb34a-1760-4617-8e1c-1f0196f8ef5b
+
+# Teste de Usabilidade 
+
+| Cenário de Teste | Participante (Perfil) | Tempo para Completar (min) | Número de Erros | Feedback Qualitativo | Observações |
+|------------------|------------------------|-----------------------------|------------------|-----------------------|-------------|
+| **Cenário 1: Navegação Inicial e Compreensão** | Estudante do Ensino Médio | 1 | 0 | “O visual é muito moderno e carregou instantaneamente no meu celular. Entendi fácil onde clicar.” | Nenhuma alteração necessária. |
+| **Cenário 2: Realização da Avaliação Diagnóstica** | Estudante Universitário | 8 | 0 | “O teste fluiu muito bem. As questões apareceram na ordem certa e o envio foi imediato.” | Nenhuma alteração necessária. |
+| **Cenário 3: Acesso aos Módulos de Estudo** | Profissional em Transição | 3 | 0 | “Encontrei o tópico de ‘Matemática Básica’ rapidamente. A organização dos conteúdos é excelente.” | Nenhuma alteração necessária. |
+| **Cenário 4: Interação no Fórum** | Monitor | 4 | 1 | “A página do fórum é boa, mas a barra de busca demorou um pouco para filtrar o assunto que eu digitei.” | Otimizar a velocidade de resposta da ferramenta de busca (RF-10). |
+| **Cenário 5: Cadastro e Acesso à Área de Membros** | Estudante do Ensino Médio | 2 | 1 | “Preenchi os dados e cliquei em cadastrar, mas a tela não mudou logo para ‘Minha Conta’, fiquei na dúvida se tinha ido.” | Adicionar um feedback visual de carregamento (loading spinner) ou redirecionamento mais ágil após o clique. |
+
 
 
 

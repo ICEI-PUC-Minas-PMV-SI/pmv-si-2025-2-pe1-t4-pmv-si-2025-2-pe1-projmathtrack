@@ -16,7 +16,6 @@ O sistema então gera um plano de estudos direcionado. Ele indica de forma preci
 * Boris Silva Mazuchi
 * Iury Thurler Pereira Barros Campos
 * Patrick Junio Pereira de Oliveira
-* Rayane Maria Santos Fraga
 * Wallison Victor de Souza Oliveira
 
 ## Orientador
